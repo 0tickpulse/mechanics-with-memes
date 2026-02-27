@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-motion-in-one-direction" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Motion in One Direction</title>
+
+  <introduction>
+    <p>
+      Our universe has three spatial dimensions.
+      At least, that's what sane people think; don't ask the string theorists.
+      But for now, let's just consider motion in one dimension.
+      This is a good starting point, and it will allow us to build up our understanding of calculus without dealing with pesky little vectors.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-position">
+    <title>Position</title>
+
+    <p>
+      You are riding in a car along a flat, straight road.
+      You are moving in one dimension.
+      I can't tell you why you're in this situation, but I can tell you that your motion is one-dimensional.
+      You could be moving forward, backward, or not at all, but you can't magically jump off the road or fly into the air.
+    </p>
+
+    <p>
+      In one dimension, we essentially treat space as a number line (the real numbers <m>\mathbb{R}</m>).
+      The coordinate along this line is a single letter, typically <m>x</m>, and it can be positive, negative, or zero.
+      The point at zero is the <term>origin</term>.
+      The choice of origin, as well as which direction is positive, is arbitrary.
+    </p>
+
+    <p>
+      But this won't suffice, for there is another parameter that we need to consider: time.
+      We treat time as another number line, with its own coordinate, typically <m>t</m>.
+      We usually choose the origin of time to be the moment we start observing the system, so <m>t=0</m> is when we start watching the car.
+      Time only moves forward, so we only consider non-negative values of <m>t</m>.
+    </p>
+
+    <p>
+      To describe the motion of the car, we need to know its position at each moment in time.
+      We can represent this as a function <m>x(t)</m>, which gives the position of the car at time <m>t</m>.
+      This function is called the <term>displacement</term>.
+    </p>
+
+    <figure xml:id="xt-function">
+      <caption>Position as a function of time, graphed as a two-dimensional plot.</caption>
+      <image source="images/xt-function.png" />
+    </figure>
+  </subsection>
+
+
+  <subsection xml:id="subsec-velocity">
+    <title>Velocity</title>
+
+    <p>
+      We shall begin with a simple question: how fast is the car moving? Suppose your friend is on the sidewalk, and he takes two pictures of your car, ten seconds apart.
+      Perhaps he's trying to capture your sweet ride, or maybe he's just trying to embarrass you.
+      After looking at the pictures, he tells you that in the first picture, your car is 0 meters from a certain lamppost, and in the second picture, your car is 100 meters from the same lamppost.
+    </p>
+
+    <p>
+      Let's now ask the question: if we knew all of this, how much would the car move after twenty seconds?
+    </p>
+
+    <p>
+      Of course, the first thing to do is transform this information into a mathematical function.
+      Let's denote the time of the first picture as <m>t_1 = 0</m> seconds, and the time of the second picture as <m>t_2 = 10</m> seconds.
+      The <term>average velocity</term> between these two times can be calculated as the change in position divided by the change in time.
+    </p>
+
+    <definition xml:id="def-average-velocity-1d">
+      <statement>
+        <p>
+          The average velocity <m>v_{\text{avg}}</m> of an object moving in one dimension between times <m>t_1</m> and <m>t_2</m> is given by the formula:
+          <me>
+            v_{\text{avg}} = \frac{x(t_2) - x(t_1)}{t_2 - t_1}
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Ooo scary...
+      "Definition 1.1.1" --- doesn't that sound fancy? Well, in this book (or course? Website? Set of notes by someone unqualified to speak on the topic? I don't know what to call it), we will be using a lot of definitions, theorems, and proofs.
+    </p>
+
+    <p>
+      Anyways, let's apply this definition to our problem.
+      We have <m>t_1 = 0</m> seconds, <m>t_2 = 10</m> seconds, <m>x(t_1) = 0</m> meters, and <m>x(t_2) = 100</m> meters.
+      Plugging these values into the formula, we get
+      <me>
+        v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10 \text{ m/s}
+      </me>.
+    </p>
+
+    <remark>
+      <p>
+        By the way, this is a good time to mention that in physics, things have units. In this case, the position is measured in meters (m), time is measured in seconds (s), and velocity is measured in meters per second (m/s). There is actually a ton of things you can do by just analyzing the units of a problem. I'll include an appendix on dimensional analysis in the near future.
+      </p>
+    </remark>
+
+    <p>
+      So, the average velocity of the car between the two pictures is 10 m/s.
+      This means that, on average, the car is moving at a speed of 10 meters per second in the positive direction.
+      However, this doesn't necessarily mean that the car is always moving at 10 m/s; it could be accelerating or decelerating.
+    </p>
+
+    <p>
+      Now, let's go back to our original question: how much would the car move after twenty seconds?
+      If we assume that the car continues to move at the same average velocity of 10 m/s, then we can calculate the position of the car at <m>t = 20</m> seconds using the formula
+      <me>
+        x(t) = v_\text{avg} t
+      </me>,
+      which gives us
+      <me>
+        x(20) = 10 \text{ m/s} \cdot 20 \text{ s} = 200 \text{ m}
+      </me>.
+    </p>
+
+    <p>
+      On the German autobahn, there are no speed limits.
+      Indeed, you can drive as fast as you want.
+      How fast you drive depends on how much you value your life.
+    </p>
+  </subsection>
+</section>

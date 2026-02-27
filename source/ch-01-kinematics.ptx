@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-01-kinematics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Motion and Kinematics</title>
+
+  <introduction>
+    <p>
+      If we want to study physics, we wish to know why things move the way they do. But to do that, we need to first understand the mathematical description of how things move. Kinematics refers to this exact description. Some people say that kinematics is a branch of mathematics, and some suggest the contrary. I don't really care, and you really shouldn't either.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="./01-kinematics/sec-motion-in-one-direction.ptx" />
+
+</chapter>

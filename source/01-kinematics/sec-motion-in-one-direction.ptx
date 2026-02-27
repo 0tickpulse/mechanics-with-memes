@@ -46,82 +46,124 @@
     <figure xml:id="xt-function">
       <caption>Position as a function of time, graphed as a two-dimensional plot.</caption>
       <image source="images/xt-function.png" />
-    </figure>
-  </subsection>
+      </figure>
+    </subsection>
 
 
-  <subsection xml:id="subsec-velocity">
-    <title>Velocity</title>
+    <subsection xml:id="subsec-velocity">
+      <title>Average Velocity</title>
 
-    <p>
-      We shall begin with a simple question: how fast is the car moving? Suppose your friend is on the sidewalk, and he takes two pictures of your car, ten seconds apart.
-      Perhaps he's trying to capture your sweet ride, or maybe he's just trying to embarrass you.
-      After looking at the pictures, he tells you that in the first picture, your car is 0 meters from a certain lamppost, and in the second picture, your car is 100 meters from the same lamppost.
-    </p>
-
-    <p>
-      Let's now ask the question: if we knew all of this, how much would the car move after twenty seconds?
-    </p>
-
-    <p>
-      Of course, the first thing to do is transform this information into a mathematical function.
-      Let's denote the time of the first picture as <m>t_1 = 0</m> seconds, and the time of the second picture as <m>t_2 = 10</m> seconds.
-      The <term>average velocity</term> between these two times can be calculated as the change in position divided by the change in time.
-    </p>
-
-    <definition xml:id="def-average-velocity-1d">
-      <statement>
-        <p>
-          The average velocity <m>v_{\text{avg}}</m> of an object moving in one dimension between times <m>t_1</m> and <m>t_2</m> is given by the formula:
-          <me>
-            v_{\text{avg}} = \frac{x(t_2) - x(t_1)}{t_2 - t_1}
-          </me>
-        </p>
-      </statement>
-    </definition>
-
-    <p>
-      Ooo scary...
-      "Definition 1.1.1" --- doesn't that sound fancy? Well, in this book (or course? Website? Set of notes by someone unqualified to speak on the topic? I don't know what to call it), we will be using a lot of definitions, theorems, and proofs.
-    </p>
-
-    <p>
-      Anyways, let's apply this definition to our problem.
-      We have <m>t_1 = 0</m> seconds, <m>t_2 = 10</m> seconds, <m>x(t_1) = 0</m> meters, and <m>x(t_2) = 100</m> meters.
-      Plugging these values into the formula, we get
-      <me>
-        v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10 \text{ m/s}
-      </me>.
-    </p>
-
-    <remark>
       <p>
-        By the way, this is a good time to mention that in physics, things have units. In this case, the position is measured in meters (m), time is measured in seconds (s), and velocity is measured in meters per second (m/s). There is actually a ton of things you can do by just analyzing the units of a problem. I'll include an appendix on dimensional analysis in the near future.
+        We shall begin with a simple question: how fast is the car moving? Suppose your friend is on the sidewalk, and he takes two pictures of your car, ten seconds apart.
+        Perhaps he's trying to capture your sweet ride, or maybe he's just trying to embarrass you.
+        After looking at the pictures, he tells you that in the first picture, your car is 0 meters from a certain lamppost, and in the second picture, your car is 100 meters from the same lamppost.
       </p>
-    </remark>
 
-    <p>
-      So, the average velocity of the car between the two pictures is 10 m/s.
-      This means that, on average, the car is moving at a speed of 10 meters per second in the positive direction.
-      However, this doesn't necessarily mean that the car is always moving at 10 m/s; it could be accelerating or decelerating.
-    </p>
+      <p>
+        Let's now ask the question: if we knew all of this, how much would the car move after twenty seconds?
+      </p>
 
-    <p>
-      Now, let's go back to our original question: how much would the car move after twenty seconds?
-      If we assume that the car continues to move at the same average velocity of 10 m/s, then we can calculate the position of the car at <m>t = 20</m> seconds using the formula
-      <me>
-        x(t) = v_\text{avg} t
-      </me>,
-      which gives us
-      <me>
-        x(20) = 10 \text{ m/s} \cdot 20 \text{ s} = 200 \text{ m}
-      </me>.
-    </p>
+      <p>
+        Of course, the first thing to do is transform this information into a mathematical function.
+        Let's denote the time of the first picture as <m>t_1 = 0</m> seconds, and the time of the second picture as <m>t_2 = 10</m> seconds.
+        The <term>average velocity</term> between these two times can be calculated as the change in position divided by the change in time.
+      </p>
 
-    <p>
-      On the German autobahn, there are no speed limits.
-      Indeed, you can drive as fast as you want.
-      How fast you drive depends on how much you value your life.
-    </p>
-  </subsection>
-</section>
+      <definition xml:id="def-average-velocity-1d">
+        <statement>
+          <p>
+            The average velocity <m>v_{\text{avg}}</m> of an object moving in one dimension between times <m>t_1</m> and <m>t_2</m> is given by the formula:
+            <me>
+              v_{\text{avg}} = \frac{x(t_2) - x(t_1)}{t_2 - t_1}
+            </me>
+          </p>
+        </statement>
+      </definition>
+
+      <p>
+        Ooo scary...
+        "Definition 1.1.1" --- doesn't that sound fancy? Well, in this book (or course? Website? Set of notes by someone unqualified to speak on the topic? I don't know what to call it), we will be using a lot of definitions, theorems, and proofs.
+      </p>
+
+      <p>
+        Anyways, let's apply this definition to our problem.
+        We have <m>t_1 = 0</m> seconds, <m>t_2 = 10</m> seconds, <m>x(t_1) = 0</m> meters, and <m>x(t_2) = 100</m> meters.
+        Plugging these values into the formula, we get
+        <me>
+          v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10 \text{ m/s}
+        </me>.
+      </p>
+
+      <remark>
+        <p>
+          By the way, this is a good time to mention that in physics, things have units.
+          In this case, the position is measured in meters (m), time is measured in seconds (s), and velocity is measured in meters per second (m/s).
+          There is actually a ton of things you can do by just analyzing the units of a problem.
+          I'll include an appendix on dimensional analysis in the near future.
+        </p>
+      </remark>
+
+      <p>
+        So, the average velocity of the car between the two pictures is 10 m/s.
+        This means that, on average, the car is moving at a speed of 10 meters per second in the positive direction.
+        However, this doesn't necessarily mean that the car is always moving at 10 m/s; it could be accelerating or decelerating.
+        The figure below shows three graphs of position as a function of time, all of which have the same average velocity of 10 m/s between <m>t=0</m> and <m>t=10</m> seconds.
+        But they clearly look different (and you certainly wouldn't want to drive a car that looks like the red graph).
+      </p>
+
+      <figure xml:id="xt-graphs">
+        <caption>Three different graphs of position as a function of time, all with the same average velocity of 10 m/s between <m>t=0</m> and <m>t=10</m> seconds.</caption>
+        <image source="images/three-graphs-with-same-v-avg.png" />
+        </figure>
+
+        <p>
+          Now, let's go back to our original question: how much would the car move after another ten seconds? We can use the average velocity to make a prediction.
+          Let's introduce some notational conventions to make this easier.
+          If the two times we are considering are <m>t_1</m> and <m>t_2</m>, we can denote the time interval as <m>\Delta t = t_2 - t_1</m>, and the change in position as <m>\Delta x = x(t_2) - x(t_1)</m>.
+          With this notation, the formula for average velocity can be rewritten as
+          <me>
+            v_{\text{avg}} = \frac{\Delta x}{\Delta t}
+          </me>.
+          Then, it is obvious that we can rearrange this formula to find the change in position:
+          <me>
+            \Delta x = v_{\text{avg}} \cdot \Delta t
+          </me>.
+          Therefore, if we assume that the car continues to move at the same average velocity of 10 m/s for another ten seconds, we can calculate the change in position as
+          <me>
+            \Delta x = 10 \text{ m/s} \cdot 10 \text{ s} = 100 \text{ m}
+          </me>.
+        </p>
+        <remark>
+          <p>
+            There are a few more notational things that you should be aware of. Because scientists are too busy with doing actual science than with writing, there are different notations for the same thing. Conversely, the same notation can mean different things in different contexts. Look out for this: between some times <m>t_1</m> and <m>t_2</m>, the time interval is <m>\Delta t = t_2 - t_1</m>. But sometimes I will write the initial time as just <m>t'</m> and the final time as <m>t' + \Delta t</m>.
+          </p>
+          <p>
+            "Wait a minute," says the calculus student, "doesn't the prime notation usually denote derivatives?" Yes, it does. But physicists are physicists.
+          </p>
+        </remark>
+      </subsection>
+      <subsection xml:id="subsec-instantaneous-velocity">
+        <title>Instantaneous Velocity</title>
+
+        <p>
+          On the German autobahn, there are no speed limits.
+          Indeed, you can drive as fast as you want.
+          How fast you drive depends on how much you value your life.
+
+          But you would have to be pretty crazy to drive at a constant speed of 10 m/s (which is about 22 mph) on the autobahn.
+          You would probably want to drive faster than that.
+          But how fast can you drive? How fast are you driving right now?
+        </p>
+
+        <p>
+          Notice the subtlety. In the previous example, we were able to calculate the average velocity over a time interval of ten seconds, but we couldn't say anything about the velocity at any specific moment in time.
+          Now, we want to know how fast the car is moving at a specific moment in time, say at <m>t=5</m> seconds.
+          In other words, what does your speedometer say at that moment? This is what we call the <term>instantaneous velocity</term>.
+        </p>
+
+        <p>
+          But what does that even mean? How can we define the velocity at a specific moment in time? If, hypothetically speaking, you were to take a picture of the car at exactly <m>t=5</m> seconds, you would see the car at a specific position, but you wouldn't be able to tell how fast it's moving just from that picture (save for motion blur, but let's ignore that for now). So, what does an instantaneous velocity even mean? How can we define it in a way that makes sense? If it seems confusing, don't worry. This exact question challenged the greatest minds in physics for centuries, and it wasn't until the development of calculus that we were able to give a sensible definition of instantaneous velocity. If it does not seem confusing, then you are either a genius or you haven't thought about it deeply enough.
+        </p>
+
+      </subsection>
+    </section>

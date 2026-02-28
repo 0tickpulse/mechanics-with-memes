@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="sec-kinematics-problems" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Additional Problems</title>
+
+<exercisegroup>
+<introduction>
+  <p>
+    It is 11:58 PM, and your group project is due at midnight.
+    The campus Wi-Fi has crashed, so you have loaded the final project onto a USB flash drive.
+    You are standing outside your partner's dorm, trying to throw the flash drive through their slightly open window.
+  </p>
+
+  <p>
+    The window is located at a horizontal distance <m>d</m> and a vertical height <m>h</m> from the release point of your hand.
+    You can throw the drive with a set initial speed <m>v_0</m>.
+    Now you just need the perfect angle <m>\theta</m>.
+  </p>
+</introduction>
+
+<exercise>
+  <statement>
+    <p>
+      Construct an expression for the trajectory of the flash drive, <m>y(x)</m>, in terms of <m>v_0</m>, <m>\tan \theta</m>, and the acceleration due to gravity <m>g</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      This trigonometric identity will come in handy:
+      <me>
+        \frac{1}{\cos^2\theta} = 1 + \tan^2\theta
+      </me>.
+    </p>
+  </hint>
+
+  <hint>
+    <p>
+      Begin with the standard equations for projectile motion,
+      <md>
+        <mrow>x(t) \amp = v_0\cos\theta t</mrow>
+        <mrow>y(t) \amp = v_0\sin\theta t - \frac{1}{2}gt^2</mrow>
+      </md>.
+      Then isolate <m>t</m> in the first equation and substitute it into the second equation to get an expression for <m>y</m> in terms of <m>x</m>.
+    </p>
+  </hint>
+
+  <solution>
+    <p>
+      Solving for <m>t</m> in the first equation gives us <m>t = \frac{x}{v_0\cos\theta}</m>.
+      Substituting this into the second equation gives us
+      <md>
+        <mrow>y(x) \amp = v_0\sin\theta \cdot \frac{x}{v_0\cos\theta} - \frac{1}{2}g\left(\frac{x}{v_0\cos\theta}\right)^2</mrow>
+        <mrow>\amp = x\tan\theta - \frac{gx^2}{2v_0^2\cos^2\theta}</mrow>
+      </md>.
+      Finally, using the trigonometric identity, we can rewrite this as
+      <md>
+        <mrow>y(x) \amp = x\tan\theta - \frac{gx^2}{2v_0^2}(1 + \tan^2\theta)</mrow>
+        <mrow>\amp = -\frac{gx^2}{2v_0^2}\tan^2\theta + x\tan\theta - \frac{gx^2}{2v_0^2}</mrow>
+      </md>,
+      which is a quadratic function of <m>\tan\theta</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Show that there are actually two angles that will allow you to hit the target.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      As long as the discriminant of the quadratic function is positive, there will be two real solutions for <m>\tan\theta</m>.
+      Therefore, just show that the discriminant is positive.
+    </p>
+  </hint>
+
+  <solution>
+    <p>
+      First, the equation we need to solve is <m>y(d) = h</m>.
+      Plugging in the expression for <m>y(x)</m> gives us
+      <md>
+        <mrow>h \amp = -\frac{gd^2}{2v_0^2}\tan^2\theta + d\tan\theta - \frac{gd^2}{2v_0^2}</mrow>
+        <mrow>\implies 0 \amp = -\frac{gd^2}{2v_0^2}\tan^2\theta + d\tan\theta - \qty(h + \frac{gd^2}{2v_0^2})</mrow>
+      </md>.
+      The discriminant of <m>a\tan^2\theta + b\tan\theta + c</m> is <m>\Delta = b^2 - 4ac</m>, so in our case, the discriminant is
+      <md>
+        <mrow>\Delta = d^2 - 4\qty(-\frac{gd^2}{2v_0^2})\qty(-h - \frac{gd^2}{2v_0^2})</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+</exercisegroup> </exercises>

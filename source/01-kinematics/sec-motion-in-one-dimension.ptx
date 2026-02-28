@@ -97,7 +97,7 @@
         We have <m>t_1 = 0</m> seconds, <m>t_2 = 10</m> seconds, <m>x(t_1) = 0</m> meters, and <m>x(t_2) = 100</m> meters.
         Plugging these values into the formula, we get
         <me>
-          v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10 \text{ m/s}
+          v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10 \text{m/s}
         </me>.
       </p>
 
@@ -139,7 +139,7 @@
 
           Therefore, if we assume that the van continues to move at the same average velocity of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> for another ten seconds, we can calculate the change in position as
           <me>
-            \Delta x = 10 \text{ m/s} \cdot 10 \text{ s} = 100 \text{ m}
+            \Delta x = 10 \text{m/s} \cdot 10 \text{s} = 100 \text{m}
           </me>.
         </p>
 
@@ -366,7 +366,7 @@
 
         <p>
           Let's assess the situation.
-          The minivan is moving at <m>v_0 = 30 \text{ m/s}</m> (that's the initial velocity).
+          The minivan is moving at <m>v_0 = 30 \text{m/s}</m> (that's the initial velocity).
           A family of raccoons is crossing the road exactly 50 meters ahead of them.
           Dave has slammed on the brakes, causing the minivan to accelerate in the opposite direction of its motion.
         </p>
@@ -443,15 +443,15 @@
 
         <p>
           We finally have the tools to predict the future.
-          Let's use Equation 3, because we know Dave's initial velocity (<m>v_0 = 30 \text{ m/s}</m>), we know his final velocity needs to be zero to avoid a tragedy (<m>v = 0</m>), and we assumed his braking acceleration is <m>a = -10 \text{ m/s}^2</m>.
+          Let's use Equation 3, because we know Dave's initial velocity (<m>v_0 = 30 \text{m/s}</m>), we know his final velocity needs to be zero to avoid a tragedy (<m>v = 0</m>), and we assumed his braking acceleration is <m>a = -10 \text{m/s}^2</m>.
           We want to find the stopping distance, <m>\Delta x</m>.
           Just doing some algebra, we obtain
           <md>
             <mrow>v^2 \amp = v_0^2 + 2a\Delta x</mrow>
             <mrow>\implies 2a\Delta x \amp = v^2 - v_0^2</mrow>
             <mrow>\implies \Delta x \amp = \frac{v^2 - v_0^2}{2a}</mrow>
-            <mrow>\amp = \frac{(0 \text{ m/s})^2 - (30 \text{ m/s})^2}{2 \cdot (-10 \text{ m/s}^2)}</mrow>
-            <mrow>\amp = 45 \text{ m}</mrow>
+            <mrow>\amp = \frac{(0 \text{m/s})^2 - (30 \text{m/s})^2}{2 \cdot (-10 \text{m/s}^2)}</mrow>
+            <mrow>\amp = 45 \text{m}</mrow>
           </md>
         </p>
 

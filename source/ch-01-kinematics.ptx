@@ -13,4 +13,6 @@
   <xi:include href="./01-kinematics/sec-motion-in-one-dimension.ptx" />
   <xi:include href="./01-kinematics/sec-motion-in-two-dimensions.ptx" />
 
+  <xi:include href="./01-kinematics/sec-kinematics-problems.ptx" />
+  <xi:include href="./01-kinematics/sec-kinematics-afr.ptx" />
 </chapter>

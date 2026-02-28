@@ -10,6 +10,7 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="./01-kinematics/sec-motion-in-one-direction.ptx" />
+  <xi:include href="./01-kinematics/sec-motion-in-one-dimension.ptx" />
+  <xi:include href="./01-kinematics/sec-motion-in-two-dimensions.ptx" />
 
 </chapter>

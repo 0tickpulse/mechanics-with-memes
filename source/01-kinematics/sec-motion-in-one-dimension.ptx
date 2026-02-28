@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-motion-in-one-dimension" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Motion in One Dimension</title>
+
+  <introduction>
+    <p>
+      Our universe has three spatial dimensions.
+      At least, that's what sane people think; don't ask the string theorists.
+      But for now, let's just consider motion in one dimension.
+      This is a good starting point, and it will allow us to build up our understanding of calculus without dealing with pesky little vectors.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-position">
+    <title>Position</title>
+
+    <p>
+      There is a storyline we shall tell throughout this book.
+      An eccentric, wildly unqualified group of freshmen (otherwise commonly known as "physics students") decides to steal back their university's beloved mascot, a 500 kg bronze statue of Richard Feynman, from the clutches of their wealthy, obnoxious rival university.
+      To even begin with this, they need to figure out how to move the statue without getting caught by the security guards.
+      They decide to use a van to transport the statue, and they need to figure out how to describe the motion of the van in order to plan their heist.
+      This is where we will start our journey into the world of kinematics, the study of motion.
+    </p>
+
+    <p>
+      I said in the introduction that the universe has three dimensions.
+      So how can we just consider motion in one dimension? Well, we can just pretend that the van is moving along a straight line, and we can ignore any motion in the other two dimensions.
+      We just work with a <term>subspace</term> of the universe.
+    </p>
+
+    <p>
+      Anyways, in one dimension, we essentially treat space as a number line (the real numbers <m>\mathbb{R}</m>).
+      The coordinate along this line is a single letter, typically <m>x</m>, and it can be positive, negative, or zero.
+      The point at zero is the <term>origin</term>.
+      The choice of origin, as well as which direction is positive, is arbitrary.
+    </p>
+
+    <p>
+      But this won't suffice, for there is another parameter that we need to consider: time.
+      We treat time as another number line, with its own coordinate, typically <m>t</m>.
+      We usually choose the origin of time to be the moment we start observing the system, so <m>t=0</m> is when we start watching the van.
+      Time only moves forward, so we only consider non-negative values of <m>t</m>.
+    </p>
+
+    <p>
+      To describe the motion of the van, we need to know its position at each moment in time.
+      We can represent this as a function <m>x(t)</m>, which gives the position of the van at time <m>t</m>.
+      This function is called the <term>position</term>.
+    </p>
+
+    <figure xml:id="xt-function">
+      <caption>Position as a function of time, graphed as a two-dimensional plot.</caption>
+      <image source="images/xt-function.png" />
+      </figure>
+    </subsection>
+
+
+    <subsection xml:id="subsec-average-velocity">
+      <title>Average Velocity</title>
+
+      <p>
+        We shall begin with a simple question: how fast is the van moving? Suppose your friend is on the sidewalk, and he takes two pictures of your van, ten seconds apart.
+        He wants to time your van in order to plan the heist, and he thinks that taking pictures is a good way to do that.
+        After looking at the pictures, he tells you that in the first picture, your van is 0 meters from a certain lamppost, and in the second picture, your van is 100 meters from the same lamppost.
+      </p>
+
+      <p>
+        Let's now ask the question: if we knew all of this, how much would the van move after twenty seconds?
+      </p>
+
+      <p>
+        Of course, the first thing to do is transform this information into a mathematical function.
+        Let's denote the time of the first picture as <m>t_1 = 0</m> seconds, and the time of the second picture as <m>t_2 = 10</m> seconds.
+        The <term>average velocity</term> between these two times can be calculated as the change in position divided by the change in time.
+      </p>
+
+      <definition xml:id="def-average-velocity-1d">
+        <statement>
+          <p>
+            The average velocity <m>v_{\text{avg}}</m> of an object moving in one dimension between times <m>t_1</m> and <m>t_2</m> is given by the formula:
+            <me>
+              v_{\text{avg}} = \frac{x(t_2) - x(t_1)}{t_2 - t_1}
+            </me>
+          </p>
+        </statement>
+      </definition>
+
+      <p>
+        Ooo scary...
+        "Definition 1.1.2" <mdash /> doesn't that sound fancy? Well, in this book (or course? Website? Set of notes by someone unqualified to speak on the topic? I don't know what to call it), we will be using a lot of definitions, theorems, and proofs.
+      </p>
+
+      <p>
+        Anyways, let's apply this definition to our problem.
+        We have <m>t_1 = 0</m> seconds, <m>t_2 = 10</m> seconds, <m>x(t_1) = 0</m> meters, and <m>x(t_2) = 100</m> meters.
+        Plugging these values into the formula, we get
+        <me>
+          v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10 \text{ m/s}
+        </me>.
+      </p>
+
+      <remark>
+        <p>
+          By the way, this is a good time to mention that in physics, things have units.
+          In this case, the position is measured in meters (m), time is measured in seconds (s), and velocity is measured in meters per second (m/s).
+          There is actually a ton of things you can do by just analyzing the units of a problem.
+          I'll include an appendix on dimensional analysis in the near future.
+        </p>
+      </remark>
+
+      <p>
+        So, the average velocity of the van between the two pictures is <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity>.
+        This means that, on average, the van is moving at a speed of 10 meters per second in the positive direction.
+        However, this doesn't necessarily mean that the van is always moving at <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity>; it could be accelerating or decelerating.
+        The figure below shows three graphs of position as a function of time, all of which have the same average velocity of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> between <m>t=0</m> and <m>t=10</m> seconds.
+        But they clearly look different (and you certainly wouldn't want to drive a van that looks like the red graph).
+      </p>
+
+      <figure xml:id="xt-graphs">
+        <caption>Three different graphs of position as a function of time, all with the same average velocity of <quantity><mag>10</mag><unit base="meter" />
+        <per base="second" /></quantity> between <m>t=0</m> and <m>t=10</m> seconds.</caption>
+        <image source="images/three-graphs-with-same-v-avg.png" />
+        </figure>
+
+        <p>
+          Now, let's go back to our original question: how much would the van move after another ten seconds? We can use the average velocity to make a prediction.
+          Let's introduce some notational conventions to make this easier.
+          If the two times we are considering are <m>t_1</m> and <m>t_2</m>, we can denote the time interval as <m>\Delta t = t_2 - t_1</m>, and the change in position as <m>\Delta x = x(t_2) - x(t_1)</m>.
+          With this notation, the formula for average velocity can be rewritten as
+          <me>
+            v_{\text{avg}} = \frac{\Delta x}{\Delta t}
+          </me>.
+          Then, it is obvious that we can rearrange this formula to find the change in position:
+          <me>
+            \Delta x = v_{\text{avg}} \cdot \Delta t
+          </me>.
+
+          Therefore, if we assume that the van continues to move at the same average velocity of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> for another ten seconds, we can calculate the change in position as
+          <me>
+            \Delta x = 10 \text{ m/s} \cdot 10 \text{ s} = 100 \text{ m}
+          </me>.
+        </p>
+
+        <remark>
+          <p>
+            There are a few more notational things that you should be aware of.
+            Because scientists are too busy with doing actual science than with perfecting their notation, there are different notations for the same thing.
+            Conversely, the same notation can mean different things in different contexts.
+            Look out for this: between some times <m>t_1</m> and <m>t_2</m>, the time interval is <m>\Delta t = t_2 - t_1</m>.
+            But sometimes I will write the initial time as just <m>t</m> and the final time as <m>t + \Delta t</m>.
+            Other times I might use a prime notation, like <m>t'</m>, notably when integrating over time.
+          </p>
+
+          <p>
+            "Wait a minute," says the calculus student, "doesn't the prime notation usually denote derivatives?" Yes, it does.
+            But physicists are physicists, and we find the prime notation to be very convenient for denoting "something else" without having to introduce new variables.
+            And we don't really use the prime notation for derivatives that much, so we don't have to worry about confusion.
+          </p>
+        </remark>
+      </subsection>
+
+
+      <subsection xml:id="subsec-instantaneous-velocity">
+        <title>Instantaneous Velocity</title>
+
+        <p>
+          You would have to be pretty crazy to drive at a constant speed of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> (which is about 22 mph) on a highway.
+          In fact, you would be breaking the law, and you would probably get a ticket for driving too slow.
+          But how fast can you drive? How fast are you driving right now?
+        </p>
+
+        <p>
+          Notice the subtlety.
+          In the previous example, we were able to calculate the average velocity over a time interval of ten seconds, but we couldn't say anything about the velocity at any specific moment in time.
+          Now, we want to know how fast the van is moving at a specific moment in time, say at <m>t=5</m> seconds.
+          In other words, what does your speedometer say at that moment? This is what we call the <term>instantaneous velocity</term>.
+        </p>
+
+        <remark>
+          <p>
+            But what does that even mean? How can we define the velocity at a specific moment in time? If, hypothetically speaking, you were to take a picture of the van at exactly <m>t=5</m> seconds, you would see the van at a specific position, but you wouldn't be able to tell how fast it's moving just from that picture (save for motion blur, but let's ignore that for now).
+            So, what does an instantaneous velocity even mean? How can we define it in a way that makes sense? If it seems confusing, don't worry.
+            This exact question challenged the greatest minds in physics for centuries, and it wasn't until the development of calculus that we were able to give a sensible definition of instantaneous velocity.
+            If it does not seem confusing, then you are either a genius or you haven't thought about it deeply enough.
+          </p>
+        </remark>
+
+        <p>
+          The way we define instantaneous velocity is as follows: take the usual formula for average velocity at some time <m>t</m> and some time interval <m>\Delta t</m>:
+          <me>
+            v_{\text{avg}} = \frac{\Delta x}{\Delta t} = \frac{x(t + \Delta t) - x(t)}{\Delta t}
+          </me>.
+          Then, as we make the time interval <m>\Delta t</m> smaller and smaller, we get closer and closer to the instantaneous velocity at time <m>t</m>.
+          In the limit as <m>\Delta t \to 0</m>, we define the instantaneous velocity as
+          <me>
+            v(t) = \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t}
+          </me>.
+          Historically, derivatives and integrals were invented by Newton and Leibniz at the same time, but they had different notations for them.
+          Interestingly, limits were not really a thing in the early days of calculus, and they were only formalized later on by Cauchy and others.
+          As per Leibniz's notation, our intuition is that the <m>\Delta</m> is replaced by a lowercase <m>d</m>, and we write this as
+          <me>
+            v(t) = \dv{x}{t}
+          </me>.
+          Newton used a dot to denote derivatives with respect to time, so we could also write this as
+          <me>
+            v(t) = \dot{x}(t)
+          </me>.
+          On a graph of position as a function of time, the instantaneous velocity at a specific time <m>t</m> is the slope of the tangent line to the graph at that point (as opposed to the slope of the secant line, which gives the average velocity).
+        </p>
+
+        <definition xml:id="def-instantaneous-velocity-1d">
+          <statement>
+            <p>
+              The instantaneous velocity <m>v(t)</m> of an object moving in one dimension at time <m>t</m> is given by the limit of the average velocity as the time interval approaches zero:
+              <me>
+                v(t) = \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t} = \dv{x}{t}
+              </me>.
+            </p>
+          </statement>
+        </definition>
+        <!-- TODO: add figure -->
+        <p>
+          Now what about the reverse? If we know the instantaneous velocity as a function of time, can we find how much the van has moved after a certain amount of time? The answer is yes, and this is where integrals come into play.
+        </p>
+
+        <p>
+          Indeed, suppose you, on the van, have a speedometer that gives you the instantaneous velocity at each moment in time.
+          Take a video of the speedometer for ten seconds, and then analyze the video to find the velocity at each frame.
+          Suppose each frame has a time interval of <m>\Delta t = 0.03</m> seconds, and you find the velocity at each frame, denoted as <m>v(t_i)</m> for the time of the <m>i</m>-th frame.
+          Then, during that frame, the van moves approximately <m>v(t_i) \cdot \Delta t</m> meters.
+          If you sum this up for all the frames, you get an approximation of how much the van has moved in those ten seconds:
+          <me>
+            \Delta x = \sum_{i} v(t_i) \cdot \Delta t
+          </me>.
+        </p>
+
+        <p>
+          Now, just like before, we make the time interval <m>\Delta t</m> smaller and smaller, and we get closer and closer to the actual displacement traveled by the van.
+          In the limit as <m>\Delta t \to 0</m>, once again, the <m>\Delta</m> is replaced by a lowercase <m>d</m>.
+          The sigma notation for the sum is replaced by a stretchy S, and we get a  formula for the displacement traveled by the van from time <m>t_1</m> to time <m>t_2</m>, in the following theorem.
+        </p>
+
+        <theorem xml:id="thm-ftoc-1d-kinematics">
+          <title>Fundamental Theorem of Calculus for One-Dimensional Kinematics</title>
+
+          <statement>
+            <p>
+              The displacement <m>\Delta x</m> of an object moving in one dimension from time <m>t_1</m> to time <m>t_2</m> can be calculated by integrating the instantaneous velocity over that time interval:
+              <me>
+                \Delta x = x(t_2) - x(t_1) = \int_{t_1}^{t_2} v(t') \, \dd{t'}
+              </me>.
+            </p>
+          </statement>
+        </theorem>
+
+        <p>
+          As there are infinite time intervals, we can't index them with a finite index like <m>i</m>, so we use a dummy variable of integration, which means that it is a placeholder that spans all the values of time between <m>t_1</m> and <m>t_2</m>.
+        </p>
+
+        <p>
+          By the way, it is important to distinguish between the displacement <m>\Delta x</m> and the total distance traveled by the van.
+          The displacement is the change in position.
+          In other words, final position minus initial position, regardless of the path taken.
+          The total distance traveled, on the other hand, is the length of the path taken by the van, which can be greater than or equal to the displacement.
+        </p>
+
+        <p>
+          In other words, if you were to let a van drive in a circle and return to its starting point, the displacement would be zero, but the total distance traveled would be the circumference of the circle.
+        </p>
+
+        <p>
+          Okay.
+          I'm sorry if this was so dry.
+          Back to storytime in the next section.
+        </p>
+      </subsection>
+
+
+      <subsection xml:id="subsec-acceleration">
+        <title>Acceleration</title>
+
+        <p>
+          The crew has successfully stolen the statue and is now driving it back to their university. The car contains the driver, Dave, and three passengers, who are all very excited about the heist. In addition to the statue, they also have a cooler full of beer, and a bunch of meter sticks for some reason.
+          The driver <mdash /> let's call him Dave <mdash /> is cruising at a constant speed of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> on the highway, and everyone in the van is feeling pretty good.
+          In fact, thanks to Galilean relativity, as long as the windows are rolled up and the suspension isn't terrible, they might as well be sitting still in a parking lot.
+          You don't actually <em>feel</em> velocity.
+        </p>
+
+        <p>
+          But then, a flashlight appears in the rearview mirror.
+          It's campus security! They are chasing the van, and they are getting closer and closer.
+          Dave steps on the gas pedal, and the van starts accelerating.
+          Now, everyone in the van feels like they are being pushed back into their seats.
+          That feeling of being shoved back into your seat? That is not velocity.
+          That is a <em>change</em> in velocity.
+          And in physics, a change in velocity over time is called <term>acceleration</term>.
+        </p>
+
+        <definition xml:id="def-average-acceleration-1d">
+          <statement>
+            <p>
+              The average acceleration <m>a_{\text{avg}}</m> of an object moving in one dimension between times <m>t_1</m> and <m>t_2</m> is given by the change in velocity divided by the change in time:
+              <me>
+                a_{\text{avg}} = \frac{v(t_2) - v(t_1)}{t_2 - t_1} = \frac{\Delta v}{\Delta t}
+              </me>
+            </p>
+          </statement>
+        </definition>
+
+        <remark>
+          <p>
+            Let's look at the units again.
+            If velocity is measured in meters per second (m/s), and we divide that by time in seconds (s), we get meters per second per second.
+            We usually write this as <quantity><unit base="meter" /><per base="second" /><per base="second" /></quantity>, or more commonly as <quantity><unit base="meter" /><per base="second" exp="2" /></quantity>.
+            It sounds weird, but it just means "how many meters per second of speed you are gaining every single second." There are units that are far more cursed, by the way.
+            Just ask a chemist.
+          </p>
+        </remark>
+
+        <p>
+          Just like with velocity, knowing the average acceleration over a ten-second panic attack isn't always enough.
+          We want to know exactly how hard the minivan is accelerating at the exact moment Dave's foot hits the floorboard.
+          We need the <term>instantaneous acceleration</term>.
+        </p>
+
+        <definition xml:id="def-instantaneous-acceleration-1d">
+          <statement>
+            <p>
+              The instantaneous acceleration <m>a(t)</m> of an object moving in one dimension at time <m>t</m> is given by the limit of the average acceleration as the time interval approaches zero:
+              <me>
+                a(t) = \lim_{\Delta t \to 0} \frac{v(t + \Delta t) - v(t)}{\Delta t} = \dv{v}{t}
+              </me>.
+            </p>
+          </statement>
+        </definition>
+
+        <p>
+          But wait, there's more! Since velocity itself is the derivative of position (<m>v = \dv{x}{t}</m>), acceleration is the derivative of the derivative of position.
+          We call this the second derivative, and we write it like this:
+          <me>
+            a(t) = \dv[2]{x}{t} = \ddot{x}(t)
+          </me>
+        </p>
+
+        <p>
+          Newton's dot notation is actually quite popular for second derivatives in mechanics, so get used to seeing those two little dots over the <m>x</m>.
+        </p>
+
+        <p>
+          Dave is now speeding at thirty meters per second.
+          Suddenly, a family of raccoons walks into the road.
+          While he is a terrible gateway driver, he loves animals, so he slams on the brakes to avoid hitting them.
+          The van lurches again, and everyone in the van feels like they are being thrown forward.
+        </p>
+
+        <p>
+          While in everyday language we might say that the van is "decelerating," in physics, we just say that the acceleration is negative.
+        </p>
+      </subsection>
+
+
+      <subsection xml:id="subsec-constant-acceleration">
+        <title>Constant Acceleration</title>
+
+        <p>
+          Let's assess the situation.
+          The minivan is moving at <m>v_0 = 30 \text{ m/s}</m> (that's the initial velocity).
+          A family of raccoons is crossing the road exactly 50 meters ahead of them.
+          Dave has slammed on the brakes, causing the minivan to accelerate in the opposite direction of its motion.
+        </p>
+
+        <p>
+          Physics isn't just about describing what is happening right now.
+          We want to predict the future, preferably with an accuracy exceeding that of a fortune teller.
+          We need to know: will the minivan stop before it hits the raccoons?
+        </p>
+
+        <p>
+          To solve this, we are going to make a classic physicist assumption.
+          We are going to assume that the minivan's acceleration is <term>constant</term>.
+          In reality, a car's braking acceleration changes depending on tire temperature, the road surface, and how hard Dave is mashing his foot into the floor mat.
+          But assuming a constant, average acceleration makes the calculus incredibly clean, and it usually gets us close enough to the right answer.
+          Let's assume the brakes provide a constant acceleration of <quantity><mag>-10</mag><unit base="meter" /><per base="second" exp="2" /></quantity>.
+        </p>
+
+        <p>
+          Since <m>a</m> is just a constant number now, we can pull it out of our integrals.
+          This allows us to derive a set of four magical formulas that govern all motion with constant acceleration.
+          We call them the Kinematic Equations, or SUVAT equations, or the Big Four, or the Holy Grail of Kinematics, or whatever you want to call them.
+        </p>
+
+        <theorem xml:id="thm-suvat">
+          <title>Kinematic Equations for Constant Acceleration in One Dimension</title>
+
+          <statement>
+            <p>
+              For an object moving in one dimension with constant acceleration <m>a</m>, initial velocity <m>v_0</m>, and initial position <m>x_0</m>, the following equations hold:
+              <md>
+                <mrow>v \amp = v_0 + at</mrow>
+                <mrow>\Delta x \amp = v_0 t + \frac{1}{2} at^2</mrow>
+                <mrow>v^2 \amp = v_0^2 + 2a\Delta x</mrow>
+                <mrow>\Delta x \amp = \frac{v + v_0}{2} t</mrow>
+              </md>
+            </p>
+          </statement>
+
+
+          <proof>
+            <p>
+              The first equation can be derived by integrating the acceleration:
+              <me>
+                v(t) = v_0 + \int_0^t a \, \dd{t'} = v_0 + at
+              </me>.
+              The second equation can be derived by integrating the velocity:
+              <me>
+                x(t) = x_0 + \int_0^t v(t') \, \dd{t'} = x_0 + \int_0^t (v_0 + at') \, \dd{t'} = x_0 + v_0 t + \frac{1}{2} at^2
+              </me>.
+              The third equation can be derived by eliminating time from the first two equations.
+              From the first equation, we have <m>t = \frac{v - v_0}{a}</m>.
+              Substituting this into the second equation gives us
+              <me>
+                \Delta x = v_0 \qty( \frac{v - v_0}{a} ) + \frac{1}{2} a \qty( \frac{v - v_0}{a} )^2
+              </me>.
+              Simplifying this expression yields the third equation:
+              <me>
+                v^2 = v_0^2 + 2a\Delta x
+              </me>.
+              The fourth equation can be derived by eliminating acceleration from the first two equations.
+              From the first equation, we have <m>a = \frac{v - v_0}{t}</m>.
+              Substituting this into the second equation gives us
+              <me>
+                \Delta x = v_0 t + \frac{1}{2} \qty( \frac{v - v_0}{t} ) t^2
+              </me>.
+              Simplifying this expression yields the fourth equation:
+              <me>
+                \Delta x = \frac{v + v_0}{2} t
+              </me>.
+            </p>
+          </proof>
+        </theorem>
+
+        <p>
+          We finally have the tools to predict the future.
+          Let's use Equation 3, because we know Dave's initial velocity (<m>v_0 = 30 \text{ m/s}</m>), we know his final velocity needs to be zero to avoid a tragedy (<m>v = 0</m>), and we assumed his braking acceleration is <m>a = -10 \text{ m/s}^2</m>.
+          We want to find the stopping distance, <m>\Delta x</m>.
+          Just doing some algebra, we obtain
+          <md>
+            <mrow>v^2 \amp = v_0^2 + 2a\Delta x</mrow>
+            <mrow>\implies 2a\Delta x \amp = v^2 - v_0^2</mrow>
+            <mrow>\implies \Delta x \amp = \frac{v^2 - v_0^2}{2a}</mrow>
+            <mrow>\amp = \frac{(0 \text{ m/s})^2 - (30 \text{ m/s})^2}{2 \cdot (-10 \text{ m/s}^2)}</mrow>
+            <mrow>\amp = 45 \text{ m}</mrow>
+          </md>
+        </p>
+
+        <p>
+          The raccoons are 50 meters away.
+          The minivan screeches to a halt exactly 5 meters in front of them.
+          The 500 kg bronze statue of Richard Feynman shifts heavily in the back but stays put.
+          Dave lets out a breath he didn't know he was holding.
+        </p>
+
+        <p>
+          Physics saves the day.
+          But they are still on campus, and the security guards have definitely heard the screeching tires.
+          You hear the sound of things being thrown.
+          You look back, and you see the security guards chasing after the van, throwing lemons at it.
+        </p>
+      </subsection>
+    </section>

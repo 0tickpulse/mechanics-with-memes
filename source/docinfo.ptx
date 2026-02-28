@@ -16,7 +16,7 @@
   <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
   <!-- <document-id>unique-book-id</document-id> -->
 
-  <!-- <math-package latex-name="physics" mathjax-name="physics" /> -->
+  <math-package latex-name="physics" mathjax-name="physics" />
   <math-package latex-name="amsmath" mathjax-name="ams" />
   <math-package latex-name="amssymb" mathjax-name="ams" />
   <!-- <math-package latex-name="siunitx" mathjax-name="siunitx" /> -->

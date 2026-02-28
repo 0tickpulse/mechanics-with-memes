@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-motion-in-two-dimensions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Motion in Two Dimensions</title>
+
+  <introduction>
+    <p>
+      Dave's quick thinking (and our convenient constant acceleration assumption) saved the raccoons.
+      But the screeching tires echoed across the quad, and now, flashing yellow lights appear in the rearview mirror.
+      It is the Campus Security Night Patrol, riding in a heavily modified, gas-powered golf cart.
+    </p>
+
+    <p>
+      Dave floors it again, keeping the minivan moving strictly in one dimension down the perfectly straight, infinitely long campus perimeter road.
+      But the security guards are not playing by 1D rules.
+      The guard in the passenger seat of the golf cart reaches into a crate of stolen dining hall fruit, winds up, and hurls a lemon at the minivan.
+    </p>
+
+    <p>
+      We have officially entered two dimensions.
+      <em>Domain expansion.</em> To figure out if Dave's minivan is about to get juiced, we need to understand projectile motion.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-the-vector">
+    <title>Introducing the Vector</title>
+
+    <p>
+      Up until now, our velocity has just been a number with a plus or minus sign, because Dave could only go forward or backward.
+      But the guard didn't throw the lemon straight forward or straight up.
+      He threw it at an angle.
+    </p>
+
+    <p>
+      Our coordinate system is two-dimensional.
+      This means that there are two directions that we can move in, and thus, we need two numbers to specify the position of an object.
+      Importantly, the horizontal motion and the vertical motion are completely independent.
+      They happen at the same time, but they do not affect one another.
+    </p>
+
+    <p>
+      This means that we can assign two separate functions to describe the horizontal and vertical motion of the lemon.
+      We can call these functions <m>x(t)</m> and <m>y(t)</m>, and they will give us the horizontal and vertical position of the lemon at any time <m>t</m>.
+      A combination of these will trace out a curve in the <m>xy</m>-plane, which is the path of the lemon.
+      The equations that trace out this curve are called the <term>parametric equations</term> of the curve.
+    </p>
+
+    <p>
+      Let's suppose we draw an arrow from the origin to the position of the lemon at any time <m>t</m>.
+      This arrow is called the <term>position vector</term> of the lemon, and it is denoted by <m>\vb{r}(t)</m>.
+      It is analogous to the position number we had in one dimension, but now its direction is important, so it is a vector <mdash/> a quantity that has both magnitude and direction (for now).
+    </p>
+
+    <p>
+      Suppose, for a moment, the lemon is in the air at some time <m>t</m>.
+      If you were able to freeze time and look at the lemon, you would be able to measure the components of the position vector, <m>x(t)</m> and <m>y(t)</m>.
+      Remember the meter sticks in the van? You could use those to measure how far the lemon is from the origin in the horizontal and vertical directions.
+      In fact, for convenience, let the meter stick in the <m>x</m> direction be a vector, say <m>\vu{x}</m>, that points in the positive <m>x</m> direction and has a length of one meter.
+      Similarly, let the meter stick in the <m>y</m> direction be a vector, say <m>\vu{y}</m>, that points in the positive <m>y</m> direction and has a length of one meter.
+      Then, we can write the position vector as a linear combination of these two unit vectors:
+      <me>
+        \vb{r}(t) = x(t)\vu{x} + y(t)\vu{y}.
+      </me>
+    </p>
+
+    <p>
+      The position vector is a very useful tool for describing motion in two dimensions, and it will be our main way of describing the motion of the lemon.
+      We can also define the velocity and acceleration vectors in a similar way, and they will also have components in the <m>x</m> and <m>y</m> directions.
+    </p>
+
+    <definition xml:id="def-instantaneous-velocity">
+      <title>Instantaneous Velocity</title>
+
+      <statement>
+        <p>
+          The <term>instantaneous velocity</term> of an object at a given time is the limit of the average velocity as the time interval approaches zero:
+          <me>
+            \vb{v}(t) = \lim_{\Delta t \to 0} \frac{\vb{r}(t + \Delta t) - \vb{r}(t)}{\Delta t} = \dv{\vb{r}}{t} = \dot{\vb{r}}(t)
+          </me>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-acceleration">
+      <title>Instantaneous Acceleration</title>
+
+      <statement>
+        <p>
+          The <term>instantaneous acceleration</term> of an object at a given time is the limit of the average acceleration as the time interval approaches zero:
+          <me>
+            \vb{a}(t) = \lim_{\Delta t \to 0} \frac{\vb{v}(t + \Delta t) - \vb{v}(t)}{\Delta t} = \dv{\vb{v}}{t} = \ddot{\vb{r}}(t)
+          </me>.
+        </p>
+      </statement>
+    </definition>
+  </subsection>
+</section>

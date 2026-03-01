@@ -4,6 +4,8 @@
 <title>Additional Problems</title>
 
 <exercisegroup>
+<title>The USB throw</title>
+
 <introduction>
   <p>
     It is 11:58 PM, and your group project is due at midnight.
@@ -66,14 +68,13 @@
 <exercise>
   <statement>
     <p>
-      Show that there are actually two angles that will allow you to hit the target.
+      Under what conditions on <m>v_0</m>, <m>d</m>, and <m>h</m> will there be a solution for <m>\theta</m> such that the flash drive goes through the window?
     </p>
   </statement>
 
   <hint>
     <p>
-      As long as the discriminant of the quadratic function is positive, there will be two real solutions for <m>\tan\theta</m>.
-      Therefore, just show that the discriminant is positive.
+      The discriminant of a quadratic equation must be non-negative for there to be a real solution.
     </p>
   </hint>
 
@@ -86,10 +87,61 @@
         <mrow>\implies 0 \amp = -\frac{gd^2}{2v_0^2}\tan^2\theta + d\tan\theta - \qty(h + \frac{gd^2}{2v_0^2})</mrow>
       </md>.
       The discriminant of <m>a\tan^2\theta + b\tan\theta + c</m> is <m>\Delta = b^2 - 4ac</m>, so in our case, the discriminant is
-      <md>
-        <mrow>\Delta = d^2 - 4\qty(-\frac{gd^2}{2v_0^2})\qty(-h - \frac{gd^2}{2v_0^2})</mrow>
-      </md>
+      <me>
+        \Delta = d^2 - 4\qty(-\frac{gd^2}{2v_0^2})\qty(-h - \frac{gd^2}{2v_0^2})
+      </me>.
+      Therefore, there will be a solution for <m>\theta</m> if and only if
+      <me>
+        d^2 - 4\qty(-\frac{gd^2}{2v_0^2})\qty(-h - \frac{gd^2}{2v_0^2}) \geq 0
+      </me>.
+      Most likely, there will be two solutions for <m>\theta</m>.
+      If this seems confusing, graph <m>y(d)</m> for the two solutions (given some specific values of <m>v_0</m>, <m>d</m>, and <m>h</m>) to see how the two parabolas both pass through the point <m>(d, h)</m>.
     </p>
   </solution>
 </exercise>
-</exercisegroup> </exercises>
+
+<exercise>
+  <statement>
+    <p>
+      Come up with one set of parameters such that there's only one angle that reaches the window, regardless of the initial speed.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      There will be only one angle if the discriminant is zero, i.e.,
+      <me>
+        d^2 - 4\qty(-\frac{gd^2}{2v_0^2})\qty(-h - \frac{gd^2}{2v_0^2}) = 0
+      </me>.
+      If we factor out <m>d^2</m>, we get
+      <me>
+        d^2\qty[1 - 4\qty(-\frac{g}{2v_0^2})\qty(-h - \frac{gd^2}{2v_0^2})] = 0
+      </me>.
+      One obvious way to satisfy this equation is to set <m>d = 0</m>, which means the window is directly above the release point of your hand.
+      Another way to satisfy this equation is to set the expression in the brackets equal to zero, which gives us
+      <me>
+        1 - 4\qty(-\frac{g}{2v_0^2})\qty(-h - \frac{gd^2}{2v_0^2}) = 0 \implies h = \frac{v_0^2}{2g} - \frac{gd^2}{2v_0^2}
+      </me>.
+      This gives us a relationship between <m>h</m>, <m>d</m>, and <m>v_0</m> such that there will be only one angle that reaches the window.
+    </p>
+  </solution>
+</exercise>
+</exercisegroup>
+
+<exercisegroup>
+
+  <introduction>
+    <p>
+      
+    </p>
+  </introduction>
+
+  <exercise>
+    <statement>
+      <p>
+
+      </p>
+    </statement>
+  </exercise>
+
+</exercisegroup>
+</exercises>

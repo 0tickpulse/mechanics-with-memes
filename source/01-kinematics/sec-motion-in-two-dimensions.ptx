@@ -65,19 +65,32 @@
     </p>
 
     <p>
-      When we visualize the position vector, we can draw a curve in the <m>xy</m>-plane that traces out the path of the lemon. Note that this is <alert>NOT</alert> the same as the <m>xt</m>-graph that we used in one dimension, although both graphs seem to be two-dimensional. On the <m>xt</m>-graph, the horizontal axis is time, and the vertical axis is position. This means that as we move to the right, we are moving forward in time. On the <m>xy</m>-graph, the horizontal axis is the horizontal position, and the vertical axis is the vertical position. This means that as we move to the right, we are moving to the right in <em>space</em>, not forward in time.
+      When we visualize the position vector, we can draw a curve in the <m>xy</m>-plane that traces out the path of the lemon.
+      Note that this is <alert>NOT</alert> the same as the <m>xt</m>-graph that we used in one dimension, although both graphs seem to be two-dimensional.
+      On the <m>xt</m>-graph, the horizontal axis is time, and the vertical axis is position.
+      This means that as we move to the right, we are moving forward in time.
+      On the <m>xy</m>-graph, the horizontal axis is the horizontal position, and the vertical axis is the vertical position.
+      This means that as we move to the right, we are moving to the right in <em>space</em>, not forward in time.
     </p>
 
     <p>
-      Indeed, on the <m>xy</m>-graph, the curve is a physical thing that exists in space. Time is not explicitly represented on the graph, but it is implicitly represented by the fact that as time passes, the position vector traces out the curve. In other words, you would have to magically play a video of the lemon's motion in order to see the motion of the lemon on the <m>xy</m>-graph. On the <m>xt</m>-graph, no such magic is needed. The motion of the lemon is directly represented on the graph, and you can see how the position changes as time passes just by looking at the graph.
+      Indeed, on the <m>xy</m>-graph, the curve is a physical thing that exists in space.
+      Time is not explicitly represented on the graph, but it is implicitly represented by the fact that as time passes, the position vector traces out the curve.
+      In other words, you would have to magically play a video of the lemon's motion in order to see the motion of the lemon on the <m>xy</m>-graph.
+      Or you can drop points on the curve at regular time intervals to see how the position changes as time passes.
+      If the points are more dense in some region of the curve, that means the lemon is moving slower in that region, and vice versa.
+      On the <m>xt</m>-graph, no such magic is needed.
+      The motion of the lemon is directly represented on the graph, and you can see how the position changes as time passes just by looking at the graph.
     </p>
 
     <p>
-      If we have a position vector, there must be a velocity vector and an acceleration vector. How do we differentiate a vector-valued function? Since the horizontal and vertical motions are independent, we can just differentiate the components separately:
+      If we have a position vector, there must be a velocity vector and an acceleration vector.
+      How do we differentiate a vector-valued function? Since the horizontal and vertical motions are independent, we can just differentiate the components separately:
       <me>
         \dv{\vb{r}}{t} = \dv{x}{t}\vu{x} + \dv{y}{t}\vu{y} = v_x(t)\vu{x} + v_y(t)\vu{y} = \vb{v}(t),
       </me>
-      where <m>v_x(t)</m> and <m>v_y(t)</m> are the horizontal and vertical components of the velocity. We can now define the instantaneous velocity and acceleration of the lemon.
+      where <m>v_x(t)</m> and <m>v_y(t)</m> are the horizontal and vertical components of the velocity.
+      We can now define the instantaneous velocity and acceleration of the lemon.
     </p>
 
     <definition xml:id="def-instantaneous-velocity">
@@ -107,10 +120,96 @@
     </definition>
 
     <p>
-      It may prove insightful to consider how we visualize these derivatives. For a scalar function, the derivative at a point is the slope of the tangent line to the curve at that point. We can't use the same idea for a vector-valued function. On one hand, we can still decompose the position vector into its components <mdash /> which are scalar functions of time <mdash /> and take the derivative of each component separately. Then, each component of the velocity vector is the slope of the tangent line to the corresponding component of the position vector.
+      It may prove insightful to consider how we visualize these derivatives.
+      For a scalar function, the derivative at a point is the slope of the tangent line to the curve at that point.
+      We can't use the same idea for a vector-valued function.
+      On one hand, we can still decompose the position vector into its components <mdash /> which are scalar functions of time <mdash /> and take the derivative of each component separately.
+      Then, each component of the velocity vector is the slope of the tangent line to the corresponding component of the position vector.
     </p>
+
     <p>
-      On the other hand, if we trace out the curve of the position vector in the <m>xy</m>-plane, we can draw a tangent line to the curve at any point. Now, our velocity, which is a vector, is tangent to the curve at that point. Its magnitude corresponds to how fast we are moving along the curve.
+      On the other hand, if we trace out the curve of the position vector in the <m>xy</m>-plane, we can draw a tangent line to the curve at any point.
+      Now, our velocity, which is a vector, is tangent to the curve at that point.
+      Its magnitude corresponds to how fast we are moving along the curve.
     </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-projectile-motion">
+    <title>Projectile Motion</title>
+
+    <p>
+      Let's return to the problem at hand: the lemon being thrown at the minivan.
+      We want to know if the lemon will hit the minivan, which is moving along the horizontal axis.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Suppose the lemon is thrown from the origin at time <m>t = 0</m> with an initial speed of <m>v_0</m> at an angle of <m>\theta</m> above the horizontal.
+          What are the components of the initial velocity vector, <m>v_x(0)</m> and <m>v_y(0)</m>?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The components are
+          <md>
+            <mrow>v_x(0) \amp = v_0\cos\theta</mrow>
+            <mrow>v_y(0) \amp = v_0\sin\theta</mrow>
+          </md>.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      Now that we have the initial velocity, we also need to know the acceleration of the lemon in order to determine its trajectory.
+      The only force acting on the lemon is gravity, which acts downward with a magnitude of <m>g</m>.
+      This means that the acceleration of the lemon is
+      <me>
+        \vb{a}(t) = 0\vu{x} - g\vu{y}
+      </me>.
+      Its components are thus
+      <md>
+        <mrow>a_x(t) \amp = 0</mrow>
+        <mrow>a_y(t) \amp = -g</mrow>
+      </md>.
+    </p>
+
+    <p>
+      We can now use the initial velocity and the acceleration to find the velocity and position of the lemon at any time <m>t</m>.
+      Since the horizontal and vertical motions are independent, we can treat them separately, the same way we did in one dimension.
+      The horizontal motion is simple: since there is no acceleration, the horizontal velocity is constant (so the same as the initial horizontal velocity),
+      <me>
+        v_x(t) = v_0\cos\theta,
+      </me>
+      and the horizontal position is
+      <me>
+        x(t) = v_0\cos(\theta) t.
+      </me>
+    </p>
+
+    <p>
+      The vertical motion is also simple, we just use <xref ref="thm-suvat"/> with the appropriate initial conditions:
+      <md>
+        <mrow>v_y(t) \amp = v_0\sin\theta - gt</mrow>
+        <mrow>y(t) \amp = v_0\sin(\theta) t - \frac{1}{2}gt^2</mrow>
+      </md>.
+    </p>
+
+    <p>
+      In vector form, the trajectory of the lemon is given by
+      <me>
+        \vb{r}(t) = v_0\cos(\theta) t \vu{x} + \qty(v_0\sin(\theta) t - \frac{1}{2}gt^2) \vu{y}.
+      </me>
+    </p>
+
+    <p>
+      This equation describes the parabolic trajectory of most projectiles near the surface of the Earth, as long as we can ignore air resistance and other forces.
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-will-the-lemon-hit">
+    <title>Will the Lemon Hit?</title>
+
   </subsection>
 </section>

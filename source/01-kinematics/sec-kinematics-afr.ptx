@@ -5,14 +5,45 @@
 
   <introduction>
     <p>
-        Every chapter in this book has an applications and further reading section.
-        Indeed, it turns out that kinematics isn't just used to throw lemons at minivans and flash drives at dorm windows.
-        This section is meant to be a collection of interesting applications of the material covered in the chapter, as well as some further reading for those who want to learn more about the topics covered in the chapter.
+      Every chapter in this book has an applications and further reading section.
+      Indeed, it turns out that kinematics isn't just used to throw lemons at minivans and flash drives at dorm windows.
+      This section is meant to be a collection of interesting applications of the material covered in the chapter, as well as some further reading for those who want to learn more about the topics covered in the chapter.
     </p>
   </introduction>
 
+
   <subsection xml:id="subsec-">
     <title></title>
-    
+
+  </subsection>
+
+
+  <subsection xml:id="subsec-kinematics-further-reading">
+    <title>Further Reading</title>
+
+    <subsubsection xml:id="subsubsec-kinematics-afr-calculus">
+      <title>Calculus</title>
+
+      <p>
+        As you may have noticed, we have been using calculus throughout this chapter.
+        It is very important to have a good understanding of calculus from the very beginning.
+      </p>
+
+      <p>
+        I would begin with Grant Sanderson's <url href="https://www.youtube.com/@3blue1brown">3Blue1Brown</url> YouTube channel, specifically his <url href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Essence of Calculus</url> series, for a gentle and visual introduction to calculus.
+        Then, I would recommend reading through the first few chapters of a standard calculus textbook, such as Stewart's <em>Calculus: Early Transcendentals</em>.
+      </p>
+    </subsubsection>
+
+    <subsubsection xml:id="subsubsec-kinematics-afr-vectors">
+      <title>Vectors</title>
+
+      <p>
+        We have been using vectors throughout this chapter, but we haven't really defined what they are or how to work with them.
+        Just like calculus, start with Grant Sanderson's <url href="https://www.youtube.com/@3blue1brown">3Blue1Brown</url> YouTube channel, specifically his <url href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</url> series, for a visual introduction to vectors and linear algebra.
+        Then, I would recommend reading through the first few chapters of a standard linear algebra textbook, such as Strang's <em>Introduction to Linear Algebra</em>.
+      </p>
+
+    </subsubsection>
   </subsection>
 </section>

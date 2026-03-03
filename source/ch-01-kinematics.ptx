@@ -5,7 +5,11 @@
 
   <introduction>
     <p>
-      If we want to study physics, we wish to know why things move the way they do. But to do that, we need to first understand the mathematical description of how things move. Kinematics refers to this exact description. Some people say that kinematics is a branch of mathematics, and some suggest the contrary. I don't really care, and you really shouldn't either.
+      If we want to study physics, we wish to know why things move the way they do. But to do that, we need to first understand the mathematical description of how things move. Kinematics refers to this exact description. Some people say that kinematics is a branch of mathematics, and some suggest the contrary. If you enjoy participating in this debate, you are a boring person.
+    </p>
+
+    <p>
+      In this chapter, we will be developing the mathematical description of motion in one, two, and three dimensions. We will be using vectors to describe motion in multiple dimensions, and we will be using calculus to describe how motion changes over time. I will hold your hand through some of the mathematical details. (Of course this is not in a literal sense. I don't think you would want me to actually hold your hand.) However, many of the mathematical details will be left as exercises or further reading, so that you can practice doing the math yourself.
     </p>
   </introduction>
 

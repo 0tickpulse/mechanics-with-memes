@@ -3,7 +3,40 @@
 <exercises xml:id="sec-kinematics-problems" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Additional Problems</title>
 
-<exercisegroup>
+<exercise>
+  <statement>
+    <p>
+      Prove <xref ref="thm-derivatives-of-polar-vectors"/>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Switch back to Cartesian coordinates and use the product rule of differentiation.
+      Then, switch back to polar coordinates and use the definitions of the unit vectors in terms of Cartesian coordinates.
+    </p>
+  </hint>
+
+  <solution>
+    <p>
+      <md>
+        <mrow>\dv{t} \vu{r} \amp = \dv{t} (\cos\theta \vu{x} + \sin\theta \vu{y})</mrow>
+        <mrow>\amp = -\sin\theta \dv{\theta}{t} \vu{x} + \cos\theta \dv{\theta}{t} \vu{y}</mrow>
+        <mrow>\amp = \dv{\theta}{t} (-\sin\theta \vu{x} + \cos\theta \vu{y})</mrow>
+        <mrow>\amp = \dv{\theta}{t} \vu{\theta}</mrow>
+      </md>,
+      and similarly,
+      <md>
+        <mrow>\dv{t} \vu{\theta} \amp = \dv{t} (-\sin\theta \vu{x} + \cos\theta \vu{y})</mrow>
+        <mrow>\amp = -\cos\theta \dv{\theta}{t} \vu{x} - \sin\theta \dv{\theta}{t} \vu{y}</mrow>
+        <mrow>\amp = -\dv{\theta}{t} (\cos\theta \vu{x} + \sin\theta \vu{y})</mrow>
+        <mrow>\amp = -\dv{\theta}{t} \vu{r}</mrow>
+      </md>.
+    </p>
+  </solution>
+</exercise>
+
+<exercisegroup xml:id="ex-the-usb-throw">
 <title>The USB throw</title>
 
 <introduction>
@@ -94,7 +127,11 @@
       <me>
         d^2 - 4\qty(-\frac{gd^2}{2v_0^2})\qty(-h - \frac{gd^2}{2v_0^2}) \geq 0
       </me>.
-      Most likely, there will be two solutions for <m>\theta</m>.
+      Rearranging this inequality gives us
+      <me>
+        v_0^4 - 2ghv_0^2 - g^2d^2 \geq 0
+      </me>.
+      Most likely, this will not be zero, meaning there will be two distinct solutions for <m>\theta</m>.
       If this seems confusing, graph <m>y(d)</m> for the two solutions (given some specific values of <m>v_0</m>, <m>d</m>, and <m>h</m>) to see how the two parabolas both pass through the point <m>(d, h)</m>.
     </p>
   </solution>
@@ -106,6 +143,7 @@
       Come up with one set of parameters such that there's only one angle that reaches the window, regardless of the initial speed.
     </p>
   </statement>
+
   <solution>
     <p>
       There will be only one angle if the discriminant is zero, i.e.,
@@ -127,21 +165,35 @@
 </exercise>
 </exercisegroup>
 
-<exercisegroup>
-
-  <introduction>
+<exercise>
+  <statement>
     <p>
-      
+      A string quartet is rehearsing in a practice room on campus.
+      The violist, as always, forgot their rosin, so they decide to borrow some from the violinist.
+      Assuming the violinist throws the rosin with an initial speed of <m>v_0</m> at an angle of <m>\theta</m>, what's the ideal angle <m>\theta</m> that maximizes the horizontal distance traveled by the rosin?
     </p>
-  </introduction>
+  </statement>
 
-  <exercise>
-    <statement>
-      <p>
+  <hint>
+    <p>
+      You may need to use the double angle formula for sine <m>\sin 2\theta = 2\sin\theta \cos\theta</m>.
+    </p>
+  </hint>
 
-      </p>
-    </statement>
-  </exercise>
-
-</exercisegroup>
+  <solution>
+    <p>
+      We need to find the horizontal distance traveled by the rosin.
+      When it arrives, the height is zero, so we can set
+      <me>
+        0 = -\frac{1}{2}gt^2 + v_y(0) t = -\frac{1}{2}gt^2 + v_0\sin\theta t
+      </me>.
+      This gives us two solutions for <m>t</m>: <m>t = 0</m> (when the rosin is released) and <m>t = \frac{2v_0\sin\theta}{g}</m> (when the rosin lands).
+      Plugging the latter solution into the equation for horizontal position gives us
+      <me>
+        x = v_x(0) t = v_0\cos\theta \cdot \frac{2v_0\sin\theta}{g} = \frac{v_0^2}{g} \cdot 2\sin\theta \cos\theta = \frac{v_0^2}{g} \sin 2\theta
+      </me>.
+      The maximum value of <m>\sin 2\theta</m> is 1, which occurs when <m>2\theta = 90^\circ</m>, so the ideal angle to throw the rosin is <m>\theta = 45^\circ</m>.
+    </p>
+  </solution>
+</exercise>
 </exercises>

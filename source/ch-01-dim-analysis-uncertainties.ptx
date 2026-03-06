@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-01-dim-analysis-uncertainties" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Dimensional Analysis and Uncertainties</title>
+
+  <introduction>
+    <p>
+      Before we can start discussing the interesting stuff, we need to understand how we think about quantities and measurements. This chapter is meant to be a brief introduction to dimensional analysis and uncertainties, which are two important tools that every scientist should be familiar with.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="./01-dim-analysis-uncertainties/sec-units-of-measurement.ptx" />
+</chapter>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-01-kinematics" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="ch-02-kinematics" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Motion and Kinematics</title>
 
   <introduction>
@@ -14,9 +14,10 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="./01-kinematics/sec-motion-in-one-dimension.ptx" />
-  <xi:include href="./01-kinematics/sec-motion-in-two-dimensions.ptx" />
+  <xi:include href="./02-kinematics/sec-motion-in-one-dimension.ptx" />
+  <xi:include href="./02-kinematics/sec-motion-in-two-dimensions.ptx" />
 
-  <xi:include href="./01-kinematics/sec-kinematics-problems.ptx" />
-  <xi:include href="./01-kinematics/sec-kinematics-afr.ptx" />
+  <xi:include href="./02-kinematics/sec-kinematics-summary.ptx" />
+  <xi:include href="./02-kinematics/sec-kinematics-problems.ptx" />
+  <xi:include href="./02-kinematics/sec-kinematics-afr.ptx" />
 </chapter>

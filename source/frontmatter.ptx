@@ -5,27 +5,27 @@
 
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
   <bibinfo>
-  
+
     <author>
-      <personname>You</personname>
-      <department>Your department</department>
-      <institution>Your institution</institution>
+      <personname>Entong Hou</personname>
+      <!-- <department>Your department</department>
+      <institution>Your institution</institution> -->
     </author>
     <date>
       <today />
     </date>
 
-    <website>
+    <!-- <website>
       <url href="https://pretextbook.org">My Website</url>
-    </website>
+    </website> -->
 
     <copyright>
-      <year>2020<ndash />2024</year>
-      <holder>You</holder>
+      <year>2026</year>
+      <holder>Entong Hou</holder>
       <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
       </shortlicense>
     </copyright>
-  
+
   </bibinfo>
 
   <titlepage>
@@ -35,5 +35,22 @@
   <colophon xml:id="front-colophon">
     <colophon-items/>
   </colophon>
+
+  <preface>
+    <p>
+      This book introduces the fundamental ideas of physics, with an emphasis on Newtonian mechanics, through a satirical storyline.
+      In this storyline, a group of freshmen at a university decide to steal back their beloved mascot, a 500 kg bronze statue of Richard Feynman, from the clutches of their wealthy, obnoxious rival university.
+      It is meant to be a fun and engaging introduction to physics for those who are new to the subject, as well as a refresher for those who have some background in physics but want to learn more about the subject in a more lighthearted way.
+    </p>
+    <p>
+      The book begins with an introduction to measurements. This section outlines how we make measurements, how we think about the uncertainties in those measurements, and how we can use those measurements to understand the world around us. With these tools in hand, we can then start to understand the motion of objects, which is the subject of the next few chapters. We will be using the measurements we made in the first chapter to understand the motion of a van, which is a key part of our storyline.
+    </p>
+    <p>
+      The next few chapters will be focused on basic concepts regarding forces and energy. We cover the standard materials, such as Newton's laws, work and energy, and momentum, but we also cover some more advanced topics, such as non-inertial reference frames, when appropriate. We will be using the concepts we learn in these chapters to understand how to plan and execute a heist.
+    </p>
+    <p>
+      This book will not cover the Lagrangian formulation, Hamiltonian formulation, or field theory. Regrettably, while these theories represent some of the most beautiful culminations of human thought, they are too advanced for the intended audience of this book.
+    </p>
+  </preface>
 </frontmatter>
 

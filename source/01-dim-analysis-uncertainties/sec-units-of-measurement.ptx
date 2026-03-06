@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-units-of-measurement" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Units of Measurement</title>
+
+  <introduction>
+    <p>
+      Welcome to the first section of the first chapter! In this section, we will discuss the units of measurement, which are the standard ways of expressing the dimensions of quantities.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-the-seven-quantities">
+    <title>The Seven Quantities</title>
+
+    <p>
+      In science, quantities are the things we measure and use to describe the world around us.
+      Every quantity contains a <term>dimension</term>, which is a fundamental property of the quantity that tells us what kind of thing it is.
+      When we measure the quantity, we get a number, called the <term>magnitude</term>, and a unit, which is a standard way of expressing the dimension.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Two college students are comparing their heights.
+          One student is 1.8 meters tall, and the other student is 6 feet tall.
+          What are the dimensions, magnitudes, and units of these measurements? Who is taller?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The dimension of both measurements is length.
+          The magnitude of the first measurement is 1.8, and the unit is meters.
+          The magnitude of the second measurement is 6, and the unit is feet.
+        </p>
+
+        <p>
+          To compare the two measurements, we need to convert them to the same unit.
+          We can use the conversion factor
+          <me>
+            1 \, \text{foot} = 0.3048 \, \text{meters}
+          </me>
+          to convert the second measurement to meters:
+          <me>
+            6 \, \text{feet} = 6 \times 0.3048 \, \text{meters} = 1.8288 \, \text{meters}
+          </me>
+          Therefore, the second student is taller, since 1.8288 meters is greater than 1.8 meters.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      The most common system of dimensions and units is the International System of Units, abbreviated SI for the French <foreign>Système international d'unités</foreign>.
+      It has a rich history, and it is the most widely used system of units in the world.
+      The SI system is based on seven fundamental quantities, stated in the following table.
+    </p>
+
+    <table>
+      <title>International System of Units</title>
+
+      <tabular>
+        <row header="yes">
+          <cell>Dimension</cell>
+          <cell>Base SI Unit</cell>
+        </row>
+
+        <row>
+          <cell>Length</cell>
+          <cell>meter (m)</cell>
+        </row>
+
+        <row>
+          <cell>Mass</cell>
+          <cell>kilogram (kg)</cell>
+        </row>
+
+        <row>
+          <cell>Time</cell>
+          <cell>second (s)</cell>
+        </row>
+
+        <row>
+          <cell>Electric current</cell>
+          <cell>ampere (A)</cell>
+        </row>
+
+        <row>
+          <cell>Temperature</cell>
+          <cell>kelvin (K)</cell>
+        </row>
+
+        <row>
+          <cell>Amount of substance</cell>
+          <cell>mole (mol)</cell>
+        </row>
+
+        <row>
+          <cell>Luminous intensity</cell>
+          <cell>candela (cd)</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      These are known as the <term>base units</term> because they define the dimensions of all other quantities.
+      To measure the velocity of the van, we need to measure the length it travels and the time it takes to travel that length.
+      The dimension of velocity is length divided by time, and the unit of velocity is meters per second, <quantity><unit base="meter" /><unit base="second" exp="-1" /></quantity>.
+      The acceleration of the van has the dimension of velocity divided by time, which is length divided by time squared, and the unit of acceleration is meters per second squared, <quantity><unit base="meter" /><unit base="second" exp="-2" /></quantity>.
+      If we apply a force to the van, the dimension of the force is mass times acceleration, which is mass times length divided by time squared, and the unit of force is kilogram meter per second squared, <quantity><unit prefix="kilo" base="gram" /><unit base="meter" /><unit base="second" exp="-2" /></quantity>, which is also known as a newton (N).
+    </p>
+
+    <p>
+      If we were to measure the energy of the van, we would find that it has the units of <quantity><unit prefix="kilo" base="gram" /><unit base="meter" exp="2" /><unit base="second" exp="-2" /></quantity>, which is also known as a joule (J).
+      Units like the newton and the joule are called <term>derived units</term> because they are derived from the base units.
+    </p>
+
+    <p>
+      Now there's a big problem: how do I know that my 1 second is the same as your 1 second? How do I know that my 1 meter is the same as your 1 meter? It would appear that we need some kind of standard to define our units.
+      The SI system incorporates a set of <term>defining constants</term>, which are fundamental physical constants that are used to define the base units.
+      We shall now go on a tour of each of the seven base units and their defining constants.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-si-def-second">
+    <title>How Do We Define the Second?</title>
+
+    <p>
+      The first unit we will discuss is the second, which is the SI base unit of time.
+      Historically, many of these units were defined in terms of physical objects or phenomena, such as the length of a particular metal bar for the meter, or the mass of a particular lump of platinum for the kilogram.
+    </p>
+
+    <p>
+      Prior to 1960, one second was defined as 1/86,400 of a mean solar day, which is the average time it takes for the Earth to complete one rotation on its axis.
+      This was sufficient for most purposes <mdash /> measuring the time it takes for a van to travel a certain distance, for example.
+      With the advent of atomic clocks, we were able to measure time with a precision of one in <m>10^{14}</m> seconds.
+      This led to a need to redefine the second in terms of a more stable and reproducible standard.
+    </p>
+
+    <p>
+      In 1960, the second was redefined by Resolution 9 of the 11th General Conference on Weights and Measures, abbreviated CGPM for the French <foreign>Conférence générale des poids et mesures</foreign>, as one in 31,556,925.9747 of the tropical year for 1900 January 0 at 12 hours ephemeris time.
+      You can read every resolution in the appendix of <xref ref="ref-si-brochure"/>.
+    </p>
+
+    <p>
+      The modern definition, as adopted in 1967 by Resolution 1 of the 13th CGPM, is based on the properties of the caesium 133 atom.
+      Its most recent definition, as adopted in 2018 by Resolution 1 of the 26th CGPM, is as follows:
+    </p>
+
+    <blockquote>
+      <p>
+        The second, symbol s, is the SI unit of time.
+        It is defined by taking the fixed numerical value of the caesium frequency, <m>\Delta \nu_\text{Cs}</m>, the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom, to be 9,192,631,770 when expressed in the unit <quantity><unit base="hertz" /></quantity>, which is equal to <quantity><unit base="second" exp="-1" /></quantity>.
+      </p>
+    </blockquote>
+
+    <p>
+      <em>What the heck does that even mean?</em> To begin, if you have studied general chemistry before, you will know that electrons in an atom can only occupy certain energy levels, and that they can transition between these energy levels by absorbing or emitting photons of specific frequencies. In caesium 133, the ground state of the atom splits into two <term>hyperfine levels</term> due to electromagnetic interactions between the nucleus and the electrons. <m>\Delta \nu_\text{Cs}</m> is the frequency of the photon emitted when an electron in a caesium 133 atom transitions between the <m>F=3</m> and <m>F=4</m> hyperfine levels of the ground state <m>\ce{6s_{1/2}}</m> electronic state.
+    </p>
+
+    <p>
+      Therefore, we have the exact relation
+      <me>
+        \Delta \nu_\text{Cs} = 9,192,631,770 \, \text{Hz} = 9,192,631,770 \, \text{s}^{-1}
+      </me>,
+      and thus
+      <me>
+        1 \, \text{s} = \frac{9,192,631,770}{\Delta \nu_\text{Cs}}
+      </me>.
+    </p>
+
+    <p>
+      In order to realize this definition, we can use an atomic clock.
+      A <term>primary frequency standard</term> is a device that uses the defining constant to realize the unit.
+      In this case, a caesium atomic clock uses the caesium frequency to realize the second.
+      During this measurement, <term>systematic errors</term> must be carefully controlled.
+      One of the most significant sources of systematic error in an atomic clock is gravity, for instance.
+    </p>
+
+    <p>
+      In the near future, the second will likely be redefined using <term>optical frequency standards</term>, which use optical transitions in atoms or ions instead of microwave transitions.
+      These optical transitions have much higher frequencies than microwave transitions, which allows for even greater precision in timekeeping <xref ref="ref-optical-atomic-clocks"/>.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-si-def-meter">
+    <title>How Do We Define the Meter?</title>
+
+    <p>
+      The meter is the SI base unit of length.
+      In the past, the meter was defined as one ten-millionth of the distance from the equator to the North Pole along a meridian through Paris.
+      This definition was based on the idea that the Earth is a perfect sphere.
+      The Earth is, in actuality, an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator.
+    </p>
+
+    <p>
+      In 1889, the meter was redefined as the distance between two marks on a platinum-iridium bar, or the "International Prototype Meter", by the 1st CGPM.
+      It was precisely calibrated for effects such as temperature, humidity, and atmospheric pressure, and it was the standard for length measurements for over 80 years.
+      This definition was more practical, but it still had some issues, such as the fact that the bar could be damaged or lost.
+      It is quite funny, if you think about it, that people had to ship a bar of metal around the world in order to have a standard unit of length.
+    </p>
+
+    <p>
+      Later on, in 1960, the meter was redefined as 1,650,763.73 wavelengths of the orange-red emission line of the krypton 86 atom (the <m>\ce{2p_{10}} \to \ce{5s_5}</m> transition), by Resolution 6 of the 11th CGPM.
+    </p>
+
+    <p>
+      The modern definition, as adopted in 1983 by Resolution 1 of the 17th CGPM, is based on the properties of light.
+      It is as follows:
+    </p>
+
+    <blockquote>
+      <p>
+        The metre, symbol m, is the SI unit of length.
+        It is defined by taking the fixed numerical value of the speed of light in vacuum, <m>c</m>, to be 299,792,458 when expressed in the unit <quantity><unit base="meter" /> <unit base="second" exp="-1" /></quantity>, where the second is defined in terms of the caesium frequency <m>\Delta \nu_\text{Cs}</m>.
+      </p>
+    </blockquote>
+
+    <p>
+      The exact relation is
+      <me>
+        c = 299,792,458 \, \text{m/s}
+      </me>,
+      and thus
+      <md>
+        <mrow>1 \, \text{m} \amp = \qty(\frac{c}{299,792,458}) \cdot 1 \, \text{s} </mrow>
+        <mrow> \amp = \qty(\frac{c}{299,792,458}) \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}}) </mrow>
+        <mrow> \amp = 30.663319 \cdot \frac{c}{\Delta \nu_\text{Cs}} </mrow>
+      </md>.
+    </p>
+
+    <p>
+      This new, very precise definition of the meter is realized via laser interferometry, which is a technique that uses the interference of light waves to measure distances with extremely high precision.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-si-def-kilogram">
+    <title>How Do We Define the Kilogram?</title>
+
+    <p>
+      The kilogram is the SI base unit of mass.
+      It was defined as the mass of the International Prototype Kilogram, which is a platinum-iridium cylinder that was kept at the International Bureau of Weights and Measures, or BIPM for the French <foreign>Bureau international des poids et mesures</foreign>, in Sèvres, France.
+      Until recently, the kilogram was the only SI base unit that was still defined in terms of a physical object.
+    </p>
+
+    <p>
+      In the 26th CGPM in 2018, the kilogram was finally redefined without reference to a physical object, using Planck's constant <m>h</m> as the defining constant.
+      It is defined as follows.
+    </p>
+
+    <blockquote>
+      <p>
+        The kilogram, symbol kg, is the SI unit of mass.
+        It is defined by taking the fixed numerical value of the Planck constant, h, to be <m>6.626 070 15 \times 10^{-34}</m> when expressed in the unit <quantity><unit base="joule" /><unit base="second" /></quantity>, which is equal to <quantity><unit prefix="kilo" base="gram" /><unit base="meter" exp="2" /><unit base="second" exp="-1" /></quantity>, where the metre and the second are defined in terms of <m>c</m> and <m>\Delta \nu_\text{Cs}</m>.
+      </p>
+    </blockquote>
+
+    <p>
+      Under the previous definition, the mass of the kilogram was determined by weighing the International Prototype Kilogram against other objects.
+      Planck's constant <m>h</m> was to be experimentally determine.
+      Using the new definition, the value of Planck's constant is fixed, and the mass of the kilogram is determined by measuring Planck's constant.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Identify the exact relation using this new definition, and thus derive an expression for the kilogram in terms of the defining constants <m>h</m>, <m>c</m>, and <m>\Delta \nu_\text{Cs}</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The exact relation using the new definition is
+          <me>
+            h = 6.626 070 15 \times 10^{-34} \, \text{J} \cdot \text{s} = 6.626 070 15 \times 10^{-34} \, \text{kg} \cdot \text{m}^2 \cdot \text{s}^{-1}
+          </me>,
+          so
+          <md>
+            <mrow>1 \, \text{kg} \amp = \qty(\frac{h}{6.626 070 15 \times 10^{-34}}) \text{m}^{-2} \cdot \text{s}^{1} </mrow>
+            <mrow> \amp = \qty(\frac{h}{6.626 070 15 \times 10^{-34}}) \qty[\qty(\frac{c}{299,792,458}) \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})]^{-2} \cdot \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})^{1} </mrow>
+            <mrow> \amp = 1.475 521 4 \times 10^{40} \qty(\frac{h \Delta \nu_\text{Cs}}{c^2}) </mrow>
+          </md>.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      To realize this new definition, one can use a Kibble balance, which is a device that measures the Planck constant by balancing the gravitational force on a mass against an electromagnetic force.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-si-def-ampere">
+    <title>How Do We Define the Ampere?</title>
+
+    <p>
+      It may seem strange that the SI uses current as a fundamental quantity, rather than charge.
+      Charge, by itself, is quite difficult to measure.
+      The flow of charge <mdash /> current, on the other hand, can be measured by measuring the magnetic field it produces, which is much easier to do with high precision.
+      Indeed, if two parallel wires carry a current, they will produce a magnetic force on each other, causing them to attract or repel each other depending on the direction of the currents.
+      This force is equal to
+      <me>
+        F = \frac{\mu_0}{2\pi} \frac{I_1 I_2}{r}
+      </me>,
+      where <m>I_1</m> and <m>I_2</m> are the currents in the wires and <m>r</m> is the distance between the wires.
+      So if we know the distance between the wires and the force they exert on each other, we can determine the current in the wires.
+    </p>
+
+    <p>
+      As such, the SI base unit of electric current, the ampere, was historically defined as the constant current that, if maintained in two straight parallel conductors of infinite length and negligible circular cross-section, and placed one meter apart in vacuum, would produce between these conductors a force equal to <m>2 \times 10^{-7}</m> newtons per meter of length.
+    </p>
+
+    <p>
+      This definition fixes the value of <m>\mu_0</m>, the vacuum magnetic permeability, to be exactly <m>4\pi \times 10^{-7}</m> henries per meter.
+    </p>
+
+    <p>
+      By Resolution 1 of the 26th CGPM in 2019, the ampere was redefined in terms of the elementary charge <m>e</m>, which is the charge of a single proton (or the negative of the charge of a single electron).
+      It is defined as follows.
+    </p>
+
+    <blockquote>
+      <p>
+        The ampere, symbol A, is the SI unit of electric current.
+        It is defined by taking the fixed numerical value of the elementary charge, <m>e</m>, to be <m>1.602 176 634 \times 10^{-19}</m> when expressed in the unit <quantity><unit base="coulomb" /></quantity>, which is equal to <quantity><unit base="ampere" /><unit base="second" /></quantity>, where the second is defined in terms of <m>\Delta \nu_\text{Cs}</m>.
+      </p>
+    </blockquote>
+
+    <exercise>
+      <statement>
+        <p>
+          Identify the exact relation using this new definition, and thus derive an expression for the ampere in terms of the defining constants <m>e</m> and <m>\Delta \nu_\text{Cs}</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The exact relation using the new definition is
+          <me>
+            e = 1.602 176 634 \times 10^{-19} \, \text{C} = 1.602 176 634 \times 10^{-19} \, \text{A} \cdot \text{s}
+          </me>,
+          so
+          <md>
+            <mrow> 1 \, \text{A} \amp = \qty(\frac{e}{1.602 176 634 \times 10^{-19}}) \cdot \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})^{-1} </mrow>
+            <mrow> \amp = 6.7896868 \times 10^{8} (\Delta \nu_\text{Cs} e) </mrow>
+          </md>.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      Instead of fixing <m>\mu_0</m>, the new definition of the ampere forces <m>\mu_0</m> to be experimentally determined, instead fixing the value of the elementary charge <m>e</m>.
+    </p>
+
+    <p>
+      If you know about electromagnetic theory, you may be wondering how this definition affects the value of the vacuum electric permittivity <m>\varepsilon_0</m>, as well as the relation
+      <me>
+        c^2 = \frac{1}{\mu_0 \varepsilon_0}
+      </me>.
+      As aforementioned, the speed of light <m>c</m> is fixed by the definition of the meter, and the vacuum magnetic permeability <m>\mu_0</m> is no longer fixed by the definition of the ampere, so the vacuum electric permittivity <m>\varepsilon_0</m> must be experimentally determined.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-si-def-kelvin">
+    <title>How Do We Define the Kelvin?</title>
+
+    <p>
+      We're almost done, hang in there.
+      The kelvin is the SI base unit of thermodynamic temperature.
+      As with the other base units, it was historically defined in terms of a physical object or phenomenon.
+    </p>
+
+    <p>
+      The original definition of the kelvin, as established in 1954 by Resolution 3 of the 10th CGPM, was based on the <term>triple point of water</term>, which is the temperature and pressure at which water can coexist in all three phases: solid, liquid, and gas.
+      This definition set the temperature of the triple point of water to be exactly <m>T_\text{TPW} = 273.16</m> kelvins.
+    </p>
+
+    <p>
+      The modern definition, as adopted in 2018 by Resolution 1 of the 26th CGPM, is based on the properties of the Boltzmann constant <m>k</m>.
+      It is defined as follows.
+    </p>
+
+    <blockquote>
+      <p>
+        The kelvin, symbol K, is the SI unit of thermodynamic temperature.
+        It is defined by taking the fixed numerical value of the Boltzmann constant, <m>k</m>, to be <m>1.380 649 \times 10^{-23}</m> when expressed in the unit <quantity><unit base="joule" /><unit base="kelvin" exp="-1" /></quantity>, which is equal to <quantity><unit prefix="kilo" base="gram" /><unit base="meter" exp="2" /><unit base="second" exp="-2" /><unit base="kelvin" exp="-1" /></quantity>, where the kilogram, metre and second are defined in terms of <m>h</m>, <m>c</m> and <m>\Delta \nu_\text{Cs}</m>.
+      </p>
+    </blockquote>
+
+    <exercise>
+      <statement>
+        <p>
+          Identify the exact relation using this new definition, and thus derive an expression for the kelvin in terms of the defining constants <m>k</m>, <m>h</m>, <m>c</m>, and <m>\Delta \nu_\text{Cs}</m>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+</section>

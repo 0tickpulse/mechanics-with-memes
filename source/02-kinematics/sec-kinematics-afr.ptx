@@ -12,10 +12,10 @@
   </introduction>
 
 
-  <subsection xml:id="subsec-">
+  <!-- <subsection xml:id="subsec-">
     <title></title>
 
-  </subsection>
+  </subsection> -->
 
 
   <subsection xml:id="subsec-kinematics-further-reading">
@@ -31,7 +31,7 @@
 
       <p>
         I would begin with Grant Sanderson's <url href="https://www.youtube.com/@3blue1brown">3Blue1Brown</url> YouTube channel, specifically his <url href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Essence of Calculus</url> series, for a gentle and visual introduction to calculus.
-        Then, I would recommend reading through the first few chapters of a standard calculus textbook, such as Stewart's <em>Calculus: Early Transcendentals</em>.
+        Then, I would recommend reading through the first few chapters of a standard calculus textbook, such as Stewart's <em>Calculus: Early Transcendentals</em> <xref ref="ref-calculus-early-transcendentals"/>.
       </p>
     </subsubsection>
 

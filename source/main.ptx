@@ -5,18 +5,20 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Classical Mechanics, with Memes</title>
+    <subtitle>A Not-so-ideal Introduction to Physics</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-01-kinematics.ptx" />
+    <xi:include href="./ch-01-dim-analysis-uncertainties.ptx" />
+    <xi:include href="./ch-02-kinematics.ptx" />
 
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
+
 
   </book>
 </pretext>

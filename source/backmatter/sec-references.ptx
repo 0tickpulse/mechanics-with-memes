@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<references xml:id="refs-main" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <biblio type="raw" xml:id="ref-optical-atomic-clocks">
+    Ludlow, Andrew D., et al.
+    <title>“Optical Atomic Clocks.”</title>
+
+    <journal>Reviews of Modern Physics</journal>,
+    vol.
+    87, no.
+    2, June 2015, pp.
+    637–701.
+    DOI.org (Crossref), <url href="https://doi.org/10.1103/RevModPhys.87.637" />.
+  </biblio>
+
+  <biblio type="raw" xml:id="ref-si-brochure">
+    <title>The International System of Units (SI): SI Brochure.</title>
+
+    2019.
+    DOI.org (Crossref), <url href="https://doi.org/10.59161/AUEZ1291" />.
+  </biblio>
+
+  <biblio type="raw" xml:id="ref-calculus-early-transcendentals">
+    Stewart, James, et al.
+    <title>Calculus: Early Transcendentals.</title>
+
+    Ninth edition, Cengage, 2021.
+  </biblio>
+
+  <biblio type="raw" xml:id="ref-introduction-to-linear-algebra">
+    Strang, Gilbert.
+    <title>Introduction to Linear Algebra.</title>
+
+    6th ed, Wellesley-Cambridge press, 2023.
+  </biblio>
+</references>

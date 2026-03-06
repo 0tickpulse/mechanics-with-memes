@@ -244,7 +244,7 @@
     <p>
       We know that the minivan is located at <m>d = 20</m> meters and <m>h = 0</m> meters, so the condition for the lemon to hit the minivan is
       <me>
-        v_0 \geq 14 \text{m/s}
+        v_0 \geq 14\, \text{m/s}
       </me>,
       which is about 31 miles per hour.
       If the guard can throw the lemon at that speed, then there will be two angles at which the lemon will hit the minivan.
@@ -368,6 +368,23 @@
           Can you derive an expression for the rate of change of the area of the rectangle with respect to time, i.e., <m>\dv{t} (l(t) w(t))</m>?
         </p>
       </statement>
+      <hint>
+        <p>
+          Draw the rectangle out. If you increase both the length and the width by a small amount, how much does the area increase by?
+        </p>
+      </hint>
+      <solution>
+        <p>
+          If we increase the length by a small amount <m>\Delta l</m> and the width by a small amount <m>\Delta w</m>, then the area increases by
+          <me>
+            \Delta A = l \Delta w + w \Delta l + \Delta l \Delta w
+          </me>.
+          Dividing both sides by <m>\Delta t</m> and taking the limit as <m>\Delta t \to 0</m>, we get
+          <me>
+            \dv{A}{t} = l \dv{w}{t} + w \dv{l}{t}
+          </me>.
+        </p>
+      </solution>
     </exercise>
   </subsection>
 
@@ -446,6 +463,11 @@
           </md>.
         </p>
       </statement>
+      <proof>
+        <p>
+          Here I will present a more visual derivation. A more rigorous derivation is in the exercises section.
+        </p>
+      </proof>
     </theorem>
 
     <p>
@@ -489,5 +511,58 @@
     <p>
       So this is it! There is an acceleration, even though the speed is constant, because the direction of the velocity, <m>\vu{\theta}</m>, is changing. This is why everyone in the van is feeling an acceleration, even though the speedometer is pegged at 15 m/s. This is why the statue of Feynman is sliding across the carpet.
     </p>
+
+    <p>
+      When discussing circular motion, it is very convenient to disregard the radius, and only discuss the angular displacement <m>\theta</m>, the angular velocity <m>\omega</m>, and the <term>angular acceleration</term> <m>\alpha = \dv{\omega}{t}</m>. Mathematically speaking, they are very similar to their linear counterparts, but they have different units and different physical interpretations. In fact, under constant angular acceleration, the equations of motion for angular displacement, velocity, and acceleration are exactly the same:
+      <md>
+        <mrow>\omega \amp = \omega_0 + \alpha t</mrow>
+        <mrow>\Delta \theta \amp = \omega_0 t + \frac{1}{2} \alpha t^2</mrow>
+        <mrow>\omega^2 \amp = \omega_0^2 + 2\alpha \Delta \theta</mrow>
+        <mrow>\Delta \theta \amp = \frac{\omega_0 + \omega}{2} t</mrow>
+      </md>
+
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          The van continues to move around the traffic circle at a constant speed of 15 m/s.
+          The traffic circle has a radius of 15 meters.
+          How long does it take for the van to complete one full revolution around the circle? This quantity is called the <term>period</term> of the motion, and it is denoted by <m>T</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The angular velocity of the van is given by <m>\omega = \frac{v}{R} = \frac{15\, \text{ m/s}}{15\, \text{ m}} = 1\, \text{ rad/s}</m>.
+        </p>
+
+        <p>
+          To complete one full revolution, the van needs to go through an angular displacement of <m>2\pi</m> radians.
+          Since the angular velocity is constant, we can use the equation <m>\Delta \theta = \omega t</m> to find the time it takes to complete one full revolution. Substituting in the values, we get
+          <me>
+            2\pi = 1 \cdot T \implies T = 2\pi\, \text{seconds}
+          </me>.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      Following the exercise above, we can define a few quantities that are commonly used in circular motion.
+    </p>
+
+    <definition xml:id="def-circular-motion-quantities">
+      <title>Quantities in Circular Motion</title>
+      <statement>
+        <p>
+          The <term>period</term> of a motion is the time it takes to complete one full cycle of the motion. It is denoted by <m>T</m>.
+        </p>
+        <p>
+          The <term>frequency</term> of a motion is the number of cycles completed per unit time,
+          <me>
+            f = \frac{1}{T}
+          </me>.
+        </p>
+      </statement>
+    </definition>
   </subsection>
 </section>

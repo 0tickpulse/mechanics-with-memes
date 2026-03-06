@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-kinematics-summary" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary</title>
+
+  <p>
+    Every chapter in this book has a summary section.
+    This section is meant to be a concise summary of the main points covered in the chapter.
+  </p>
+
+  <p>
+    <ol>
+      <li>
+        <p>
+          Motion is described by functions of time.
+          In one dimension, the position function is <m>x(t)</m>, and in multiple dimensions, the position function is a vector function <m>\vb{r}(t)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The average velocity between two times <m>t_1</m> and <m>t_2</m> is the change in position divided by the change in time,
+          <me>
+            \vb{v}_{\text{avg}} = \frac{\vb{r}(t_2) - \vb{r}(t_1)}{t_2 - t_1} = \frac{\Delta \vb{r}}{\Delta t}
+          </me>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The instantaneous velocity is defined by taking the limit as the change in time goes to zero,
+          <me>
+            \vb{v}(t) = \lim_{\Delta t \to 0} \frac{\Delta \vb{r}}{\Delta t} = \dv{\vb{r}}{t}
+          </me>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The velocity is the derivative of the position, <m>\vb{v}(t) = \dv{\vb{r}}{t}</m>, and the acceleration is the derivative of the velocity, <m>\vb{a}(t) = \dv{\vb{v}}{t} = \dv[2]{\vb{r}}{t}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Under constant acceleration, a set of four kinematic equations can be derived:
+          <md>
+            <mrow>\vb{v} \amp = \vb{v}_0 + \vb{a}t</mrow>
+            <mrow>\Delta \vb{r} \amp = \vb{v}_0 t + \frac{1}{2} \vb{a} t^2</mrow>
+            <mrow>\vb{v}^2 \amp = \vb{v}_0^2 + 2\vb{a} \cdot \Delta \vb{r}</mrow>
+            <mrow>\Delta \vb{r} \amp = \frac{1}{2} (\vb{v} + \vb{v}_0) t</mrow>
+          </md>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Vectors can be expressed in different coordinate systems, such as Cartesian coordinates and polar coordinates. In polar coordinates, the unit vectors are changing with time, so we have to use the product rule of differentiation when taking derivatives of vectors in polar coordinates. These derivatives are described in <xref ref="thm-derivatives-of-polar-vectors"/>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          In circular motion, even if the speed is constant, there is still an acceleration because the direction of the velocity is changing.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Uniform circular motion is a special case of circular motion where the angular velocity is constant. In uniform circular motion of radius <m>R</m> and angular velocity <m>\omega</m>, the acceleration is
+          <me>
+            \vb{a}(t) = -R\omega^2 \vu{r}
+          </me>.
+        </p>
+      </li>
+
+    </ol>
+  </p>
+</section>

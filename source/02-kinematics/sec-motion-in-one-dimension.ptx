@@ -20,8 +20,9 @@
       There is a storyline we shall tell throughout this book.
       An eccentric, wildly unqualified group of freshmen (otherwise commonly known as "physics students") decides to steal back their university's beloved mascot, a 500 kg bronze statue of Richard Feynman, from the clutches of their wealthy, obnoxious rival university.
       To even begin with this, they need to figure out how to move the statue without getting caught by the security guards.
-      They decide to use a van to transport the statue, and they need to figure out how to describe the motion of the van in order to plan their heist.
-      This is where we will start our journey into the world of kinematics, the study of motion.
+      This involves making measurements of the statue and the van they will be using to transport it, and then using those measurements to plan their heist.
+      We saw how to make measurements and ascertain their uncertainties in the previous chapter, but now we need to figure out how to use those measurements to understand the motion of the van.
+      This is where we will start our journey into the world of kinematics, the study of how to use measurements to understand motion.
     </p>
 
     <p>
@@ -107,7 +108,7 @@
           We have <m>t_1 = 0</m> seconds, <m>t_2 = 10</m> seconds, <m>x(t_1) = 0</m> meters, and <m>x(t_2) = 100</m> meters.
           Plugging these values into the formula, we get
           <me>
-            v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10 \text{m/s}
+            v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10\, \text{m/s}
           </me>.
         </p>
 
@@ -149,7 +150,7 @@
 
             Therefore, if we assume that the van continues to move at the same average velocity of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> for another ten seconds, we can calculate the change in position as
             <me>
-              \Delta x = 10 \text{m/s} \cdot 10 \text{s} = 100 \text{m}
+              \Delta x = 10 \, \text{m/s} \cdot 10 \, \text{s} = 100 \, \text{m}
             </me>.
           </p>
         </subsection>
@@ -234,11 +235,13 @@
                   Show that <m>\dv{t} t^n = nt^{n-1}</m> for any positive integer <m>n</m>.
                 </p>
               </statement>
+
               <hint>
                 <p>
                   You will need to use the binomial expansion to expand <m>(t + \Delta t)^n</m>.
                 </p>
               </hint>
+
               <solution>
                 <p>
                   Plugging into the limit gives us
@@ -335,11 +338,11 @@
 
             <p>
               The crew has successfully stolen the statue and is now driving it back to their university.
-              The car contains the driver, Dave, and three passengers, who are all very excited about the heist.
+              The car contains the driver and three passengers, who are all very excited about the heist.
               In addition to the statue, they also have a cooler full of beer, and a bunch of meter sticks for some reason.
               The driver <mdash /> let's call him Dave <mdash /> is cruising at a constant speed of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> on the highway, and everyone in the van is feeling pretty good.
-              In fact, thanks to Galilean relativity, as long as the windows are rolled up and the suspension isn't terrible, they might as well be sitting still in a parking lot.
-              You don't actually <em>feel</em> velocity.
+              (In fact, thanks to Galilean relativity, as long as the windows are rolled up and the suspension isn't terrible, they might as well be sitting still in a parking lot.
+              You don't actually <em>feel</em> velocity.)
             </p>
 
             <p>
@@ -420,7 +423,7 @@
 
             <p>
               Let's assess the situation.
-              The minivan is moving at <m>v_0 = 30 \text{m/s}</m> (that's the initial velocity).
+              The minivan is moving at <m>v_0 = 30\, \text{m/s}</m> (that's the initial velocity).
               A family of raccoons is crossing the road exactly 50 meters ahead of them.
               Dave has slammed on the brakes, causing the minivan to accelerate in the opposite direction of its motion.
             </p>
@@ -497,15 +500,15 @@
 
             <p>
               We finally have the tools to predict the future.
-              Let's use Equation 3, because we know Dave's initial velocity (<m>v_0 = 30 \text{m/s}</m>), we know his final velocity needs to be zero to avoid a tragedy (<m>v = 0</m>), and we assumed his braking acceleration is <m>a = -10 \text{m/s}^2</m>.
+              Let's use Equation 3, because we know Dave's initial velocity (<m>v_0 = 30\, \text{m/s}</m>), we know his final velocity needs to be zero to avoid a tragedy (<m>v = 0</m>), and we assumed his braking acceleration is <m>a = -10\, \text{m/s}^2</m>.
               We want to find the stopping distance, <m>\Delta x</m>.
               Just doing some algebra, we obtain
               <md>
                 <mrow>v^2 \amp = v_0^2 + 2a\Delta x</mrow>
                 <mrow>\implies 2a\Delta x \amp = v^2 - v_0^2</mrow>
                 <mrow>\implies \Delta x \amp = \frac{v^2 - v_0^2}{2a}</mrow>
-                <mrow>\amp = \frac{(0 \text{m/s})^2 - (30 \text{m/s})^2}{2 \cdot (-10 \text{m/s}^2)}</mrow>
-                <mrow>\amp = 45 \text{m}</mrow>
+                <mrow>\amp = \frac{(0\, \text{m/s})^2 - (30\, \text{m/s})^2}{2 \cdot (-10\, \text{m/s}^2)}</mrow>
+                <mrow>\amp = 45\, \text{m}</mrow>
               </md>
             </p>
 

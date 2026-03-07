@@ -51,6 +51,9 @@
     <p>
       This book will not cover the Lagrangian formulation, Hamiltonian formulation, or field theory. Regrettably, while these theories represent some of the most beautiful culminations of human thought, they are too advanced for the intended audience of this book.
     </p>
+    <p>
+      In terms of math, I will be using calculus and linear algebra throughout the book, but I will not be assuming any prior knowledge of these subjects. I will be introducing the necessary mathematical concepts as we go along, and I will be providing exercises and further reading for those who want to learn more about the math. I will hold your hand through some of the mathematical details. (<em>Of course this is not in a literal sense. I don't think you would want me to actually hold your hand.</em>) However, many of the mathematical details will be left as exercises or further reading, so that you can practice doing the math yourself.
+    </p>
   </preface>
 </frontmatter>
 

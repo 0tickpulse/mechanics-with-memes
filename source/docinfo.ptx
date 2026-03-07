@@ -21,6 +21,8 @@
   <math-package latex-name="amsmath" mathjax-name="ams" />
   <math-package latex-name="amssymb" mathjax-name="ams" />
   <math-package latex-name="mhchem" mathjax-name="mhchem" />
+  <math-package latex-name="newpxtext" mathjax-name="" />
+  <math-package latex-name="newpxmath" mathjax-name="" />
   <!-- <math-package latex-name="siunitx" mathjax-name="siunitx" /> -->
 
   <!-- macros for defining latex math shortcuts. It is good practice -->
@@ -31,9 +33,6 @@
     \newcommand{\Z}{\mathbb Z}
     \newcommand{\Q}{\mathbb Q}
     \newcommand{\R}{\mathbb R}
-
-    % Renew \vu to use \boldsymbol if and only if the argument is theta
-    \renewcommand{\vu}[1]{\ifthenelse{\equal{#1}{\theta}}{\boldsymbol{\hat{#1}}}{\mathbf{\hat{#1}}}}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

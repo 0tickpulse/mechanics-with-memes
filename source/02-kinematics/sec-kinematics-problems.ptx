@@ -6,7 +6,7 @@
 <exercise>
   <statement>
     <p>
-      <!-- Prove <xref ref="thm-derivatives-of-polar-vectors"/>. -->
+      Prove <xref ref="thm-derivatives-of-polar-vectors"/>.
     </p>
   </statement>
 
@@ -193,6 +193,39 @@
         x = v_x(0) t = v_0\cos\theta \cdot \frac{2v_0\sin\theta}{g} = \frac{v_0^2}{g} \cdot 2\sin\theta \cos\theta = \frac{v_0^2}{g} \sin 2\theta
       </me>.
       The maximum value of <m>\sin 2\theta</m> is 1, which occurs when <m>2\theta = 90^\circ</m>, so the ideal angle to throw the rosin is <m>\theta = 45^\circ</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Suppose the van in our storyline was allowed to drive radially and tangentially in the "Founder's Quad Traffic Circle".
+      Recall that in polar coordinates, the position of the van is given by <m>\vb{r}(t) = r\vu{r}</m>, where <m>r</m> is the distance from the center of the traffic circle and <m>\vu{r}</m> is the unit vector pointing radially outward from the center of the traffic circle.
+      Show that the acceleration of the van can be written as
+      <me>
+        \vb{a} = \qty(\dv[2]{r}{t} - r\qty(\dv{\theta}{t})^2)\vu{r} + \qty(r\dv[2]{\theta}{t} + 2\dv{r}{t}\dv{\theta}{t})\vu{\theta}
+      </me>.
+      One of these terms is the centripetal acceleration, which is responsible for keeping the van moving in a circle.
+      The other is called the <term>coriolis acceleration</term>, which is responsible for the van's tendency to "slide outward" when it tries to turn.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      This is just brute force differentiation, using the product rule and the results from <xref ref="thm-derivatives-of-polar-vectors"/>.
+      First, we compute the velocity of the van:
+      <md>
+        <mrow>\vb{v} \amp = \dv{t} \vb{r} = \dv{t} (r\vu{r}) </mrow>
+        <mrow>\amp = \dv{r}{t}\vu{r} + r\dv{\vu{r}}{t} </mrow>
+        <mrow>\amp = \dv{r}{t}\vu{r} + r\dv{\theta}{t}\vu{\theta}</mrow>
+      </md>.
+      Then the acceleration is
+      <md>
+        <mrow>\vb{a} \amp = \dv{t} \vb{v} = \dv{t} \qty(\dv{r}{t}\vu{r} + r\dv{\theta}{t}\vu{\theta})</mrow>
+        <mrow>\amp = \dv[2]{r}{t} \vu{r} + \dv{r}{t}\dv{\vu{r}}{t} + \dv{r}{t}\dv{\theta}{t}\vu{\theta} + r\dv[2]{\theta}{t}\vu{\theta} + r\dv{\theta}{t}\dv{\vu{\theta}}{t}</mrow>
+        <mrow>\amp = \dv[2]{r}{t} \vu{r} + \dv{r}{t}\dv{\theta}{t}\vu{\theta} + \dv{r}{t}\dv{\theta}{t}\vu{\theta} + r\dv[2]{\theta}{t}\vu{\theta} - r\qty(\dv{\theta}{t})^2\vu{r}</mrow>
+        <mrow>\amp = \qty(\dv[2]{r}{t} - r\qty(\dv{\theta}{t})^2)\vu{r} + \qty(r\dv[2]{\theta}{t} + 2\dv{r}{t}\dv{\theta}{t})\vu{\theta}</mrow>
+      </md>
     </p>
   </solution>
 </exercise>

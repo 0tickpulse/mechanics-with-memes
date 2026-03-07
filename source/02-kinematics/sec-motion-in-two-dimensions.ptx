@@ -486,7 +486,7 @@
       </me>.
       The velocity points in the tangential direction, which makes sense since the van is moving around the circle.
       The term <m>\dv{\theta}{t}</m> is called the <term>angular velocity</term>, and it is the rate at which the angle <m>\theta</m> changes with respect to time.
-      It is denoted by <m>\omega</m>, so we can write the velocity as
+      It is denoted by <m>\omega</m> (Greek letter <foreign>omega</foreign>), so we can write the velocity as
       <me>
         \vb{v}(t) = R\omega \vu{\theta}
       </me>.
@@ -554,12 +554,15 @@
       <title>Quantities in Circular Motion</title>
       <statement>
         <p>
-          The <term>period</term> of a motion is the time it takes to complete one full cycle of the motion. It is denoted by <m>T</m>.
+          The <term>period</term> of a motion is the time it takes to complete one full cycle of the motion. It is denoted by
+          <me>
+            T = \frac{2\pi}{\omega}
+          </me>.
         </p>
         <p>
           The <term>frequency</term> of a motion is the number of cycles completed per unit time,
           <me>
-            f = \frac{1}{T}
+            f = \frac{1}{T} = \frac{\omega}{2\pi}
           </me>.
         </p>
       </statement>

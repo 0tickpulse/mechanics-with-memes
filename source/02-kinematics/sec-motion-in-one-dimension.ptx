@@ -17,15 +17,6 @@
     <title>Position</title>
 
     <p>
-      There is a storyline we shall tell throughout this book.
-      An eccentric, wildly unqualified group of freshmen (otherwise commonly known as "physics students") decides to steal back their university's beloved mascot, a 500 kg bronze statue of Richard Feynman, from the clutches of their wealthy, obnoxious rival university.
-      To even begin with this, they need to figure out how to move the statue without getting caught by the security guards.
-      This involves making measurements of the statue and the van they will be using to transport it, and then using those measurements to plan their heist.
-      We saw how to make measurements and ascertain their uncertainties in the previous chapter, but now we need to figure out how to use those measurements to understand the motion of the van.
-      This is where we will start our journey into the world of kinematics, the study of how to use measurements to understand motion.
-    </p>
-
-    <p>
       I said in the introduction that the universe has three dimensions.
       So how can we just consider motion in one dimension? Well, we can just pretend that the van is moving along a straight line, and we can ignore any motion in the other two dimensions.
       We just work with a <term>subspace</term> of the universe.
@@ -111,15 +102,6 @@
             v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10\, \text{m/s}
           </me>.
         </p>
-
-        <remark>
-          <p>
-            By the way, this is a good time to mention that in physics, things have units.
-            In this case, the position is measured in meters (m), time is measured in seconds (s), and velocity is measured in meters per second (m/s).
-            There is actually a ton of things you can do by just analyzing the units of a problem.
-            I'll include an appendix on dimensional analysis in the near future.
-          </p>
-        </remark>
 
         <p>
           So, the average velocity of the van between the two pictures is <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity>.

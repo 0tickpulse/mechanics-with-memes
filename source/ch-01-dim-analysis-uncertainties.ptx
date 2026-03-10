@@ -10,5 +10,6 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="./01-dim-analysis-uncertainties/sec-units-of-measurement.ptx" />
+  <xi:include href="./01-dim-analysis-uncertainties/sec-the-international-system-of-units.ptx" />
+  <xi:include href="./01-dim-analysis-uncertainties/sec-dimensions-and-uncertainties.ptx" />
 </chapter>

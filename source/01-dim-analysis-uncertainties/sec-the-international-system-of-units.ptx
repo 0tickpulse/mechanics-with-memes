@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-units-of-measurement" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Units of Measurement</title>
+<section xml:id="sec-the-international-system-of-units" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The International System of Units</title>
 
   <introduction>
     <p>
@@ -310,6 +310,7 @@
           <md>
             <mrow>1 \, \text{kg} \amp = \qty(\frac{h}{6.626 070 15 \times 10^{-34}}) \text{m}^{-2} \cdot \text{s}^{1} </mrow>
             <mrow> \amp = \qty(\frac{h}{6.626 070 15 \times 10^{-34}}) \qty[\qty(\frac{c}{299,792,458}) \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})]^{-2} \cdot \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})^{1} </mrow>
+            <mrow> \amp = \frac{(299,792,458)^2}{(6.626 070 15 \times 10^{-34})(9,192,631,770)} \frac{h\Delta \nu_\text{Cs}}{c^2}</mrow>
             <mrow> \amp \approx 1.475 521 4 \times 10^{40} \qty(\frac{h \Delta \nu_\text{Cs}}{c^2}) </mrow>
           </md>.
         </p>
@@ -361,7 +362,8 @@
     <exercise>
       <statement>
         <p>
-          Identify the exact relation using this new definition, and thus derive an expression for the ampere in terms of the defining constants <m>e</m> and <m>\Delta \nu_\text{Cs}</m>. Explain, in words, what this new definition means.
+          Identify the exact relation using this new definition, and thus derive an expression for the ampere in terms of the defining constants <m>e</m> and <m>\Delta \nu_\text{Cs}</m>.
+          Explain, in words, what this new definition means.
         </p>
       </statement>
 
@@ -374,6 +376,7 @@
           so
           <md>
             <mrow> 1 \, \text{A} \amp = \qty(\frac{e}{1.602 176 634 \times 10^{-19}}) \cdot \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})^{-1} </mrow>
+            <mrow> \amp = \frac{1}{1.602 176 634 \times 10^{-19}} \Delta \nu_\text{Cs} e </mrow>
             <mrow> \amp \approx 6.7896868 \times 10^{8} (\Delta \nu_\text{Cs} e) </mrow>
           </md>.
         </p>
@@ -427,7 +430,8 @@
     <exercise>
       <statement>
         <p>
-          Identify the exact relation using this new definition, and thus derive an expression for the kelvin in terms of the defining constants <m>k</m>, <m>h</m>, <m>c</m>, and <m>\Delta \nu_\text{Cs}</m>. What does this new definition mean, in words?
+          Identify the exact relation using this new definition, and thus derive an expression for the kelvin in terms of the defining constants <m>k</m>, <m>h</m>, <m>c</m>, and <m>\Delta \nu_\text{Cs}</m>.
+          What does this new definition mean, in words?
         </p>
       </statement>
 
@@ -442,6 +446,7 @@
             <mrow> 1 \, \text{K} \amp = \qty(\frac{1.380 649 \times 10^{-23}}{k}) \text{kg} \cdot \text{m}^2 \cdot \text{s}^{-2} </mrow>
             <mrow> \amp = \qty(\frac{1.380 649 \times 10^{-23}}{k}) \qty[\qty(\frac{h}{6.626 070 15 \times 10^{-34}}) \text{m}^{-2} \cdot \text{s}^{1} ] (1 \text{m}^2 \cdot \text{s}^{-1}) \frac{\Delta \nu_\text{Cs}}{9,192,631,770} </mrow>
             <mrow> \amp = \qty(\frac{1.380 649 \times 10^{-23}}{k}) \qty(\frac{h}{6.626 070 15 \times 10^{-34}}) \qty(\frac{\Delta \nu_\text{Cs}}{9,192,631,770}) </mrow>
+            <mrow> \amp = \frac{1.380 649 \times 10^{-23}}{(6.626 070 15 \times 10^{-34})(9,192,631,770)} \frac{h \Delta \nu_\text{Cs}}{k} </mrow>
             <mrow> \amp \approx 2.266 6653 \qty(\frac{h \Delta \nu_\text{Cs}}{k}) </mrow>
           </md>.
         </p>
@@ -491,6 +496,7 @@
     </p>
   </subsection>
 
+
   <subsection xml:id="subsec-si-def-candela">
     <title>How Do We Define the Candela?</title>
 
@@ -500,12 +506,142 @@
     </p>
 
     <p>
-      A <term>radian</term> is a unit of angular measurement such that a full circle is <m>2\pi</m> radians. There are many advantages to using radians instead of degrees. If you trace out a circle of radius <m>r</m>, the length of the arc corresponding to an angle of <m>\theta</m> radians is just <m>s = r \theta</m>. The area of the sector corresponding to an angle of <m>\theta</m> radians is just <m>A = \frac{1}{2} r^2 \theta</m>. Moreover, in radians, the small angle approximations <m>\sin \theta \approx \theta</m>, <m>\tan \theta \approx \theta</m>, and <m>\cos \theta \approx 1 - \frac{\theta^2}{2}</m> work without any additional conversion factors.
+      A <term>radian</term> is a unit of angular measurement such that a full circle is <m>2\pi</m> radians.
+      There are many advantages to using radians instead of degrees.
+      If you trace out a circle of radius <m>r</m>, the length of the arc corresponding to an angle of <m>\theta</m> radians is just <m>s = r \theta</m>.
+      The area of the sector corresponding to an angle of <m>\theta</m> radians is just <m>A = \frac{1}{2} r^2 \theta</m>.
+      Moreover, in radians, the small angle approximations <m>\sin \theta \approx \theta</m>, <m>\tan \theta \approx \theta</m>, and <m>\cos \theta \approx 1 - \frac{\theta^2}{2}</m> work without any additional conversion factors.
     </p>
 
     <p>
-      A <term>steradian</term> is a unit of solid angle <mdash /> the three-dimensional analogue of the radian. A full sphere corresponds to <m>4\pi</m> steradians. The area of a spherical cap corresponding to a solid angle of <m>\Omega</m> steradians on a sphere of radius <m>r</m> is just <m>A = r^2 \Omega</m>.
+      A <term>steradian</term> is a unit of solid angle <mdash /> the three-dimensional analogue of the radian.
+      A full sphere corresponds to <m>4\pi</m> steradians.
+      The area of a spherical cap corresponding to a solid angle of <m>\Omega</m> steradians on a sphere of radius <m>r</m> is just <m>A = r^2 \Omega</m>.
     </p>
 
+    <p>
+      As light travels, it spreads out over a larger and larger area, so the intensity of the light decreases with distance.
+      <term>Luminous intensity</term> is a measure of the amount of light emitted in a particular direction per unit solid angle.
+      The SI base unit of luminous intensity is the <term>candela</term>, which is defined as follows.
+    </p>
+
+    <blockquote>
+      <p>
+        The candela, symbol cd, is the SI unit of luminous intensity in a given direction.
+        It is defined by taking the fixed numerical value of the luminous efficacy of monochromatic radiation of frequency <m>540 \times 10^{12}</m> Hz, <m>K_\text{cd}</m>, to be 683 when expressed in the unit <quantity><unit base="lumen" /><unit base="watt" exp="-1" /></quantity>, which is equal to <quantity><unit base="candela" /><unit base="steradian" /><unit base="watt" exp="-1" /></quantity>, or <quantity><unit prefix="kilo" base="gram" exp="-1" /><unit base="meter" exp="-2" /><unit base="second" exp="3" /></quantity>, where the kilogram, metre and second are defined in terms of <m>h</m>, <m>c</m> and <m>\Delta \nu_\text{Cs}</m>.
+      </p>
+    </blockquote>
+
+    <exercise>
+      <statement>
+        <p>
+          Identify the exact relation using this new definition, and thus derive an expression for the candela in terms of the defining constants <m>K_\text{cd}</m>, <m>h</m>, <m>c</m>, and <m>\Delta \nu_\text{Cs}</m>.
+          What does this new definition mean, in words?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The exact relation using the new definition is
+          <me>
+            K_\text{cd} = 683 \, \text{lm/W} = 683 \, \text{cd} \cdot \text{sr} \cdot \text{W}^{-1} = 683 \, \text{cd} \cdot \text{sr} \cdot \text{kg}^{-1} \cdot \text{m}^{-2} \cdot \text{s}^{3}
+          </me>,
+          so
+          <md>
+            <mrow> 1 \, \text{cd} \amp = \frac{K_\text{Cd}}{683} \text{sr}^{-1} \cdot \text{kg} \cdot \text{m}^{2} \cdot \text{s}^{-3} </mrow>
+            <mrow> \amp = \frac{K_\text{Cd}}{683} \qty[\frac{(299,792,458)^2}{(6.626 070 15 \times 10^{-34})(9,192,631,770)} \frac{h\Delta \nu_\text{Cs}}{c^2}] \qty(\frac{9,192,631,770}{299,792,458} \frac{c}{\Delta \nu_\text{Cs}})^2 \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})^{-3} </mrow>
+            <mrow> \amp = \frac{1}{(6.626 070 15 \times 10^{-34})(9,192,631,770)^2(683)} K_\text{Cd} (\Delta \nu_\text{Cs})^2 h </mrow>
+            <mrow> \amp \approx 2.614 8305 \times 10^{10} K_\text{Cd} (\Delta \nu_\text{Cs})^2 h </mrow>
+          </md>.
+        </p>
+
+        <p>
+          In words, the candela is defined as the luminous intensity of a source that emits monochromatic radiation of frequency <m>540</m> terahertz and has a radiant intensity of <m>1/683</m> watts per steradian in that direction.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      And we're all done! This set of defining constants and definitions allows us to have a precise and consistent system of units that we can use to measure the various quantities involved in our heist, from the distance to the getaway van to the brightness of its headlights.
+    </p>
+
+    <table>
+      <title>SI Units and Definitions</title>
+
+      <tabular>
+        <row header="yes">
+          <cell>Base SI Unit</cell>
+          <cell>Defining Constant</cell>
+          <cell>Exact Relation</cell>
+        </row>
+
+        <row>
+          <cell>second (s)</cell>
+          <cell><m>\Delta \nu_\text{Cs}</m></cell>
+          <cell><m>1 \, \text{s} = \frac{9,192,631,770}{\Delta \nu_\text{Cs}}</m></cell>
+        </row>
+
+        <row>
+          <cell>meter (m)</cell>
+          <cell><m>c</m></cell>
+          <cell><m>1 \, \text{m} = \frac{9,192,631,770}{299,792,458} \frac{c}{\Delta \nu_\text{Cs}}</m></cell>
+        </row>
+
+        <row>
+          <cell>kilogram (kg)</cell>
+          <cell><m>h</m></cell>
+          <cell><m>1 \, \text{kg} = \frac{(299,792,458)^2}{(6.626 070 15 \times 10^{-34})(9,192,631,770)} \frac{h\Delta \nu_\text{Cs}}{c^2}</m></cell>
+        </row>
+
+        <row>
+          <cell>ampere (A)</cell>
+          <cell><m>e</m></cell>
+          <cell><m>1 \, \text{A} =\frac{1}{(1.602 176 634 \times 10^{-19})(9,192,631,770)} e \Delta \nu_\text{Cs}</m></cell>
+        </row>
+
+        <row>
+          <cell>kelvin (K)</cell>
+          <cell><m>k</m></cell>
+          <cell><m>1 \, \text{K} = \frac{1.380 649 \times 10^{-23}}{(6.626 070 15 \times 10^{-34})(9,192,631,770)} \frac{h \Delta \nu_\text{Cs}}{k}</m></cell>
+        </row>
+
+        <row>
+          <cell>mole (mol)</cell>
+          <cell><m>N_\text{A}</m></cell>
+          <cell><m>1 \, \text{mol} = \frac{6.022 140 76 \times 10^{23}}{N_\text{A}}</m></cell>
+        </row>
+
+        <row>
+          <cell>candela (cd)</cell>
+          <cell><m>K_\text{cd}</m></cell>
+          <cell><m>1 \, \text{cd} = \frac{1}{(6.626 070 15 \times 10^{-34})(9,192,631,770)^2(683)} K_\text{Cd} (\Delta \nu_\text{Cs})^2 h</m></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      Almost any physical quantity can be expressed in terms of these seven base units, and thus in terms of the defining constants.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-other-systems-of-units">
+    <title>Other Systems of Units</title>
+
+    <p>
+      In addition to the SI, there are other systems of units that are used in specific fields or contexts.
+    </p>
+
+    <p>
+      Your chemist friend might prefer to use the CGS system of units, which stands for "centimeter-gram-second".
+      In this system, the base units are the centimeter (cm) for length, the gram (g) for mass, and the second (s) for time.
+      In electromagnetism, the CGS system has two variants: the Gaussian units and the Heaviside-Lorentz units.
+      The Gaussian units are commonly used in theoretical physics, while the Heaviside-Lorentz units are often used in particle physics and quantum field theory.
+    </p>
+
+    <p>
+      The more deranged physicist might prefer to use natural units, which are a system of units in which certain fundamental constants are set to 1.
+      This includes <m>c</m>, <m>\hbar</m>, and <m>k</m>.
+    </p>
   </subsection>
 </section>

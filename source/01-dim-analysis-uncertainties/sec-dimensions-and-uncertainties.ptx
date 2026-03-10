@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-dimensions-and-uncertainties" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Dimensions and Uncertainties</title>
+
+  <introduction>
+    <p>
+      Now that we are familiar with the SI units, we can start talking about how to make measurements.
+      Our goal in this section is twofold: first, we want to understand how to think about the dimensions of our measurements, and second, we want to understand how to think about the uncertainties in our measurements.
+      Indeed, in a heist, a small mistake in the math does not just incur a lower grade on a homework assignment, but can lead to the 500 kg statue of Feynman dropping through the floor of a stolen van.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-dimensional-analysis">
+    <title>Dimensional Analysis</title>
+
+    <p>
+      Let's begin by discussing the dimensions of our measurements.
+      In our story, the van is moving at a certain speed.
+      The dimension of speed is length over time.
+      We shall write the dimension of length as <m>L</m> and the dimension of time as <m>T</m>.
+      Therefore, the dimension of speed is
+      <me>
+        [\text{speed}] = \frac{L}{T}.
+      </me>
+    </p>
+
+    <p>
+      The following exercises should help you get a feel for how to ascertain the dimensions of a quantity.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Sarah (the Engineer) is hyper-caffeinated and scribbling formulas for the winch system, which will be used to pull the statue into the van.
+          She hands Dave, the team leader, a formula for the required power of the winch system:
+          <me>
+            \text{Power} = \text{mass} \cdot \text{speed}
+          </me>.
+          She argues that the formula makes sense because with more mass and more speed, we need more power.
+        </p>
+
+        <p>
+          But Dave, using only his brain, is able to determine that the formula is nonsense, without even looking at the numbers or referencing any physical principles.
+          Do you see the issue?
+        </p>
+      </statement>
+
+      <hint>
+        <p>
+          The dimension of power is
+          <me>
+            [\text{power}] = \frac{ML^2}{T^3}
+          </me>,
+          where <m>M</m> is the dimension of mass.
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          The formula given by Sarah has the dimension
+          <me>
+            [\text{mass} \cdot \text{speed}] = M \cdot \frac{L}{T} = \frac{ML}{T},
+          </me>
+          which is not the dimension of power.
+          So the dimensions of both sides do not match.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Dave is trying to figure a way to fix Sarah's formula for the power of the winch system.
+          He proposes that
+          <me>
+            \text{Power} = k \cdot \text{mass}^a \cdot \text{speed}^b \cdot \text{time}^c
+          </me>,
+          where <m>k</m> is a dimensionless constant, and <m>a</m>, <m>b</m>, and <m>c</m> are constants that we need to determine.
+          Can you determine the values of <m>a</m>, <m>b</m>, and <m>c</m> by using dimensional analysis?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          This is quite straightforward.
+          The dimension of the right hand side is
+          <me>
+            [k \cdot \text{mass}^a \cdot \text{speed}^b \cdot \text{time}^c] = M^a \cdot \qty(\frac{L}{T})^b \cdot T^c = M^a L^b T^{c - b}.
+          </me>
+          We want this to match the dimension of power, which is <m>\frac{ML^2}{T^3}</m>.
+          Therefore, we need to have <m>a = 1</m>, <m>b = 2</m>, and <m>c - b = -3</m>, which gives us <m>c = -1</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      To further refine the formula, we need to use certain laws of physics to figure out the constants.
+      Sarah argues, in her derivation, that we need to take gravity into account.
+      According to Isaac Newton, when two objects with masses <m>m_1</m> and <m>m_2</m> are separated by a distance <m>r</m>, they exert a gravitational force on each other given by
+      <me>
+        F = G \frac{m_1 m_2}{r^2},
+      </me>
+      where <m>G</m> is a constant.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          What are the dimensions of <m>G</m>?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The dimension of the left hand side is
+          <me>
+            [F] = \frac{ML}{T^2},
+          </me>
+          and the dimension of the right hand side is
+          <me>
+            \qty[G \frac{m_1 m_2}{r^2}] = [G] \cdot \frac{M^2}{L^2}.
+          </me>
+          Therefore, we need to have
+          <me>
+            [G] \cdot \frac{M^2}{L^2} = \frac{ML}{T^2} \implies [G] = \frac{L^3}{MT^2}.
+          </me>
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      Let's take another example to illustrate the power of dimensional analysis.
+      A pendulum is a system consisting of a mass <m>m</m> hanging from a string of length <m>l</m>.
+      The time it takes for the pendulum to complete one full swing back and forth is called the period, which we will denote as <m>T</m>.
+      The maximum angle that the pendulum makes with the vertical is called the amplitude, which we will denote as <m>\theta_0</m>.
+      The gravitational acceleration is denoted as <m>g</m>.
+      We can now use dimensional analysis to figure out how the period of the pendulum depends on the other parameters.
+    </p>
+
+    <p>
+      We first write down the most general formula for the period of the pendulum that we can think of:
+      <me>
+        T = f(\theta_0) \cdot m^a \cdot l^b \cdot g^c
+      </me>,
+      where <m>f(\theta_0)</m> is some function of the amplitude, and <m>a</m>, <m>b</m>, and <m>c</m> are constants that we need to determine.
+      The period of the pendulum has the dimension of time, which we will denote as <m>T</m>.
+      The other parameters have the following dimensions:
+      <me>
+        [m] = M, \quad [l] = L, \quad [\theta_0] = 1, \quad [g] = \frac{L}{T^2}
+      </me>.
+      The dimension of the right hand side is
+      <me>
+        [f(\theta_0) \cdot m^a \cdot l^b \cdot g^c] = M^a L^{b + c} T^{-2c}
+      </me>.
+      We want this to match the dimension of time, which is <m>T</m>.
+      Therefore, we need to have <m>a = 0</m>, <m>b + c = 0</m>, and <m>-2c = 1</m>, which gives us <m>c = -\frac{1}{2}</m> and <m>b = \frac{1}{2}</m>.
+      Therefore, the period of the pendulum is given by
+      <me>
+        T = f(\theta_0) \cdot \sqrt{\frac{l}{g}}
+      </me>.
+      The function <m>f(\theta_0)</m> cannot be determined by dimensional analysis, but it can be determined by using the laws of physics.
+      It turns out that for small angles, <m>f(\theta_0) \approx 2\pi</m>, which gives us the well-known formula for the period of a pendulum:
+      <me>
+        T \approx 2\pi \sqrt{\frac{l}{g}}.
+      </me>
+    </p>
+
+    <p>
+      With dimensional analysis, we were able to figure out a close expression for the period of the pendulum, without even looking at the equations of motion.
+      Crucially, we were able to figure out that the period does not depend on the mass of the pendulum, which is something not obvious from first glance.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-uncertainties-and-errors">
+    <title>Uncertainties and Errors</title>
+
+    <p>
+      "Measure twice, steal once," is Dave's new motto.
+      During their midnight scouting mission, the team measured the statue's base.
+      The meter stick they used had a smallest division of 1 mm (0.1 cm).
+    </p>
+
+    <p>
+      When we measure anything, we never get the exact value of the quantity we are trying to measure.
+      There is always a range of possible values that the quantity could take, and we can only say that the true value of the quantity is likely to be within that range.
+      For instance, if Sarah measures the length of the statue's base to be 80.2 cm, she might say that the length ranges from 80.15 cm to 80.25 cm, which means that the true length of the statue's base is likely to be within that range.
+      We write this as
+      <me>
+        L = 80.20 \pm 0.05 \, \text{cm}
+      </me>.
+      The number after the plus-minus sign is called the <term>uncertainty</term> of the measurement.
+      We say that a measuring device is more <term>precise</term> if it has a smaller uncertainty.
+    </p>
+
+    <p>
+      Because Sarah's hands were shaking from too much espresso, they got three different results: <m>80.2</m> cm, <m>80.5</m> cm, and <m>79.9</m> cm.
+      When we have multiple measurements of the same quantity, we report the <term>mean</term> of the measurements as the value of the quantity, and we report the <term>standard error</term> of the measurements as the uncertainty of the quantity.
+      The standard error is given by the formula
+      <me>
+        \Delta x = \frac{\sigma}{\sqrt{N}}
+      </me>,
+      where <m>\sigma</m> is the standard deviation of the measurements, and <m>N</m> is the number of measurements.
+      The mean is given by
+      <me>
+        \bar{x} = \frac{1}{3} (80.2 + 80.5 + 79.9) \, \text{cm} = 80.2 \, \text{cm}
+      </me>,
+      and the standard deviation is given by
+      <me>
+        \sigma = \sqrt{\frac{1}{3} ((80.2 - 80.2)^2 + (80.5 - 80.2)^2 + (79.9 - 80.2)^2)} \, \text{cm} \approx 0.24 \, \text{cm}
+      </me>.
+      Therefore, the standard error is given by
+      <me>
+        \Delta x = \frac{0.24}{\sqrt{3}} \, \text{cm} \approx 0.14 \, \text{cm}
+      </me>.
+      And so we would report the length of the statue's base as
+      <me>
+        L = 80.2 \pm 0.14 \, \text{cm}
+      </me>.
+    </p>
+
+    <p>
+      Why did the value vary so much? This is because of <term>random errors</term>, which are errors that arise from unpredictable fluctuations in the measurement process.
+      Sarah's shaky hands caused random errors in her measurements, which is why she got highly variable results.
+      Random errors can be reduced by taking more measurements and averaging them, which is what we did to get the mean and standard deviation.
+      Had Sarah taken 30 measurements instead of 3, the standard deviation would have been smaller, and we would have had a more precise measurement of the length of the statue's base.
+    </p>
+
+    <p>
+      Sarah, in her hyper-caffeinated state, also misplaced the meter stick.
+      She placed it at an angle from the base of the statue, which led to a larger measurement than the true length of the statue's base.
+      This is an example of a <term>systematic error</term>, which is an error that arises from a consistent bias in the measurement process.
+      Systematic errors cannot be reduced by taking more measurements and averaging them, because they affect all measurements in the same way.
+      To reduce systematic errors, we need to identify the source of the error and correct it.
+      In this case, Sarah could have used a level to make sure that the meter stick was placed horizontally, which would have reduced the systematic error in her measurements.
+    </p>
+
+    <p>
+      In an experimental report, it is good practice to report all known sources of error, and to estimate the magnitude of those errors.
+      If we were writing a report on the measurements of the statue's base, we would include a "Sources of Error" section, where we would discuss the random errors and systematic errors in our measurements, and we would estimate the magnitude of those errors.
+    </p>
+
+    <definition xml:id="def-random-error">
+      <statement>
+        <p>
+          A <term>random error</term> is an error that arises from unpredictable fluctuations in the measurement process.
+          They are reduced by taking more measurements.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-systematic-error">
+      <statement>
+        <p>
+          A <term>systematic error</term> is an error that arises from a consistent bias in the measurement process.
+          They cannot be reduced by taking more measurements, and they are reduced by identifying the source of the error and correcting it.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          You are estimating the height of a window on the second floor of a building by throwing a rock from the window and measuring the time it takes for it to hit the ground using a stopwatch.
+          Then, you use the formula <m>h = \frac{1}{2}gt^2</m> to estimate the height of the window, where <m>g</m> is the gravitational acceleration and <m>t</m> is the time it takes for the rock to hit the ground.
+          What are some sources of error in this experiment?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          <ul>
+            <li>
+              <p>
+                One source of error is the random error in the measurement of time using the stopwatch.
+                You are never perfectly precise when you start and stop the stopwatch, so there is an uncertainty in the measurement of time.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Another random error is the initial speed of the rock when you throw it.
+                If you throw the rock with a nonzero initial speed, then the formula <m>h = \frac{1}{2}gt^2</m> is not accurate, because it assumes that the rock is dropped from rest.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                A systematic error is the air resistance acting on the rock as it falls.
+                The formula <m>h = \frac{1}{2}gt^2</m> does not take air resistance into account, so it will overestimate the height of the window.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </example>
+
+    <exercise>
+      <statement>
+        <p>
+          You are estimating the power emitted from a candle by measuring how much it heats up a beaker of water placed above it.
+          You measure the temperature of the water at regular intervals, and you find that the temperature increases by 10 degrees Celsius in 5 minutes.
+          You use the formula <m>P = mc\frac{\Delta T}{\Delta t}</m> to estimate the power emitted from the candle, where <m>m</m> is the mass of the water, <m>c</m> is a constant (the specific heat capacity of water), <m>\Delta T</m> is the change in temperature, and <m>\Delta t</m> is the change in time.
+          What is one systematic error in this experiment? How can you reduce this error?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          A systematic error is the heat loss to the surroundings.
+          The formula <m>P = mc\frac{\Delta T}{\Delta t}</m> assumes that all the heat emitted from the candle goes into heating up the water, but in reality, some of the heat will be lost to the surroundings, which will lead to an underestimate of the power emitted from the candle.
+        </p>
+
+        <p>
+          To reduce this error, you could place a lid on the beaker to reduce heat loss, or you could perform the experiment in a draft-free environment to minimize heat loss due to air currents.
+        </p>
+      </solution>
+    </exercise>
+
+    <definition xml:id="def-relative-uncertainty">
+      <statement>
+        <p>
+          The <term>relative uncertainty</term> of a measurement is the ratio of the uncertainty to the value of the measurement.
+        </p>
+      </statement>
+    </definition>
+  </subsection>
+
+
+  <subsection xml:id="subsec-uncertainty-propagation">
+    <title>Uncertainty Propagation</title>
+
+    <p>
+      The real danger comes when we use our measurements to calculate other quantities.
+      The original uncertainties will propagate through our calculations, and the final result will thus also have an uncertainty.
+      What is the uncertainty of the final result?
+    </p>
+
+    <p>
+      In our situation, we can use some formulas to calculate the uncertainty of the final result.
+    </p>
+
+    <p>
+      If we are adding two lengths <m>L = x + y</m>, the uncertainty in <m>L</m> is given by
+      <me>
+        \Delta L = \sqrt{(\Delta x)^2 + (\Delta y)^2}
+      </me>,
+      where <m>\Delta x</m> and <m>\Delta y</m> are the uncertainties in <m>x</m> and <m>y</m>, respectively.
+    </p>
+
+    <p>
+      If we are multiplying two lengths <m>A = xy</m>, the relative uncertainty in <m>A</m> is given by
+      <me>
+        \frac{\Delta A}{A} = \sqrt{\qty(\frac{\Delta x}{x})^2 + \qty(\frac{\Delta y}{y})^2}
+      </me>.
+    </p>
+
+    <p>
+      If we are dividing two lengths <m>B = \frac{x}{y}</m>, the relative uncertainty in <m>B</m> is given by
+      <me>
+        \frac{\Delta B}{B} = \sqrt{\qty(\frac{\Delta x}{x})^2 + \qty(\frac{\Delta y}{y})^2}
+      </me>.
+    </p>
+
+    <p>
+      If we are raising a length to a power <m>C = x^n</m>, the relative uncertainty in <m>C</m> is given by
+      <me>
+        \frac{\Delta C}{C} = |n| \cdot \frac{\Delta x}{x}
+      </me>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          To transport the statue, we need to carry it onto the van using a ramp.
+          The calculations involve determining the kinetic energy of the statue as it moves up the ramp, which is given by <m>K = \frac{1}{2}mv^2</m>, where <m>m</m> is the mass of the statue and <m>v</m> is its velocity.
+          If the mass of the statue is measured to be <m>500 \pm 5</m> kg and its velocity is measured to be <m>2 \pm 0.1</m> m/s, what is the uncertainty in the kinetic energy of the statue?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The relative uncertainty in the kinetic energy is given by
+          <me>
+            \frac{\Delta K}{K} = \sqrt{\qty(\frac{\Delta m}{m})^2 + \qty(2 \cdot \frac{\Delta v}{v})^2} = \sqrt{\qty(\frac{5}{500})^2 + \qty(2 \cdot \frac{0.1}{2})^2} \approx 0.1
+          </me>.
+          Therefore, the uncertainty in the kinetic energy is given by
+          <me>
+            \Delta K = 0.1 \cdot K = 0.1 \cdot \frac{1}{2} \cdot (500 \, \text{kg}) \cdot (2 \, \text{m} \cdot \text{s}^{-1})^2 = 100 \, \text{J}
+          </me>.
+        </p>
+      </solution>
+    </exercise>
+
+    <remark>
+      <p>
+        By the way, there is a general formula for uncertainty propagation, which you can explore if you're proficient in calculus.
+        If we have a function <m>f(x_1, x_2, \ldots, x_n)</m>, where <m>x_i</m> are the (independent) measured quantities with uncertainties <m>\Delta x_i</m>, then the uncertainty in <m>f</m> is given by
+        <me>
+          \Delta f = \sqrt{\qty(\frac{\partial f}{\partial x_1} \Delta x_1)^2 + \qty(\frac{\partial f}{\partial x_2} \Delta x_2)^2 + \cdots + \qty(\frac{\partial f}{\partial x_n} \Delta x_n)^2}
+        </me>.
+        This formula can be derived using the Taylor expansion of <m>f</m> around the mean values of <m>x_i</m>, and it reduces to the formulas we have given above for addition, multiplication, division, and exponentiation.
+      </p>
+
+      <p>
+        To take an example, consider the function <m>x(x_0, \omega, t) = x_0 \cos(\omega t)</m>.
+        The uncertainty in <m>x</m> is given by
+        <md>
+          <mrow>\Delta x \amp = \sqrt{\qty(\frac{\partial x}{\partial x_0} \Delta x_0)^2 + \qty(\frac{\partial x}{\partial \omega} \Delta \omega)^2 + \qty(\frac{\partial x}{\partial t} \Delta t)^2} </mrow>
+          <mrow> \amp = \sqrt{\qty(\cos(\omega t) \Delta x_0)^2 + \qty(-x_0 t \sin(\omega t) \Delta \omega)^2 + \qty(-x_0 \omega \sin(\omega t) \Delta t)^2} </mrow>
+        </md>.
+      </p>
+    </remark>
+
+    <exercise>
+      <title>Will it Fit?</title>
+
+      <statement>
+        <p>
+          Suppose the van door is <m>85.0 \pm 0.5</m> cm wide, and the statue base is <m>80.0 \pm 0.8</m> cm wide.
+          Dave needs to know the gap width <m>G = W_\text{door} - W_\text{statue}</m> and its uncertainty.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The gap is <m>85.0 - 80.0 = 5.0</m> cm.
+          The uncertainty is
+          <me>
+            \Delta G = \sqrt{(0.5)^2 + (0.8)^2} \approx 0.94 \, \text{cm}
+          </me>.
+          So the gap is <m>5.0 \pm 0.9</m> cm.
+          Dave realizes that in the worst case, the gap could be as small as <m>4.1</m> cm <mdash /> dangerously tight for a high-speed extraction.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+
+
+  <subsection xml:id="subsec-representing-data-visually">
+    <title>Representing Data Visually</title>
+
+    <p>
+      Dave knows that a single data point is a suggestion, but a graph is a proof.
+      To ensure the getaway van doesn't bottom out under the weight of a bronze physicist, the team conducted a load test.
+      They added mass to the van and measured the compression of the suspension springs.
+    </p>
+
+    <p>
+      When we plot data, we almost always plot the relationship between two variables.
+      The <term>independent variable</term> is the variable that we control, and the <term>dependent variable</term> is the variable that we measure.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          What are the independent variable and the dependent variable in the load test experiment?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The independent variable is the mass added to the van, and the dependent variable is the compression of the suspension springs.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      The independent variable is placed on the horizontal axis, and the dependent variable is placed on the vertical axis.
+      For our experiment, let's call the mass added to the van <m>m</m>, and let's call the compression of the suspension springs <m>C</m>.
+      Each data point on the graph corresponds to a pair of values.
+      We can denote the data points as <m>(m_1, C_1)</m>, <m>(m_2, C_2)</m>, and so on.
+    </p>
+  </subsection>
+</section>

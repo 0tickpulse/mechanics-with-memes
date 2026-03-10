@@ -8,9 +8,9 @@
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
   <title>Backmatter</title>
 
-  <solutions divisional="hint"> <title>Selected Hints</title> </solutions>
+  <!-- <solutions divisional="hint"> <title>Selected Hints</title> </solutions> -->
 
-  <solutions divisional="solution"> <title>Selected Solutions</title> </solutions>
+  <!-- <solutions divisional="solution"> <title>Selected Solutions</title> </solutions> -->
 
   <!-- <appendix> <title>List of Symbols</title> <notation-list/> </appendix> -->
 

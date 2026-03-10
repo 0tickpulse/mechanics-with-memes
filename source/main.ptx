@@ -5,7 +5,7 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>Classical Mechanics, with Memes</title>
+    <title>Mechanics with Memes</title>
     <subtitle>A Not-so-ideal Introduction to Physics</subtitle>
 
     <!-- Include frontmatter -->

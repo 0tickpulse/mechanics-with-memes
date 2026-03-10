@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dimensions and Uncertainties</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Classical Mechanics, with Memes">
+<meta property="book:author" content="Entong Hou">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.18';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.1d92cd109bc12c4d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Classical Mechanics, with Memes</span> <span class="subtitle">A Not-so-ideal Introduction to Physics</span></a></h1>
+<p class="byline">Entong Hou</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-the-international-system-of-units.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-01-dim-analysis-uncertainties.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-02-kinematics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{physics}\require{ams}\require{ams}\require{mhchem}\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-01-dim-analysis-uncertainties.html" class="internal"><span class="codenumber">1</span> <span class="title">Dimensional Analysis and Uncertainties</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-the-international-system-of-units.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The International System of Units</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-the-seven-quantities" class="internal"><span class="codenumber">1.1.1</span> <span class="title">The Seven Quantities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-si-def-second" class="internal"><span class="codenumber">1.1.2</span> <span class="title">How Do We Define the Second?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-si-def-meter" class="internal"><span class="codenumber">1.1.3</span> <span class="title">How Do We Define the Meter?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-si-def-kilogram" class="internal"><span class="codenumber">1.1.4</span> <span class="title">How Do We Define the Kilogram?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-si-def-ampere" class="internal"><span class="codenumber">1.1.5</span> <span class="title">How Do We Define the Ampere?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-si-def-kelvin" class="internal"><span class="codenumber">1.1.6</span> <span class="title">How Do We Define the Kelvin?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-si-def-mole" class="internal"><span class="codenumber">1.1.7</span> <span class="title">How Do We Define the Mole?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-si-def-candela" class="internal"><span class="codenumber">1.1.8</span> <span class="title">How Do We Define the Candela?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-international-system-of-units.html#subsec-other-systems-of-units" class="internal"><span class="codenumber">1.1.9</span> <span class="title">Other Systems of Units</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-dimensions-and-uncertainties.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Dimensions and Uncertainties</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensions-and-uncertainties.html#subsec-dimensional-analysis" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Dimensional Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensions-and-uncertainties.html#subsec-uncertainties-and-errors" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Uncertainties and Errors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensions-and-uncertainties.html#subsec-uncertainty-propagation" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Uncertainty Propagation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensions-and-uncertainties.html#subsec-representing-data-visually" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Representing Data Visually</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Motion and Kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-motion-in-one-dimension.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Motion in One Dimension</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-position" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Position</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-average-velocity" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Average Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-instantaneous-velocity" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Instantaneous Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-acceleration" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-constant-acceleration" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Constant Acceleration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Motion in Two Dimensions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-the-vector" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Introducing the Vector</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-projectile-motion" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Projectile Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-will-the-lemon-hit" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Will the Lemon Hit?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-derivative-rules" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Derivative Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-polar-coordinates" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Polar Coordinates and Uniform Circular Motion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-kinematics-summary.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Summary</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kinematics-problems.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-kinematics-afr.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Applications and Further Reading</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-kinematics-afr.html#subsec-kinematics-further-reading" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Further Reading</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-kinematics-afr.html#subsubsec-kinematics-afr-calculus" class="internal"><span class="codenumber">2.5.1.1</span> <span class="title">Calculus</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-kinematics-afr.html#subsubsec-kinematics-afr-vectors" class="internal"><span class="codenumber">2.5.1.2</span> <span class="title">Vectors</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-main.html" class="internal"><span class="title">References</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-dimensions-and-uncertainties"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dimensions and Uncertainties</span>
+</h2>
+<section class="introduction" id="sec-dimensions-and-uncertainties-2"><div class="para" id="sec-dimensions-and-uncertainties-2-1">Now that we are familiar with the SI units, we can start talking about how to make measurements. Our goal in this section is twofold: first, we want to understand how to think about the dimensions of our measurements, and second, we want to understand how to think about the uncertainties in our measurements. Indeed, in a heist, a small mistake in the math does not just incur a lower grade on a homework assignment, but can lead to the 500 kg statue of Feynman dropping through the floor of a stolen van.<div class="autopermalink" data-description="Paragraph"><a href="#sec-dimensions-and-uncertainties-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-dimensional-analysis"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dimensional Analysis</span>
+</h3>
+<div class="para logical" id="subsec-dimensional-analysis-2">
+<div class="para">Let’s begin by discussing the dimensions of our measurements. In our story, the van is moving at a certain speed. The dimension of speed is length over time. We shall write the dimension of length as <span class="process-math">\(L\)</span> and the dimension of time as <span class="process-math">\(T\text{.}\)</span> Therefore, the dimension of speed is</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-2-3">
+\begin{equation*}
+[\text{speed}] = \frac{L}{T}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-dimensional-analysis-3">The following exercises should help you get a feel for how to ascertain the dimensions of a quantity.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-dimensional-analysis-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="subsec-dimensional-analysis-4-1-1">
+<div class="para">Sarah (the Engineer) is hyper-caffeinated and scribbling formulas for the winch system, which will be used to pull the statue into the van. She hands Dave, the team leader, a formula for the required power of the winch system:</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-4-1-1-1">
+\begin{equation*}
+\text{Power} = \text{mass} \cdot \text{speed}\text{.}
+\end{equation*}
+</div>
+<div class="para">She argues that the formula makes sense because with more mass and more speed, we need more power.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="subsec-dimensional-analysis-4-1-2">But Dave, using only his brain, is able to determine that the formula is nonsense, without even looking at the numbers or referencing any physical principles. Do you see the issue?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-dimensional-analysis-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="subsec-dimensional-analysis-4-2-1">
+<div class="para">The dimension of power is</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-4-2-1-1">
+\begin{equation*}
+[\text{power}] = \frac{ML^2}{T^3}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(M\)</span> is the dimension of mass.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.2.1.1"><a href="#subsec-dimensional-analysis-4-2" title="Copy heading and permalink for Hint 1.2.1.1" aria-label="Copy heading and permalink for Hint 1.2.1.1">🔗</a></div>
+</div></details><details id="subsec-dimensional-analysis-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-dimensional-analysis-4-3-1">
+<div class="para">The formula given by Sarah has the dimension</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-4-3-1-1">
+\begin{equation*}
+[\text{mass} \cdot \text{speed}] = M \cdot \frac{L}{T} = \frac{ML}{T},
+\end{equation*}
+</div>
+<div class="para">which is not the dimension of power. So the dimensions of both sides do not match.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.1.1"><a href="#subsec-dimensional-analysis-4-3" title="Copy heading and permalink for Solution 1.2.1.1" aria-label="Copy heading and permalink for Solution 1.2.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.2.1"><a href="#subsec-dimensional-analysis-4" title="Copy heading and permalink for Checkpoint 1.2.1" aria-label="Copy heading and permalink for Checkpoint 1.2.1">🔗</a></div></article></details><details id="subsec-dimensional-analysis-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="subsec-dimensional-analysis-5-1-1">
+<div class="para">Dave is trying to figure a way to fix Sarah’s formula for the power of the winch system. He proposes that</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-5-1-1-1">
+\begin{equation*}
+\text{Power} = k \cdot \text{mass}^a \cdot \text{speed}^b \cdot \text{time}^c\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(k\)</span> is a dimensionless constant, and <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are constants that we need to determine. Can you determine the values of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> by using dimensional analysis?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-dimensional-analysis-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-dimensional-analysis-5-2-1">
+<div class="para">This is quite straightforward. The dimension of the right hand side is</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-5-2-1-1">
+\begin{equation*}
+[k \cdot \text{mass}^a \cdot \text{speed}^b \cdot \text{time}^c] = M^a \cdot \qty(\frac{L}{T})^b \cdot T^c = M^a L^b T^{c - b}.
+\end{equation*}
+</div>
+<div class="para">We want this to match the dimension of power, which is <span class="process-math">\(\frac{ML^2}{T^3}\text{.}\)</span> Therefore, we need to have <span class="process-math">\(a = 1\text{,}\)</span> <span class="process-math">\(b = 2\text{,}\)</span> and <span class="process-math">\(c - b = -3\text{,}\)</span> which gives us <span class="process-math">\(c = -1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.2.1"><a href="#subsec-dimensional-analysis-5-2" title="Copy heading and permalink for Solution 1.2.2.1" aria-label="Copy heading and permalink for Solution 1.2.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.2.2"><a href="#subsec-dimensional-analysis-5" title="Copy heading and permalink for Checkpoint 1.2.2" aria-label="Copy heading and permalink for Checkpoint 1.2.2">🔗</a></div></article></details><div class="para logical" id="subsec-dimensional-analysis-6">
+<div class="para">To further refine the formula, we need to use certain laws of physics to figure out the constants. Sarah argues, in her derivation, that we need to take gravity into account. According to Isaac Newton, when two objects with masses <span class="process-math">\(m_1\)</span> and <span class="process-math">\(m_2\)</span> are separated by a distance <span class="process-math">\(r\text{,}\)</span> they exert a gravitational force on each other given by</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-6-4">
+\begin{equation*}
+F = G \frac{m_1 m_2}{r^2},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(G\)</span> is a constant.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-dimensional-analysis-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-dimensional-analysis-7-1-1">What are the dimensions of <span class="process-math">\(G\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-dimensional-analysis-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-dimensional-analysis-7-2-1">
+<div class="para">The dimension of the left hand side is</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-7-2-1-1">
+\begin{equation*}
+[F] = \frac{ML}{T^2},
+\end{equation*}
+</div>
+<div class="para">and the dimension of the right hand side is</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-7-2-1-2">
+\begin{equation*}
+\qty[G \frac{m_1 m_2}{r^2}] = [G] \cdot \frac{M^2}{L^2}.
+\end{equation*}
+</div>
+<div class="para">Therefore, we need to have</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-7-2-1-3">
+\begin{equation*}
+[G] \cdot \frac{M^2}{L^2} = \frac{ML}{T^2} \implies [G] = \frac{L^3}{MT^2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.3.1"><a href="#subsec-dimensional-analysis-7-2" title="Copy heading and permalink for Solution 1.2.3.1" aria-label="Copy heading and permalink for Solution 1.2.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.2.3"><a href="#subsec-dimensional-analysis-7" title="Copy heading and permalink for Checkpoint 1.2.3" aria-label="Copy heading and permalink for Checkpoint 1.2.3">🔗</a></div></article></details><div class="para" id="subsec-dimensional-analysis-8">Let’s take another example to illustrate the power of dimensional analysis. A pendulum is a system consisting of a mass <span class="process-math">\(m\)</span> hanging from a string of length <span class="process-math">\(l\text{.}\)</span> The time it takes for the pendulum to complete one full swing back and forth is called the period, which we will denote as <span class="process-math">\(T\text{.}\)</span> The maximum angle that the pendulum makes with the vertical is called the amplitude, which we will denote as <span class="process-math">\(\theta_0\text{.}\)</span> The gravitational acceleration is denoted as <span class="process-math">\(g\text{.}\)</span> We can now use dimensional analysis to figure out how the period of the pendulum depends on the other parameters.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-dimensional-analysis-9">
+<div class="para">We first write down the most general formula for the period of the pendulum that we can think of:</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-9-1">
+\begin{equation*}
+T = f(\theta_0) \cdot m^a \cdot l^b \cdot g^c\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(f(\theta_0)\)</span> is some function of the amplitude, and <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are constants that we need to determine. The period of the pendulum has the dimension of time, which we will denote as <span class="process-math">\(T\text{.}\)</span> The other parameters have the following dimensions:</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-9-7">
+\begin{equation*}
+[m] = M, \quad [l] = L, \quad [\theta_0] = 1, \quad [g] = \frac{L}{T^2}\text{.}
+\end{equation*}
+</div>
+<div class="para">The dimension of the right hand side is</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-9-8">
+\begin{equation*}
+[f(\theta_0) \cdot m^a \cdot l^b \cdot g^c] = M^a L^{b + c} T^{-2c}\text{.}
+\end{equation*}
+</div>
+<div class="para">We want this to match the dimension of time, which is <span class="process-math">\(T\text{.}\)</span> Therefore, we need to have <span class="process-math">\(a = 0\text{,}\)</span> <span class="process-math">\(b + c = 0\text{,}\)</span> and <span class="process-math">\(-2c = 1\text{,}\)</span> which gives us <span class="process-math">\(c = -\frac{1}{2}\)</span> and <span class="process-math">\(b = \frac{1}{2}\text{.}\)</span> Therefore, the period of the pendulum is given by</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-9-15">
+\begin{equation*}
+T = f(\theta_0) \cdot \sqrt{\frac{l}{g}}\text{.}
+\end{equation*}
+</div>
+<div class="para">The function <span class="process-math">\(f(\theta_0)\)</span> cannot be determined by dimensional analysis, but it can be determined by using the laws of physics. It turns out that for small angles, <span class="process-math">\(f(\theta_0) \approx 2\pi\text{,}\)</span> which gives us the well-known formula for the period of a pendulum:</div>
+<div class="displaymath process-math" id="subsec-dimensional-analysis-9-18">
+\begin{equation*}
+T \approx 2\pi \sqrt{\frac{l}{g}}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-dimensional-analysis-10">With dimensional analysis, we were able to figure out a close expression for the period of the pendulum, without even looking at the equations of motion. Crucially, we were able to figure out that the period does not depend on the mass of the pendulum, which is something not obvious from first glance.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-dimensional-analysis-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.2.1: Dimensional Analysis"><a href="#subsec-dimensional-analysis" title="Copy heading and permalink for Subsection 1.2.1: Dimensional Analysis" aria-label="Copy heading and permalink for Subsection 1.2.1: Dimensional Analysis">🔗</a></div></section><section class="subsection" id="subsec-uncertainties-and-errors"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uncertainties and Errors</span>
+</h3>
+<div class="para" id="subsec-uncertainties-and-errors-2">"Measure twice, steal once," is Dave’s new motto. During their midnight scouting mission, the team measured the statue’s base. The meter stick they used had a smallest division of 1 mm (0.1 cm).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-uncertainties-and-errors-3">
+<div class="para">When we measure anything, we never get the exact value of the quantity we are trying to measure. There is always a range of possible values that the quantity could take, and we can only say that the true value of the quantity is likely to be within that range. For instance, if Sarah measures the length of the statue’s base to be 80.2 cm, she might say that the length ranges from 80.15 cm to 80.25 cm, which means that the true length of the statue’s base is likely to be within that range. We write this as</div>
+<div class="displaymath process-math" id="subsec-uncertainties-and-errors-3-1">
+\begin{equation*}
+L = 80.20 \pm 0.05 \, \text{cm}\text{.}
+\end{equation*}
+</div>
+<div class="para">The number after the plus-minus sign is called the <dfn class="terminology">uncertainty</dfn> of the measurement. We say that a measuring device is more <dfn class="terminology">precise</dfn> if it has a smaller uncertainty.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-uncertainties-and-errors-4">
+<div class="para">Because Sarah’s hands were shaking from too much espresso, they got three different results: <span class="process-math">\(80.2\)</span> cm, <span class="process-math">\(80.5\)</span> cm, and <span class="process-math">\(79.9\)</span> cm. When we have multiple measurements of the same quantity, we report the <dfn class="terminology">mean</dfn> of the measurements as the value of the quantity, and we report the <dfn class="terminology">standard error</dfn> of the measurements as the uncertainty of the quantity. The standard error is given by the formula</div>
+<div class="displaymath process-math" id="subsec-uncertainties-and-errors-4-6">
+\begin{equation*}
+\Delta x = \frac{\sigma}{\sqrt{N}}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\sigma\)</span> is the standard deviation of the measurements, and <span class="process-math">\(N\)</span> is the number of measurements. The mean is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainties-and-errors-4-9">
+\begin{equation*}
+\bar{x} = \frac{1}{3} (80.2 + 80.5 + 79.9) \, \text{cm} = 80.2 \, \text{cm}\text{,}
+\end{equation*}
+</div>
+<div class="para">and the standard deviation is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainties-and-errors-4-10">
+\begin{equation*}
+\sigma = \sqrt{\frac{1}{3} ((80.2 - 80.2)^2 + (80.5 - 80.2)^2 + (79.9 - 80.2)^2)} \, \text{cm} \approx 0.24 \, \text{cm}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, the standard error is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainties-and-errors-4-11">
+\begin{equation*}
+\Delta x = \frac{0.24}{\sqrt{3}} \, \text{cm} \approx 0.14 \, \text{cm}\text{.}
+\end{equation*}
+</div>
+<div class="para">And so we would report the length of the statue’s base as</div>
+<div class="displaymath process-math" id="subsec-uncertainties-and-errors-4-12">
+\begin{equation*}
+L = 80.2 \pm 0.14 \, \text{cm}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-uncertainties-and-errors-5">Why did the value vary so much? This is because of <dfn class="terminology">random errors</dfn>, which are errors that arise from unpredictable fluctuations in the measurement process. Sarah’s shaky hands caused random errors in her measurements, which is why she got highly variable results. Random errors can be reduced by taking more measurements and averaging them, which is what we did to get the mean and standard deviation. Had Sarah taken 30 measurements instead of 3, the standard deviation would have been smaller, and we would have had a more precise measurement of the length of the statue’s base.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-uncertainties-and-errors-6">Sarah, in her hyper-caffeinated state, also misplaced the meter stick. She placed it at an angle from the base of the statue, which led to a larger measurement than the true length of the statue’s base. This is an example of a <dfn class="terminology">systematic error</dfn>, which is an error that arises from a consistent bias in the measurement process. Systematic errors cannot be reduced by taking more measurements and averaging them, because they affect all measurements in the same way. To reduce systematic errors, we need to identify the source of the error and correct it. In this case, Sarah could have used a level to make sure that the meter stick was placed horizontally, which would have reduced the systematic error in her measurements.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-uncertainties-and-errors-7">In an experimental report, it is good practice to report all known sources of error, and to estimate the magnitude of those errors. If we were writing a report on the measurements of the statue’s base, we would include a "Sources of Error" section, where we would discuss the random errors and systematic errors in our measurements, and we would estimate the magnitude of those errors.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-random-error"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="def-random-error-1-1">A <dfn class="terminology">random error</dfn> is an error that arises from unpredictable fluctuations in the measurement process. They are reduced by taking more measurements.<div class="autopermalink" data-description="Paragraph"><a href="#def-random-error-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.4"><a href="#def-random-error" title="Copy heading and permalink for Definition 1.2.4" aria-label="Copy heading and permalink for Definition 1.2.4">🔗</a></div></article><article class="definition definition-like" id="def-systematic-error"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="def-systematic-error-1-1">A <dfn class="terminology">systematic error</dfn> is an error that arises from a consistent bias in the measurement process. They cannot be reduced by taking more measurements, and they are reduced by identifying the source of the error and correcting it.<div class="autopermalink" data-description="Paragraph"><a href="#def-systematic-error-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.5"><a href="#def-systematic-error" title="Copy heading and permalink for Definition 1.2.5" aria-label="Copy heading and permalink for Definition 1.2.5">🔗</a></div></article><details id="subsec-uncertainties-and-errors-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-uncertainties-and-errors-10-1-1">You are estimating the height of a window on the second floor of a building by throwing a rock from the window and measuring the time it takes for it to hit the ground using a stopwatch. Then, you use the formula <span class="process-math">\(h = \frac{1}{2}gt^2\)</span> to estimate the height of the window, where <span class="process-math">\(g\)</span> is the gravitational acceleration and <span class="process-math">\(t\)</span> is the time it takes for the rock to hit the ground. What are some sources of error in this experiment?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-uncertainties-and-errors-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-uncertainties-and-errors-10-2-1">
+<ul class="disc" id="subsec-uncertainties-and-errors-10-2-1-1">
+<li id="subsec-uncertainties-and-errors-10-2-1-1-1">
+<div class="para" id="subsec-uncertainties-and-errors-10-2-1-1-1-1">One source of error is the random error in the measurement of time using the stopwatch. You are never perfectly precise when you start and stop the stopwatch, so there is an uncertainty in the measurement of time.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-10-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-uncertainties-and-errors-10-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-uncertainties-and-errors-10-2-1-1-2">
+<div class="para" id="subsec-uncertainties-and-errors-10-2-1-1-2-1">Another random error is the initial speed of the rock when you throw it. If you throw the rock with a nonzero initial speed, then the formula <span class="process-math">\(h = \frac{1}{2}gt^2\)</span> is not accurate, because it assumes that the rock is dropped from rest.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-10-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-uncertainties-and-errors-10-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-uncertainties-and-errors-10-2-1-1-3">
+<div class="para" id="subsec-uncertainties-and-errors-10-2-1-1-3-1">A systematic error is the air resistance acting on the rock as it falls. The formula <span class="process-math">\(h = \frac{1}{2}gt^2\)</span> does not take air resistance into account, so it will overestimate the height of the window.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-10-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-uncertainties-and-errors-10-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.6.1"><a href="#subsec-uncertainties-and-errors-10-2" title="Copy heading and permalink for Solution 1.2.6.1" aria-label="Copy heading and permalink for Solution 1.2.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.2.6"><a href="#subsec-uncertainties-and-errors-10" title="Copy heading and permalink for Example 1.2.6" aria-label="Copy heading and permalink for Example 1.2.6">🔗</a></div></article></details><details id="subsec-uncertainties-and-errors-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-uncertainties-and-errors-11-1-1">You are estimating the power emitted from a candle by measuring how much it heats up a beaker of water placed above it. You measure the temperature of the water at regular intervals, and you find that the temperature increases by 10 degrees Celsius in 5 minutes. You use the formula <span class="process-math">\(P = mc\frac{\Delta T}{\Delta t}\)</span> to estimate the power emitted from the candle, where <span class="process-math">\(m\)</span> is the mass of the water, <span class="process-math">\(c\)</span> is a constant (the specific heat capacity of water), <span class="process-math">\(\Delta T\)</span> is the change in temperature, and <span class="process-math">\(\Delta t\)</span> is the change in time. What is one systematic error in this experiment? How can you reduce this error?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-uncertainties-and-errors-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-uncertainties-and-errors-11-2-1">A systematic error is the heat loss to the surroundings. The formula <span class="process-math">\(P = mc\frac{\Delta T}{\Delta t}\)</span> assumes that all the heat emitted from the candle goes into heating up the water, but in reality, some of the heat will be lost to the surroundings, which will lead to an underestimate of the power emitted from the candle.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-uncertainties-and-errors-11-2-2">To reduce this error, you could place a lid on the beaker to reduce heat loss, or you could perform the experiment in a draft-free environment to minimize heat loss due to air currents.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainties-and-errors-11-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.7.1"><a href="#subsec-uncertainties-and-errors-11-2" title="Copy heading and permalink for Solution 1.2.7.1" aria-label="Copy heading and permalink for Solution 1.2.7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.2.7"><a href="#subsec-uncertainties-and-errors-11" title="Copy heading and permalink for Checkpoint 1.2.7" aria-label="Copy heading and permalink for Checkpoint 1.2.7">🔗</a></div></article></details><article class="definition definition-like" id="def-relative-uncertainty"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="def-relative-uncertainty-1-1">The <dfn class="terminology">relative uncertainty</dfn> of a measurement is the ratio of the uncertainty to the value of the measurement.<div class="autopermalink" data-description="Paragraph"><a href="#def-relative-uncertainty-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.8"><a href="#def-relative-uncertainty" title="Copy heading and permalink for Definition 1.2.8" aria-label="Copy heading and permalink for Definition 1.2.8">🔗</a></div></article><div class="autopermalink" data-description="Subsection 1.2.2: Uncertainties and Errors"><a href="#subsec-uncertainties-and-errors" title="Copy heading and permalink for Subsection 1.2.2: Uncertainties and Errors" aria-label="Copy heading and permalink for Subsection 1.2.2: Uncertainties and Errors">🔗</a></div></section><section class="subsection" id="subsec-uncertainty-propagation"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uncertainty Propagation</span>
+</h3>
+<div class="para" id="subsec-uncertainty-propagation-2">The real danger comes when we use our measurements to calculate other quantities. The original uncertainties will propagate through our calculations, and the final result will thus also have an uncertainty. What is the uncertainty of the final result?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-uncertainty-propagation-3">In our situation, we can use some formulas to calculate the uncertainty of the final result.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-uncertainty-propagation-4">
+<div class="para">If we are adding two lengths <span class="process-math">\(L = x + y\text{,}\)</span> the uncertainty in <span class="process-math">\(L\)</span> is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-4-3">
+\begin{equation*}
+\Delta L = \sqrt{(\Delta x)^2 + (\Delta y)^2}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\Delta x\)</span> and <span class="process-math">\(\Delta y\)</span> are the uncertainties in <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> respectively.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-uncertainty-propagation-5">
+<div class="para">If we are multiplying two lengths <span class="process-math">\(A = xy\text{,}\)</span> the relative uncertainty in <span class="process-math">\(A\)</span> is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-5-3">
+\begin{equation*}
+\frac{\Delta A}{A} = \sqrt{\qty(\frac{\Delta x}{x})^2 + \qty(\frac{\Delta y}{y})^2}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-uncertainty-propagation-6">
+<div class="para">If we are dividing two lengths <span class="process-math">\(B = \frac{x}{y}\text{,}\)</span> the relative uncertainty in <span class="process-math">\(B\)</span> is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-6-3">
+\begin{equation*}
+\frac{\Delta B}{B} = \sqrt{\qty(\frac{\Delta x}{x})^2 + \qty(\frac{\Delta y}{y})^2}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-uncertainty-propagation-7">
+<div class="para">If we are raising a length to a power <span class="process-math">\(C = x^n\text{,}\)</span> the relative uncertainty in <span class="process-math">\(C\)</span> is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-7-3">
+\begin{equation*}
+\frac{\Delta C}{C} = |n| \cdot \frac{\Delta x}{x}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-uncertainty-propagation-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-uncertainty-propagation-8-1-1">To transport the statue, we need to carry it onto the van using a ramp. The calculations involve determining the kinetic energy of the statue as it moves up the ramp, which is given by <span class="process-math">\(K = \frac{1}{2}mv^2\text{,}\)</span> where <span class="process-math">\(m\)</span> is the mass of the statue and <span class="process-math">\(v\)</span> is its velocity. If the mass of the statue is measured to be <span class="process-math">\(500 \pm 5\)</span> kg and its velocity is measured to be <span class="process-math">\(2 \pm 0.1\)</span> m/s, what is the uncertainty in the kinetic energy of the statue?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-uncertainty-propagation-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-uncertainty-propagation-8-2-1">
+<div class="para">The relative uncertainty in the kinetic energy is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-8-2-1-1">
+\begin{equation*}
+\frac{\Delta K}{K} = \sqrt{\qty(\frac{\Delta m}{m})^2 + \qty(2 \cdot \frac{\Delta v}{v})^2} = \sqrt{\qty(\frac{5}{500})^2 + \qty(2 \cdot \frac{0.1}{2})^2} \approx 0.1\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, the uncertainty in the kinetic energy is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-8-2-1-2">
+\begin{equation*}
+\Delta K = 0.1 \cdot K = 0.1 \cdot \frac{1}{2} \cdot (500 \, \text{kg}) \cdot (2 \, \text{m} \cdot \text{s}^{-1})^2 = 100 \, \text{J}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.9.1"><a href="#subsec-uncertainty-propagation-8-2" title="Copy heading and permalink for Solution 1.2.9.1" aria-label="Copy heading and permalink for Solution 1.2.9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.2.9"><a href="#subsec-uncertainty-propagation-8" title="Copy heading and permalink for Checkpoint 1.2.9" aria-label="Copy heading and permalink for Checkpoint 1.2.9">🔗</a></div></article></details><article class="remark remark-like" id="subsec-uncertainty-propagation-9"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="subsec-uncertainty-propagation-9-1">
+<div class="para">By the way, there is a general formula for uncertainty propagation, which you can explore if you’re proficient in calculus. If we have a function <span class="process-math">\(f(x_1, x_2, \ldots, x_n)\text{,}\)</span> where <span class="process-math">\(x_i\)</span> are the (independent) measured quantities with uncertainties <span class="process-math">\(\Delta x_i\text{,}\)</span> then the uncertainty in <span class="process-math">\(f\)</span> is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-9-1-5">
+\begin{equation*}
+\Delta f = \sqrt{\qty(\frac{\partial f}{\partial x_1} \Delta x_1)^2 + \qty(\frac{\partial f}{\partial x_2} \Delta x_2)^2 + \cdots + \qty(\frac{\partial f}{\partial x_n} \Delta x_n)^2}\text{.}
+\end{equation*}
+</div>
+<div class="para">This formula can be derived using the Taylor expansion of <span class="process-math">\(f\)</span> around the mean values of <span class="process-math">\(x_i\text{,}\)</span> and it reduces to the formulas we have given above for addition, multiplication, division, and exponentiation.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-uncertainty-propagation-9-2">
+<div class="para">To take an example, consider the function <span class="process-math">\(x(x_0, \omega, t) = x_0 \cos(\omega t)\text{.}\)</span> The uncertainty in <span class="process-math">\(x\)</span> is given by</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-9-2-3">
+\begin{align*}
+\Delta x \amp = \sqrt{\qty(\frac{\partial x}{\partial x_0} \Delta x_0)^2 + \qty(\frac{\partial x}{\partial \omega} \Delta \omega)^2 + \qty(\frac{\partial x}{\partial t} \Delta t)^2} \\
+\amp = \sqrt{\qty(\cos(\omega t) \Delta x_0)^2 + \qty(-x_0 t \sin(\omega t) \Delta \omega)^2 + \qty(-x_0 \omega \sin(\omega t) \Delta t)^2} \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 1.2.10"><a href="#subsec-uncertainty-propagation-9" title="Copy heading and permalink for Remark 1.2.10" aria-label="Copy heading and permalink for Remark 1.2.10">🔗</a></div></article><details id="subsec-uncertainty-propagation-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Will it Fit?</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-uncertainty-propagation-10-2-1">Suppose the van door is <span class="process-math">\(85.0 \pm 0.5\)</span> cm wide, and the statue base is <span class="process-math">\(80.0 \pm 0.8\)</span> cm wide. Dave needs to know the gap width <span class="process-math">\(G = W_\text{door} - W_\text{statue}\)</span> and its uncertainty.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-uncertainty-propagation-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-uncertainty-propagation-10-3-1">
+<div class="para">The gap is <span class="process-math">\(85.0 - 80.0 = 5.0\)</span> cm. The uncertainty is</div>
+<div class="displaymath process-math" id="subsec-uncertainty-propagation-10-3-1-2">
+\begin{equation*}
+\Delta G = \sqrt{(0.5)^2 + (0.8)^2} \approx 0.94 \, \text{cm}\text{.}
+\end{equation*}
+</div>
+<div class="para">So the gap is <span class="process-math">\(5.0 \pm 0.9\)</span> cm. Dave realizes that in the worst case, the gap could be as small as <span class="process-math">\(4.1\)</span> cm — dangerously tight for a high-speed extraction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-uncertainty-propagation-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.11.1"><a href="#subsec-uncertainty-propagation-10-3" title="Copy heading and permalink for Solution 1.2.11.1" aria-label="Copy heading and permalink for Solution 1.2.11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.2.11: Will it Fit?"><a href="#subsec-uncertainty-propagation-10" title="Copy heading and permalink for Checkpoint 1.2.11: Will it Fit?" aria-label="Copy heading and permalink for Checkpoint 1.2.11: Will it Fit?">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.2.3: Uncertainty Propagation"><a href="#subsec-uncertainty-propagation" title="Copy heading and permalink for Subsection 1.2.3: Uncertainty Propagation" aria-label="Copy heading and permalink for Subsection 1.2.3: Uncertainty Propagation">🔗</a></div></section><section class="subsection" id="subsec-representing-data-visually"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Representing Data Visually</span>
+</h3>
+<div class="para" id="subsec-representing-data-visually-2">Dave knows that a single data point is a suggestion, but a graph is a proof. To ensure the getaway van doesn’t bottom out under the weight of a bronze physicist, the team conducted a load test. They added mass to the van and measured the compression of the suspension springs.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-representing-data-visually-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-representing-data-visually-3">When we plot data, we almost always plot the relationship between two variables. The <dfn class="terminology">independent variable</dfn> is the variable that we control, and the <dfn class="terminology">dependent variable</dfn> is the variable that we measure.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-representing-data-visually-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-representing-data-visually-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-representing-data-visually-4-1-1">What are the independent variable and the dependent variable in the load test experiment?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-representing-data-visually-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-representing-data-visually-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-representing-data-visually-4-2-1">The independent variable is the mass added to the van, and the dependent variable is the compression of the suspension springs.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-representing-data-visually-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.12.1"><a href="#subsec-representing-data-visually-4-2" title="Copy heading and permalink for Solution 1.2.12.1" aria-label="Copy heading and permalink for Solution 1.2.12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.2.12"><a href="#subsec-representing-data-visually-4" title="Copy heading and permalink for Checkpoint 1.2.12" aria-label="Copy heading and permalink for Checkpoint 1.2.12">🔗</a></div></article></details><div class="para" id="subsec-representing-data-visually-5">The independent variable is placed on the horizontal axis, and the dependent variable is placed on the vertical axis. For our experiment, let’s call the mass added to the van <span class="process-math">\(m\text{,}\)</span> and let’s call the compression of the suspension springs <span class="process-math">\(C\text{.}\)</span> Each data point on the graph corresponds to a pair of values. We can denote the data points as <span class="process-math">\((m_1, C_1)\text{,}\)</span> <span class="process-math">\((m_2, C_2)\text{,}\)</span> and so on.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-representing-data-visually-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.2.4: Representing Data Visually"><a href="#subsec-representing-data-visually" title="Copy heading and permalink for Subsection 1.2.4: Representing Data Visually" aria-label="Copy heading and permalink for Subsection 1.2.4: Representing Data Visually">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2: Dimensions and Uncertainties"><a href="#sec-dimensions-and-uncertainties" title="Copy heading and permalink for Section 1.2: Dimensions and Uncertainties" aria-label="Copy heading and permalink for Section 1.2: Dimensions and Uncertainties">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-the-international-system-of-units.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-02-kinematics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

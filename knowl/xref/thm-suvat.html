@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kinematic Equations for Constant Acceleration in One Dimension.</span>
+</h4>
+<div class="para logical">
+<div class="para">For an object moving in one dimension with constant acceleration <span class="process-math">\(a\text{,}\)</span> initial velocity <span class="process-math">\(v_0\text{,}\)</span> and initial position <span class="process-math">\(x_0\text{,}\)</span> the following equations hold:</div>
+<div class="displaymath process-math">
+\begin{align*}
+v \amp = v_0 + at\\
+\Delta x \amp = v_0 t + \frac{1}{2} at^2\\
+v^2 \amp = v_0^2 + 2a\Delta x\\
+\Delta x \amp = \frac{v + v_0}{2} t
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-suvat-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.1.14: Kinematic Equations for Constant Acceleration in One Dimension"><a href="#thm-suvat" title="Copy heading and permalink for Theorem 2.1.14: Kinematic Equations for Constant Acceleration in One Dimension" aria-label="Copy heading and permalink for Theorem 2.1.14: Kinematic Equations for Constant Acceleration in One Dimension">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">The first equation can be derived by integrating the acceleration:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = v_0 + \int_0^t a \, \dd{t'} = v_0 + at\text{.}
+\end{equation*}
+</div>
+<div class="para">The second equation can be derived by integrating the velocity:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = x_0 + \int_0^t v(t') \, \dd{t'} = x_0 + \int_0^t (v_0 + at') \, \dd{t'} = x_0 + v_0 t + \frac{1}{2} at^2\text{.}
+\end{equation*}
+</div>
+<div class="para">The third equation can be derived by eliminating time from the first two equations. From the first equation, we have <span class="process-math">\(t = \frac{v - v_0}{a}\text{.}\)</span> Substituting this into the second equation gives us</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta x = v_0 \qty( \frac{v - v_0}{a} ) + \frac{1}{2} a \qty( \frac{v - v_0}{a} )^2\text{.}
+\end{equation*}
+</div>
+<div class="para">Simplifying this expression yields the third equation:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v^2 = v_0^2 + 2a\Delta x\text{.}
+\end{equation*}
+</div>
+<div class="para">The fourth equation can be derived by eliminating acceleration from the first two equations. From the first equation, we have <span class="process-math">\(a = \frac{v - v_0}{t}\text{.}\)</span> Substituting this into the second equation gives us</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta x = v_0 t + \frac{1}{2} \qty( \frac{v - v_0}{t} ) t^2\text{.}
+\end{equation*}
+</div>
+<div class="para">Simplifying this expression yields the fourth equation:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta x = \frac{v + v_0}{2} t\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-suvat-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.1.14.1"><a href="#thm-suvat-3" title="Copy heading and permalink for Proof 2.1.14.1" aria-label="Copy heading and permalink for Proof 2.1.14.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="sec-motion-in-one-dimension.html#thm-suvat">in-context</a></span>
+</body>
+</html>

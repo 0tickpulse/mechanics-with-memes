@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dimensional Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="My Great Book">
+<meta property="book:author" content="You">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.17';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.86a1bdf80f338ffc.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">My Great Book</span> <span class="subtitle">An example to get you started</span></a></h1>
+<p class="byline">You</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-01-dim-analysis-uncertainties.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-01-dim-analysis-uncertainties.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-02-kinematics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{physics}\require{ams}\require{ams}\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-01-dim-analysis-uncertainties.html" class="internal"><span class="codenumber">1</span> <span class="title">Dimensional Analysis and Uncertainties</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-dimensional-analysis.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Dimensional Analysis</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensional-analysis.html#subsec-the-seven-quantities" class="internal"><span class="codenumber">1.1.1</span> <span class="title">The Seven Quantities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensional-analysis.html#subsec-si-def-second" class="internal"><span class="codenumber">1.1.2</span> <span class="title">How Do We Define the Second?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensional-analysis.html#subsec-si-def-meter" class="internal"><span class="codenumber">1.1.3</span> <span class="title">How Do We Define the Meter?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensional-analysis.html#subsec-si-def-kilogram" class="internal"><span class="codenumber">1.1.4</span> <span class="title">How Do We Define the Kilogram?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-dimensional-analysis.html#subsec-si-def-ampere" class="internal"><span class="codenumber">1.1.5</span> <span class="title">How Do We Define the Ampere?</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Motion and Kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-motion-in-one-dimension.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Motion in One Dimension</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-position" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Position</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-average-velocity" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Average Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-instantaneous-velocity" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Instantaneous Velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-acceleration" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-one-dimension.html#subsec-constant-acceleration" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Constant Acceleration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Motion in Two Dimensions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-the-vector" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Introducing the Vector</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-projectile-motion" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Projectile Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-will-the-lemon-hit" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Will the Lemon Hit?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-derivative-rules" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Derivative Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-motion-in-two-dimensions.html#subsec-polar-coordinates" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Polar Coordinates and Uniform Circular Motion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-kinematics-summary.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Summary</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kinematics-problems.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-kinematics-afr.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Applications and Further Reading</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-kinematics-afr.html#subsec-" class="internal"><span class="codenumber">2.5.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-kinematics-afr.html#subsec-kinematics-further-reading" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Further Reading</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-kinematics-afr.html#subsubsec-kinematics-afr-calculus" class="internal"><span class="codenumber">2.5.2.1</span> <span class="title">Calculus</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-kinematics-afr.html#subsubsec-kinematics-afr-vectors" class="internal"><span class="codenumber">2.5.2.2</span> <span class="title">Vectors</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-main.html" class="internal"><span class="title">References</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-dimensional-analysis"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dimensional Analysis</span>
+</h2>
+<section class="introduction" id="sec-dimensional-analysis-2"><div class="para" id="sec-dimensional-analysis-2-1">There is a storyline we shall tell throughout this book. An eccentric, wildly unqualified group of freshmen (otherwise commonly known as "physics students") decides to steal back their university’s beloved mascot, a 500 kg bronze statue of Richard Feynman, from the clutches of their wealthy, obnoxious rival university. To even begin with this, they need to figure out how to move the statue without getting caught by the security guards. This involves making measurements of the statue and the van they will be using to transport it, and then using those measurements to plan their heist. This is where we will start our journey into the world of dimensional analysis, the study of how to use measurements to understand the world around us.<div class="autopermalink" data-description="Paragraph"><a href="#sec-dimensional-analysis-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-the-seven-quantities"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Seven Quantities</span>
+</h3>
+<div class="para" id="subsec-the-seven-quantities-2">In science, quantities are the things we measure and use to describe the world around us. Every quantity contains a <dfn class="terminology">dimension</dfn>, which is a fundamental property of the quantity that tells us what kind of thing it is. When we measure the quantity, we get a number, called the <dfn class="terminology">magnitude</dfn>, and a unit, which is a standard way of expressing the dimension.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-seven-quantities-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-the-seven-quantities-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-the-seven-quantities-3-1-1">Two college students are comparing their heights. One student is 1.8 meters tall, and the other student is 6 feet tall. What are the dimensions, magnitudes, and units of these measurements? Who is taller?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-seven-quantities-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-the-seven-quantities-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-the-seven-quantities-3-2-1">The dimension of both measurements is length. The magnitude of the first measurement is 1.8, and the unit is meters. The magnitude of the second measurement is 6, and the unit is feet.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-seven-quantities-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-the-seven-quantities-3-2-2">
+<div class="para">To compare the two measurements, we need to convert them to the same unit. We can use the conversion factor</div>
+<div class="displaymath process-math" id="subsec-the-seven-quantities-3-2-2-1">
+\begin{equation*}
+1 \, \text{foot} = 0.3048 \, \text{meters}
+\end{equation*}
+</div>
+<div class="para">to convert the second measurement to meters:</div>
+<div class="displaymath process-math" id="subsec-the-seven-quantities-3-2-2-2">
+\begin{equation*}
+6 \, \text{feet} = 6 \times 0.3048 \, \text{meters} = 1.8288 \, \text{meters}
+\end{equation*}
+</div>
+<div class="para">Therefore, the second student is taller, since 1.8288 meters is greater than 1.8 meters.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-seven-quantities-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.1.1"><a href="#subsec-the-seven-quantities-3-2" title="Copy heading and permalink for Solution 1.1.1.1" aria-label="Copy heading and permalink for Solution 1.1.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.1.1"><a href="#subsec-the-seven-quantities-3" title="Copy heading and permalink for Checkpoint 1.1.1" aria-label="Copy heading and permalink for Checkpoint 1.1.1">🔗</a></div></article></details><div class="para" id="subsec-the-seven-quantities-4">The most common system of dimensions and units is the International System of Units, abbreviated SI for the French <i class="foreign">Système international d’unités</i>. It has a rich history, and it is the most widely used system of units in the world. The SI system is based on seven fundamental quantities, stated in the following table.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-seven-quantities-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="subsec-the-seven-quantities-5"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>International System of Units<div class="autopermalink" data-description="Table 1.1.2: International System of Units"><a href="#subsec-the-seven-quantities-5" title="Copy heading and permalink for Table 1.1.2: International System of Units" aria-label="Copy heading and permalink for Table 1.1.2: International System of Units">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines">Dimension</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Base SI Unit</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Length</td>
+<td class="l m b0 r0 l0 t0 lines">meter (m)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Mass</td>
+<td class="l m b0 r0 l0 t0 lines">kilogram (kg)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Time</td>
+<td class="l m b0 r0 l0 t0 lines">second (s)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Electric current</td>
+<td class="l m b0 r0 l0 t0 lines">ampere (A)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Temperature</td>
+<td class="l m b0 r0 l0 t0 lines">kelvin (K)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Amount of substance</td>
+<td class="l m b0 r0 l0 t0 lines">mole (mol)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Luminous intensity</td>
+<td class="l m b0 r0 l0 t0 lines">candela (cd)</td>
+</tr>
+</table></div></figure><div class="para" id="subsec-the-seven-quantities-6">These are known as the <dfn class="terminology">base units</dfn> because they define the dimensions of all other quantities. To measure the velocity of the van, we need to measure the length it travels and the time it takes to travel that length. The dimension of velocity is length divided by time, and the unit of velocity is meters per second, <span class="quantity">m·s<sup>-1</sup></span>. The acceleration of the van has the dimension of velocity divided by time, which is length divided by time squared, and the unit of acceleration is meters per second squared, <span class="quantity">m·s<sup>-2</sup></span>. If we apply a force to the van, the dimension of the force is mass times acceleration, which is mass times length divided by time squared, and the unit of force is kilogram meter per second squared, <span class="quantity">kg·m·s<sup>-2</sup></span>, which is also known as a Newton (N).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-seven-quantities-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-the-seven-quantities-7">Now there’s a big problem: how do I know that my 1 second is the same as your 1 second? How do I know that my 1 meter is the same as your 1 meter? It would appear that we need some kind of standard to define our units. The SI system incorporates a set of <dfn class="terminology">defining constants</dfn>, which are fundamental physical constants that are used to define the base units. We shall now go on a tour of each of the seven base units and their defining constants.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-seven-quantities-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.1: The Seven Quantities"><a href="#subsec-the-seven-quantities" title="Copy heading and permalink for Subsection 1.1.1: The Seven Quantities" aria-label="Copy heading and permalink for Subsection 1.1.1: The Seven Quantities">🔗</a></div></section><section class="subsection" id="subsec-si-def-second"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How Do We Define the Second?</span>
+</h3>
+<div class="para" id="subsec-si-def-second-2">The first unit we will discuss is the second, which is the SI base unit of time. Historically, many of these units were defined in terms of physical objects or phenomena, such as the length of a particular metal bar for the meter, or the mass of a particular lump of platinum for the kilogram.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-second-3">Prior to 1960, one second was defined as 1/86,400 of a mean solar day, which is the average time it takes for the Earth to complete one rotation on its axis. This was sufficient for most purposes — measuring the time it takes for a van to travel a certain distance, for example. With the advent of atomic clocks, we were able to measure time with a precision of one in <span class="process-math">\(10^{14}\)</span> seconds. This led to a need to redefine the second in terms of a more stable and reproducible standard.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-second-4">In 1960, the second was redefined by Resolution 9 of the 11th General Conference on Weights and Measures, abbreviated CGPM for the French <i class="foreign">Conférence générale des poids et mesures</i>, as one in 31,556,925.9747 of the tropical year for 1900 January 0 at 12 hours ephemeris time. You can read every resolution in the appendix of <a href="refs-main.html#ref-si-brochure" class="internal" title="Bibliographic Entry 2: The International System of Units (SI): SI Brochure.">[2]</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-second-5">The modern definition, as adopted in 1967 by Resolution 1 of the 13th CGPM, is based on the properties of the caesium 133 atom. Its most recent definition, as adopted in 2018 by Resolution 1 of the 26th CGPM, is as follows:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<blockquote class="blockquote" id="subsec-si-def-second-6">
+<div class="para" id="subsec-si-def-second-6-1">The second, symbol s, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency, <span class="process-math">\(\Delta \nu_\text{Cs}\text{,}\)</span> the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom, to be 9,192,631,770 when expressed in the unit <span class="quantity">Hz</span>, which is equal to <span class="quantity">s<sup>-1</sup></span>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Quotation"><a href="#subsec-si-def-second-6" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<div class="para" id="subsec-si-def-second-7">
+<em class="emphasis">What the heck does that even mean?</em> To begin, if you have studied general chemistry before, you will know that electrons in an atom can only occupy certain energy levels, and that they can transition between these energy levels by absorbing or emitting photons of specific frequencies. The caesium frequency, <span class="process-math">\(\Delta \nu_\text{Cs}\text{,}\)</span> is the frequency of the photon emitted when an electron in a caesium 133 atom transitions between the <span class="process-math">\(F=3\)</span> and <span class="process-math">\(F=4\)</span> hyperfine levels of the ground state <span class="process-math">\(\ce{6s_{1/2}}\)</span> electronic state.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-si-def-second-8">
+<div class="para">Therefore, we have the exact relation</div>
+<div class="displaymath process-math" id="subsec-si-def-second-8-1">
+\begin{equation*}
+\Delta \nu_\text{Cs} = 9,192,631,770 \, \text{Hz} = 9,192,631,770 \, \text{s}^{-1}\text{,}
+\end{equation*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math" id="subsec-si-def-second-8-2">
+\begin{equation*}
+1 \, \text{s} = \frac{9,192,631,770}{\Delta \nu_\text{Cs}}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-second-9">In order to realize this definition, we can use an atomic clock. A <dfn class="terminology">primary frequency standard</dfn> is a device that uses the defining constant to realize the unit. In this case, a caesium atomic clock uses the caesium frequency to realize the second. During this measurement, <dfn class="terminology">systematic errors</dfn> must be carefully controlled. One of the most significant sources of systematic error in an atomic clock is gravity, for instance.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-second-10">In the near future, the second will likely be redefined using <dfn class="terminology">optical frequency standards</dfn>, which use optical transitions in atoms or ions instead of microwave transitions. These optical transitions have much higher frequencies than microwave transitions, which allows for even greater precision in timekeeping <a href="refs-main.html#ref-optical-atomic-clocks" class="internal" title="Bibliographic Entry 1: “Optical Atomic Clocks.”">[1]</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-second-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.2: How Do We Define the Second?"><a href="#subsec-si-def-second" title="Copy heading and permalink for Subsection 1.1.2: How Do We Define the Second?" aria-label="Copy heading and permalink for Subsection 1.1.2: How Do We Define the Second?">🔗</a></div></section><section class="subsection" id="subsec-si-def-meter"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How Do We Define the Meter?</span>
+</h3>
+<div class="para" id="subsec-si-def-meter-2">The meter is the SI base unit of length. In the past, the meter was defined as one ten-millionth of the distance from the equator to the North Pole along a meridian through Paris. This definition was based on the idea that the Earth is a perfect sphere. The Earth is, in actuality, an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-meter-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-meter-3">In 1889, the meter was redefined as the distance between two marks on a platinum-iridium bar, or the "International Prototype Meter", by the 1st CGPM. It was precisely calibrated for effects such as temperature, humidity, and atmospheric pressure, and it was the standard for length measurements for over 80 years. This definition was more practical, but it still had some issues, such as the fact that the bar could be damaged or lost. It is quite funny, if you think about it, that people had to ship a bar of metal around the world in order to have a standard unit of length.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-meter-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-meter-4">Later on, in 1960, the meter was redefined as 1,650,763.73 wavelengths of the orange-red emission line of the krypton 86 atom (the <span class="process-math">\(\ce{2p_{10}} \to \ce{5s_5}\)</span> transition), by Resolution 6 of the 11th CGPM.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-meter-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-meter-5">The modern definition, as adopted in 1983 by Resolution 1 of the 17th CGPM, is based on the properties of light. It is as follows:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-meter-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<blockquote class="blockquote" id="subsec-si-def-meter-6">
+<div class="para" id="subsec-si-def-meter-6-1">The metre, symbol m, is the SI unit of length. It is defined by taking the fixed numerical value of the speed of light in vacuum, <span class="process-math">\(c\text{,}\)</span> to be 299,792,458 when expressed in the unit <span class="quantity">m·s<sup>-1</sup></span>, where the second is defined in terms of the caesium frequency <span class="process-math">\(\Delta \nu_\text{Cs}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-meter-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Quotation"><a href="#subsec-si-def-meter-6" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<div class="para logical" id="subsec-si-def-meter-7">
+<div class="para">The exact relation is</div>
+<div class="displaymath process-math" id="subsec-si-def-meter-7-1">
+\begin{equation*}
+c = 299,792,458 \, \text{m/s}\text{,}
+\end{equation*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math" id="subsec-si-def-meter-7-2">
+\begin{align*}
+1 \, \text{m} \amp = \qty(\frac{c}{299,792,458}) \cdot 1 \, \text{s} \\
+\amp = \qty(\frac{c}{299,792,458}) \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}}) \\
+\amp = 30.663319 \cdot \frac{c}{\Delta \nu_\text{Cs}} \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-meter-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-meter-8">This new, very precise definition of the meter is realized via laser interferometry, which is a technique that uses the interference of light waves to measure distances with extremely high precision.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-meter-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.3: How Do We Define the Meter?"><a href="#subsec-si-def-meter" title="Copy heading and permalink for Subsection 1.1.3: How Do We Define the Meter?" aria-label="Copy heading and permalink for Subsection 1.1.3: How Do We Define the Meter?">🔗</a></div></section><section class="subsection" id="subsec-si-def-kilogram"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How Do We Define the Kilogram?</span>
+</h3>
+<div class="para" id="subsec-si-def-kilogram-2">The kilogram is the SI base unit of mass. It was defined as the mass of the International Prototype Kilogram, which is a platinum-iridium cylinder that was kept at the International Bureau of Weights and Measures, or BIPM for the French <i class="foreign">Bureau international des poids et mesures</i>, in Sèvres, France. Until recently, the kilogram was the only SI base unit that was still defined in terms of a physical object.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-kilogram-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-kilogram-3">In the 26th CGPM in 2018, the kilogram was finally redefined without reference to a physical object, using Planck’s constant <span class="process-math">\(h\)</span> as the defining constant. It is defined as follows.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-kilogram-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<blockquote class="blockquote" id="subsec-si-def-kilogram-4">
+<div class="para" id="subsec-si-def-kilogram-4-1">The kilogram, symbol kg, is the SI unit of mass. It is defined by taking the fixed numerical value of the Planck constant, h, to be <span class="process-math">\(6.626 070 15 \times 10^{-34}\)</span> when expressed in the unit <span class="quantity">J·s</span>, which is equal to <span class="quantity">kg·m<sup>2</sup>·s<sup>-1</sup></span>, where the metre and the second are defined in terms of <span class="process-math">\(c\)</span> and <span class="process-math">\(\Delta \nu_\text{Cs}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-kilogram-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Quotation"><a href="#subsec-si-def-kilogram-4" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<div class="para" id="subsec-si-def-kilogram-5">Under the previous definition, the mass of the kilogram was determined by weighing the International Prototype Kilogram against other objects. Planck’s constant <span class="process-math">\(h\)</span> was to be experimentally determine. Using the new definition, the value of Planck’s constant is fixed, and the mass of the kilogram is determined by measuring Planck’s constant.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-kilogram-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-si-def-kilogram-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-si-def-kilogram-6-1-1">Identify the exact relation using this new definition, and thus derive an expression for the kilogram in terms of the defining constants <span class="process-math">\(h\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(\Delta \nu_\text{Cs}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-kilogram-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-si-def-kilogram-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-si-def-kilogram-6-2-1">
+<div class="para">The exact relation using the new definition is</div>
+<div class="displaymath process-math" id="subsec-si-def-kilogram-6-2-1-1">
+\begin{equation*}
+h = 6.626 070 15 \times 10^{-34} \, \text{J} \cdot \text{s} = 6.626 070 15 \times 10^{-34} \, \text{kg} \cdot \text{m}^2 \cdot \text{s}^{-1}\text{,}
+\end{equation*}
+</div>
+<div class="para">so</div>
+<div class="displaymath process-math" id="subsec-si-def-kilogram-6-2-1-2">
+\begin{align*}
+1 \, \text{kg} \amp = \qty(\frac{h}{6.626 070 15 \times 10^{-34}}) \text{m}^{-2} \cdot \text{s}^{1} \\
+\amp = \qty(\frac{h}{6.626 070 15 \times 10^{-34}}) \qty[\qty(\frac{c}{299,792,458}) \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})]^{-2} \cdot \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})^{1} \\
+\amp = 1.475 521 4 \times 10^{40} \qty(\frac{h \Delta \nu_\text{Cs}}{c^2}) \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-kilogram-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.3.1"><a href="#subsec-si-def-kilogram-6-2" title="Copy heading and permalink for Solution 1.1.3.1" aria-label="Copy heading and permalink for Solution 1.1.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.1.3"><a href="#subsec-si-def-kilogram-6" title="Copy heading and permalink for Checkpoint 1.1.3" aria-label="Copy heading and permalink for Checkpoint 1.1.3">🔗</a></div></article></details><div class="para" id="subsec-si-def-kilogram-7">To realize this new definition, one can use a Kibble balance, which is a device that measures the Planck constant by balancing the gravitational force on a mass against an electromagnetic force.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-kilogram-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.4: How Do We Define the Kilogram?"><a href="#subsec-si-def-kilogram" title="Copy heading and permalink for Subsection 1.1.4: How Do We Define the Kilogram?" aria-label="Copy heading and permalink for Subsection 1.1.4: How Do We Define the Kilogram?">🔗</a></div></section><section class="subsection" id="subsec-si-def-ampere"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How Do We Define the Ampere?</span>
+</h3>
+<div class="para logical" id="subsec-si-def-ampere-2">
+<div class="para">It may seem strange that the SI uses current as a fundamental quantity, rather than charge. Charge, by itself, is quite difficult to measure. The flow of charge — current, on the other hand, can be measured by measuring the magnetic field it produces, which is much easier to do with high precision. Indeed, if two parallel wires carry a current, they will produce a magnetic force on each other, causing them to attract or repel each other depending on the direction of the currents. This force is equal to</div>
+<div class="displaymath process-math" id="subsec-si-def-ampere-2-2">
+\begin{equation*}
+F = \frac{\mu_0}{2\pi} \frac{I_1 I_2}{r}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(I_1\)</span> and <span class="process-math">\(I_2\)</span> are the currents in the wires and <span class="process-math">\(r\)</span> is the distance between the wires. So if we know the distance between the wires and the force they exert on each other, we can determine the current in the wires.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-ampere-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-ampere-3">As such, the SI base unit of electric current, the ampere, was historically defined as the constant current that, if maintained in two straight parallel conductors of infinite length and negligible circular cross-section, and placed one meter apart in vacuum, would produce between these conductors a force equal to <span class="process-math">\(2 \times 10^{-7}\)</span> newtons per meter of length.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-ampere-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-ampere-4">This definition fixes the value of <span class="process-math">\(\mu_0\text{,}\)</span> the vacuum magnetic permeability, to be exactly <span class="process-math">\(4\pi \times 10^{-7}\)</span> henries per meter.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-ampere-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-si-def-ampere-5">By Resolution 1 of the 26th CGPM in 2019, the ampere was redefined in terms of the elementary charge <span class="process-math">\(e\text{,}\)</span> which is the charge of a single proton (or the negative of the charge of a single electron). It is defined as follows.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-ampere-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<blockquote class="blockquote" id="subsec-si-def-ampere-6">
+<div class="para" id="subsec-si-def-ampere-6-1">The ampere, symbol A, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge, <span class="process-math">\(e\text{,}\)</span> to be <span class="process-math">\(1.602 176 634 \times 10^{-19}\)</span> when expressed in the unit <span class="quantity">C</span>, which is equal to <span class="quantity">A·s</span>, where the second is defined in terms of <span class="process-math">\(\Delta \nu_\text{Cs}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-ampere-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Quotation"><a href="#subsec-si-def-ampere-6" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<details id="subsec-si-def-ampere-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-si-def-ampere-7-1-1">Identify the exact relation using this new definition, and thus derive an expression for the ampere in terms of the defining constants <span class="process-math">\(e\)</span> and <span class="process-math">\(\Delta \nu_\text{Cs}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-ampere-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-si-def-ampere-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-si-def-ampere-7-2-1">
+<div class="para">The exact relation using the new definition is</div>
+<div class="displaymath process-math" id="subsec-si-def-ampere-7-2-1-1">
+\begin{equation*}
+e = 1.602 176 634 \times 10^{-19} \, \text{C} = 1.602 176 634 \times 10^{-19} \, \text{A} \cdot \text{s}\text{,}
+\end{equation*}
+</div>
+<div class="para">so</div>
+<div class="displaymath process-math" id="subsec-si-def-ampere-7-2-1-2">
+\begin{align*}
+1 \, \text{A} \amp = \qty(\frac{e}{1.602 176 634 \times 10^{-19}}) \cdot \qty(\frac{9,192,631,770}{\Delta \nu_\text{Cs}})^{-1} \\
+\amp = 6.7896868 \times 10^{8} (\Delta \nu_\text{Cs} e) \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-si-def-ampere-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.4.1"><a href="#subsec-si-def-ampere-7-2" title="Copy heading and permalink for Solution 1.1.4.1" aria-label="Copy heading and permalink for Solution 1.1.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.1.4"><a href="#subsec-si-def-ampere-7" title="Copy heading and permalink for Checkpoint 1.1.4" aria-label="Copy heading and permalink for Checkpoint 1.1.4">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.1.5: How Do We Define the Ampere?"><a href="#subsec-si-def-ampere" title="Copy heading and permalink for Subsection 1.1.5: How Do We Define the Ampere?" aria-label="Copy heading and permalink for Subsection 1.1.5: How Do We Define the Ampere?">🔗</a></div></section><div class="autopermalink" data-description="Section 1.1: Dimensional Analysis"><a href="#sec-dimensional-analysis" title="Copy heading and permalink for Section 1.1: Dimensional Analysis" aria-label="Copy heading and permalink for Section 1.1: Dimensional Analysis">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch-01-dim-analysis-uncertainties.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-02-kinematics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

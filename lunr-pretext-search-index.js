@@ -802,24 +802,6 @@ var ptx_lunr_docs = [
   "body": " Applications and Further Reading   Every chapter in this book has an applications and further reading section. Indeed, it turns out that kinematics isn't just used to throw lemons at minivans and flash drives at dorm windows. This section is meant to be a collection of interesting applications of the material covered in the chapter, as well as some further reading for those who want to learn more about the topics covered in the chapter.     Further Reading   Calculus  As you may have noticed, we have been using calculus throughout this chapter. It is very important to have a good understanding of calculus from the very beginning.  I would begin with Grant Sanderson's 3Blue1Brown YouTube channel, specifically his Essence of Calculus series, for a gentle and visual introduction to calculus. Then, I would recommend reading through the first few chapters of a standard calculus textbook, such as Stewart's Calculus: Early Transcendentals  .    Vectors  We have been using vectors throughout this chapter, but we haven't really defined what they are or how to work with them. Just like calculus, start with Grant Sanderson's 3Blue1Brown YouTube channel, specifically his Essence of Linear Algebra series, for a visual introduction to vectors and linear algebra. Then, I would recommend reading through the first few chapters of a standard linear algebra textbook, such as Strang's Introduction to Linear Algebra .    "
 },
 {
-  "id": "backmatter-2",
-  "level": "1",
-  "url": "backmatter-2.html",
-  "type": "Appendix",
-  "number": "A",
-  "title": "Selected Hints",
-  "body": " Selected Hints  "
-},
-{
-  "id": "backmatter-3",
-  "level": "1",
-  "url": "backmatter-3.html",
-  "type": "Appendix",
-  "number": "B",
-  "title": "Selected Solutions",
-  "body": " Selected Solutions  "
-},
-{
   "id": "refs-main",
   "level": "1",
   "url": "refs-main.html",
@@ -829,9 +811,9 @@ var ptx_lunr_docs = [
   "body": " Ludlow, Andrew D., et al. “Optical Atomic Clocks.”  Reviews of Modern Physics , vol. 87, no. 2, June 2015, pp. 637–701. DOI.org (Crossref), .   The International System of Units (SI): SI Brochure. 2019. DOI.org (Crossref), .  Stewart, James, et al. Calculus: Early Transcendentals. Ninth edition, Cengage, 2021.  Strang, Gilbert. Introduction to Linear Algebra. 6th ed, Wellesley-Cambridge press, 2023.  "
 },
 {
-  "id": "backmatter-5",
+  "id": "backmatter-3",
   "level": "1",
-  "url": "backmatter-5.html",
+  "url": "backmatter-3.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",

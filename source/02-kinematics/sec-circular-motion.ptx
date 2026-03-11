@@ -301,14 +301,14 @@
       This reflects a mathematical connection between linear and angular motion, as summarized in the following table.
     </p>
 
-    <table>
+    <table xml:id="tbl-linear-vs-circular-motion">
       <title>Linear vs. Circular Motion</title>
 
       <tabular>
         <row header="yes">
           <cell>Concept</cell>
           <cell>Linear</cell>
-          <cell>Angular</cell>
+          <cell>Circular</cell>
           <cell>Relationship</cell>
         </row>
 
@@ -384,5 +384,64 @@
         </p>
       </statement>
     </definition>
+
+    <p>
+      During the scouting mission, Dave notices that the "Founder's Quad" traffic circle is made of smooth, polished cobblestone <mdash /> a nightmare for tire traction.
+      He knows that for the van to stay in the circle, the road must provide enough <term>friction</term> to match the required centripetal acceleration <m>a_c</m>.
+    </p>
+
+    <p>
+      If the required acceleration <m>a_c = \frac{v^2}{R}</m> exceeds what the tires can provide, the van won't turn.
+      It will slide tangentially into a very expensive-looking marble fountain.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          The radius of the traffic circle is <m>R = 35</m> meters.
+          Dave estimates that on a damp night, the maximum centripetal acceleration the van can handle before sliding is <m>6.0 \, \text{m} \cdot \text{s}^{-2}</m>.
+          What is the maximum speed <m>v_{\text{max}}</m> Dave can maintain without losing control?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Rearranging the formula for centripetal acceleration, we can solve for the maximum speed:
+          <me>
+            a_c = \frac{v^2}{R} \implies v = \sqrt{a_c R}
+          </me>.
+          So this gives
+          <me>
+            v = \sqrt{6.0 \cdot 35} = \sqrt{210} \approx 14 \, \text{m} \cdot \text{s}^{-1}
+          </me>.
+          Dave realizes that his current speed of <m>15 \, \text{m} \cdot \text{s}^{-1}</m> is only possible because the road is dry.
+          If it rains on the night of the heist, he'll have to drop his speed by nearly 40% to avoid a disaster.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+
+
+  <subsection xml:id="subsec-the-plan">
+    <title>The Plan</title>
+
+    <p>
+      With our coverage of circular motion complete, we are now ready to understand the plan for the heist.
+      The goal of Dave's crew is to steal the 500 kg bronze statue of Richard Feynman.
+    </p>
+
+    <p>
+      In the first chapter, we discussed how the crew used dimensional analysis and measurement tools to map out the layout of the campus and plan their route.
+      We saw that the statue can be modeled as a cylinder, roughly 0.5 meters wide, 0.2 meters deep, and 1.75 meters tall.
+      They will need a winch to pull the statue onto the van. Sarah performed a load test on the van's floor, and used graphical analysis to determine a set of results.
+    </p>
+
+    <p>
+      In this chapter, we saw their initial scouting mission and a chase from the security guards. We used projectile motion to analyze the lemon-throwing, and we used circular motion to analyze the van's trajectory around the traffic circle.
+    </p>
+
+    <p>
+      While all of this was going on, another member of the crew, Mike, was busy sketching a map of the campus, and using it to plan the route for the heist.
+    </p>
   </subsection>
 </section>

@@ -569,7 +569,7 @@
       And we're all done! This set of defining constants and definitions allows us to have a precise and consistent system of units that we can use to measure the various quantities involved in our heist, from the distance to the getaway van to the brightness of its headlights.
     </p>
 
-    <table xml:id="tab-si-definitions">
+    <table xml:id="tbl-si-definitions">
       <title>SI Units and Definitions</title>
 
       <tabular>

@@ -4,7 +4,7 @@
   <title>Summary</title>
 
   <p>
-    <ol>
+    <ul>
       <li>
         <p>
           Motion is described by functions of time.
@@ -69,6 +69,12 @@
         </p>
       </li>
 
-    </ol>
+      <li>
+        <p>
+          Angular coordinates behave very similarly to linear coordinates, forming a relationship summarized in <xref ref="tbl-linear-vs-circular-motion"/>.
+        </p>
+      </li>
+
+    </ul>
   </p>
 </section>

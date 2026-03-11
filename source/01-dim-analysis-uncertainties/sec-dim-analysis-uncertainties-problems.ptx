@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="sec-dim-analysis-uncertainties-problems" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Additional Problems</title>
+
+<exercise>
+  <title>Up</title>
+
+  <statement>
+    <p>
+      How many helium balloons would it take to lift a house of mass <m>100,000 \, \text{kg}</m> off the ground?
+    </p>
+
+    <p>
+      Data:
+      <ul>
+        <li>
+          <p>
+            The density of helium is approximately <m>0.18 \, \text{kg/m}^3</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The density of air is approximately <m>1.2 \, \text{kg/m}^3</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            A standard spherical party balloon has a diameter of about 0.3 meters, so its volume is approximately <m>0.014 \, \text{m}^3</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      According to Archimedes' principle, the buoyant force on a balloon is equal to the weight of the air it displaces minus the weight of the helium inside it.
+      The weight of something is given by its mass times <m>g \approx 9.8 \, \text{m/s}^2</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      For a single balloon, the buoyant force is given by
+      <md>
+        <mrow> F_b \amp = m_{\text{air}} g - m_{\text{helium}} g </mrow>
+        <mrow> \amp = (\rho_{\text{air}} V - \rho_{\text{helium}} V) g </mrow>
+        <mrow> \amp = (\rho_{\text{air}} - \rho_{\text{helium}}) V g </mrow>
+      </md>,
+      where <m>\rho_{\text{air}}</m> and <m>\rho_{\text{helium}}</m> are the densities of air and helium, respectively, <m>V</m> is the volume of the balloon, and <m>g</m> is the acceleration due to gravity.
+    </p>
+
+    <p>
+      Plugging in the numbers, we get
+      <md>
+        <mrow> F_b \amp = (1.2 \, \text{kg/m}^3 - 0.18 \, \text{kg/m}^3) (0.014 \, \text{m}^3) (9.8 \, \text{m/s}^2) </mrow>
+        <mrow> \amp \approx 0.15 \, \text{N} </mrow>
+      </md>.
+      To lift a house of mass <m>100,000 \, \text{kg}</m>, we need the buoyant force to overcome the weight of the house, which is given by
+      <md>
+        <mrow> F_\text{house} \amp = m_\text{house} g </mrow>
+        <mrow> \amp = (100,000 \, \text{kg}) (9.8 \, \text{m/s}^2) </mrow>
+        <mrow> \amp = 980,000 \, \text{N} </mrow>
+      </md>.
+      Therefore, the number of balloons needed is given by
+      <md>
+        <mrow> N \amp = \frac{F_\text{house}}{F_b} </mrow>
+        <mrow> \amp = \frac{980,000 \, \text{N}}{0.15 \, \text{N}} </mrow>
+        <mrow> \amp \approx 6.5 \times 10^6 </mrow>
+      </md>.
+      So it would take approximately 6.5 million helium balloons to lift the house off the ground.
+      Indeed, Carl Fredricksen's house in the movie <em>Up</em> would not be able to fly with just a few hundred balloons!
+    </p>
+  </solution>
+</exercise>
+
+<exercisegroup>
+<introduction>
+  <p>
+    For this set of problems, you will need the following data:
+    <ul>
+      <li>
+        <p>
+          The atmosphere has a mass of approximately <m>5.15 \times 10^{18} \, \text{kg}</m>.
+          Its average molar mass is about <m>29 \, \text{g} \cdot \text{mol}^{-1}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The average human breathes about <m>0.5 \, \text{L}</m> of air per breath.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          At room temperature and atmospheric pressure, one mole of an ideal gas occupies about <m>22.4 \, \text{L} \cdot \text{mol}^{-1}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          A person takes about 15 breaths per minute.
+        </p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+
+<exercise>
+  <statement>
+    <p>
+      How many molecules does a person breathe each year? How many in 20 years?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Before doing anything, let's convert all the data to the dimension of molecules.
+      <ul>
+        <li>
+          <p>
+            The number of moles in the atmosphere is given by
+            <me>
+              \frac{5.15 \times 10^{18} \, \text{kg}}{29 \, \text{g} \cdot \text{mol}^{-1}} = \frac{5.15 \times 10^{21} \, \text{g}}{29 \, \text{g} \cdot \text{mol}^{-1}} \approx 1.78 \times 10^{20} \, \text{mol}
+            </me>.
+            Therefore, the number of molecules in the atmosphere is given by
+            <me>
+              (1.78 \times 10^{20} \, \text{mol})(6.022 \times 10^{23} \, \text{mol}^{-1}) = 10^{44}
+            </me>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The number of molecules in a single breath can be determined by the molar volume as given above.
+            The number of moles in a single breath is given by
+            <me>
+              n_\text{breath} = \frac{0.5 \, \text{L}}{22.4 \, \text{L} \cdot \text{mol}^{-1}} \approx 0.0223 \, \text{mol}
+            </me>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      Thus, the number of molecules in a single breath is given by
+      <me>
+        N_\text{breath} = (0.0223 \, \text{mol})(6.022 \times 10^{23} \, \text{mol}^{-1}) \approx 10^{22}
+      </me>.
+    </p>
+
+    <p>
+      Assuming we take about 15 breaths per minute, we take about <m>15 \times 60 \times 24 \times 365 \approx 7.9 \times 10^6</m> breaths per year.
+      Therefore, the number of molecules we breathe in a year is given by
+      <me>
+        N_\text{year} = (7.9 \times 10^6)(10^{22}) = 7.9 \times 10^{28}
+      </me>.
+      In 20 years, we would breathe in about <m>20( 7.9 \times 10^{28}) = 1.6 \times 10^{30}</m> molecules.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      What is the probability that a single molecule from the atmosphere has not been in my lungs in the last 20 years?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The total number of molecules in the atmosphere is approximately <m>10^{44}</m>, and the number of molecules we breathe in 20 years is approximately <m>1.6 \times 10^{30}</m>.
+      Therefore, the probability that a single molecule from the atmosphere has not been in my lungs in the last 20 years is given by
+      <me>
+        P = 1 - \frac{1.6 \times 10^{30}}{10^{44}} = 1 - 1.6 \times 10^{-14} \approx 1
+      </me>.
+      So the probability is essentially 1, meaning that it is almost certain that a given molecule from the atmosphere has not been in my lungs in the last 20 years.
+      There's a caveat, though!
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      What is the probability that you are currently breathing in a molecule that was in my lungs at some point in the last 20 years?
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      First find the probability that zero of the molecules in your current breath were in my lungs in the last 20 years, and then subtract that from 1 to get the probability that at least one molecule in your current breath was in my lungs.
+    </p>
+
+    <p>
+      The probability will be incredibly difficult to compute, even with a calculator, so you will need to use some approximations.
+      Use the fact that
+      <me>
+        e^{-x} = \lim_{n \to \infty} \qty(1 - \frac{x}{n})^n
+      </me>
+      to your advantage.
+    </p>
+  </hint>
+
+  <solution>
+    <p>
+      The probability that zero of the molecules in your current breath were in my lungs in the last 20 years is given by
+      <me>
+        P_0 = \qty(1 - \frac{1.6 \times 10^{30}}{10^{44}})^{10^{22}} \approx e^{-\frac{1.6 \times 10^{30}}{10^{44}} \times 10^{22}}
+      </me>.
+      This can be approximated by
+      <me>
+        P_0 = \qty(1 - \frac{1.6 \times 10^{8}}{10^{22}})^{10^{22}} \approx e^{-1.6 \times 10^{8}} \approx 0
+      </me>.
+    </p>
+
+    <p>
+      Thus, the probability that at least one molecule in your current breath was in my lungs at some point in the last 20 years is given by
+      <me>
+        P = 1 - P_0 \approx 1
+      </me>.
+      So the probability is essentially 1, meaning that it is almost certain that you are currently breathing in a molecule that was in my lungs at some point in the last 20 years.
+    </p>
+
+    <p>
+      In other words, you are taking my breath away as you read this sentence.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Generalize this approach.
+      Suppose an event has a probability of <m>p</m> of occurring in a single trial, and we have <m>n</m> independent trials, where <m>n</m> is unbelievably large.
+      What is the probability that the event occurs at least once in those <m>n</m> trials?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Let <m>q = 1 - p</m> be the probability that the event does not occur in a single trial.
+      The probability that the event does not occur in any of the <m>n</m> trials is given by
+      <me>
+        P_0 = q^n = (1 - p)^n \approx e^{-pn}
+      </me>.
+      Therefore, the probability that the event occurs at least once in those <m>n</m> trials is given by
+      <me>
+        P = 1 - P_0 \approx 1 - e^{-pn}
+      </me>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Hence, determine the probability that the event occurs <m>k</m> times in those <m>n</m> trials, where <m>k \lt n</m> is a fixed positive integer.
+      Use the approximation
+      <me>
+        \binom{n}{k} \approx \frac{n^k}{k!}
+      </me>
+      for large <m>n</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The probability that the event occurs exactly <m>k</m> times in those <m>n</m> trials is given by the binomial distribution:
+      <me>
+        P_k = \binom{n}{k} p^k q^{n-k} = \binom{n}{k} p^k (1 - p)^{n-k}
+      </me>.
+      Let's take the limit as <m>n \to \infty</m> while keeping <m>k</m> fixed.
+      Therefore, we have
+      <me>
+        P_k \approx \frac{n^k}{k!} p^k (1 - p)^{n-k} \approx \frac{(pn)^k}{k!} e^{-pn}
+      </me>.
+      This, by the way, is called the Poisson distribution.
+    </p>
+  </solution>
+</exercise>
+</exercisegroup>
+
+<exercise>
+  <statement>
+    <p>
+      Astronomers use light to determine the properties of distant objects in the universe, such as their mass, size, and composition.
+      To separate light into its component wavelengths, a diffraction grating <mdash /> a device with many closely spaced slits <mdash /> is used.
+      The diffraction grating causes the light to interfere constructively at certain angles as given by
+      <me>
+        d \sin \theta = m \lambda
+      </me>,
+      where <m>d</m> is the distance between the slits, <m>\theta</m> is the angle of the diffracted light, <m>m</m> is an integer called the order of the diffraction, and <m>\lambda</m> is the wavelength of the light.
+    </p>
+
+    <p>
+      In a test of a new diffraction grating, an astronomer shines light of wavelength <m>500 \pm 10 \, \text{nm}</m> onto the grating and measures the angle of the first-order diffraction (<m>m = 1</m>) to be <m>30^\circ \pm 1^\circ</m>.
+      Determine the relative uncertainty in the distance between the slits <m>d</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      The uncertainty in <m>\sin \theta</m> is
+      <me>
+        \Delta (\sin \theta) = |\cos \theta| \Delta \theta
+      </me>,
+      which can be determined using differential calculus (don't worry if you haven't learned calculus yet.).
+    </p>
+  </hint>
+
+  <solution>
+    <p>
+      We can rearrange the diffraction equation to solve for <m>d</m>:
+      <me>
+        d = \frac{m \lambda}{\sin \theta}
+      </me>.
+      The relative uncertainty in <m>d</m> can be found by combining the relative uncertainties in <m>\lambda</m> and <m>\sin \theta</m>:
+      <me>
+        \frac{\Delta d}{d} = \sqrt{\qty(\frac{\Delta \lambda}{\lambda})^2 + \qty(\frac{\Delta (\sin \theta)}{\sin \theta})^2}
+      </me>.
+      As given in the hint, this is
+      <md>
+        <mrow>\frac{\Delta d}{d} \amp = \sqrt{\qty(\frac{\Delta \lambda}{\lambda})^2 + \qty(\frac{|\cos \theta| \Delta \theta}{\sin \theta})^2}</mrow>
+        <mrow> \amp = \sqrt{\qty(\frac{\Delta \lambda}{\lambda})^2 + \qty(\frac{1}{\tan \theta} \Delta \theta)^2}</mrow>
+      </md>.
+      Thus
+      <md>
+        <mrow>\frac{\Delta d}{d} \amp = \sqrt{\qty(\frac{10 \times 10^{-9}}{500 \times 10^{-9}})^2 + \qty(\frac{1}{\tan 30^\circ} \cdot \frac{\pi}{180})^2}</mrow>
+        <mrow> \amp \approx 0.036 </mrow>
+      </md>.
+    </p>
+  </solution>
+</exercise>
+</exercises>

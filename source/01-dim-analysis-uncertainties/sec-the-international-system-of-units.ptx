@@ -57,6 +57,10 @@
           </me>.
           Sarah's measurement is significantly taller—suggesting she either found a giant statue or, more likely, used a very non-standard sandwich.
         </p>
+        <p>
+          Sarah is, however, not to be chastised for this.
+          Indeed, even NASA lost a Mars orbiter because one team used metric units while another used imperial units.
+        </p>
       </solution>
     </exercise>
 
@@ -565,7 +569,7 @@
       And we're all done! This set of defining constants and definitions allows us to have a precise and consistent system of units that we can use to measure the various quantities involved in our heist, from the distance to the getaway van to the brightness of its headlights.
     </p>
 
-    <table>
+    <table xml:id="tab-si-definitions">
       <title>SI Units and Definitions</title>
 
       <tabular>

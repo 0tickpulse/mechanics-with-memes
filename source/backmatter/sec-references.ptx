@@ -13,11 +13,11 @@
     DOI.org (Crossref), <url href="https://doi.org/10.1103/RevModPhys.87.637" />.
   </biblio>
 
-  <biblio type="raw" xml:id="ref-si-brochure">
-    <title>The International System of Units (SI): SI Brochure.</title>
+  <biblio type="raw" xml:id="ref-umd-fermi">
+    Redish, Edward F., et al.
+    <title>University of Maryland Fermi Problems</title>
 
-    2019.
-    DOI.org (Crossref), <url href="https://doi.org/10.59161/AUEZ1291" />.
+    <url href="https://www.physics.umd.edu/perg/fermi/fermi.htm" />
   </biblio>
 
   <biblio type="raw" xml:id="ref-calculus-early-transcendentals">
@@ -32,5 +32,12 @@
     <title>Introduction to Linear Algebra.</title>
 
     6th ed, Wellesley-Cambridge press, 2023.
+  </biblio>
+
+  <biblio type="raw" xml:id="ref-si-brochure">
+    <title>The International System of Units (SI): SI Brochure.</title>
+
+    2019.
+    DOI.org (Crossref), <url href="https://doi.org/10.59161/AUEZ1291" />.
   </biblio>
 </references>

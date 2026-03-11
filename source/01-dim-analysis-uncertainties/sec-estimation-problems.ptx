@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-estimation-problems" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Estimation Problems</title>
+
+  <introduction>
+    <p>
+      Before the team spends $500 on a heavy-duty winch or continues with the heist plan, they need to make some sanity checks.
+      We don't need to know the exact volume of the statue to the third decimal place yet <mdash /> we just need to know if we're dealing with the weight of a motorcycle or the weight of an elephant.
+      This is the art of the <term>Fermi Problem</term>: making a calculated guess when you have limited data.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-orders-of-magnitude">
+    <title>Orders of Magnitude</title>
+
+    <p>
+      An <term>order of magnitude</term> is a way of expressing the scale of a quantity in terms of powers of ten.
+      When we express a quantity in scientific notation, the exponent of ten gives us the order of magnitude of the quantity.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Determine the order of magnitude of the following quantities:
+          <ol>
+            <li>
+              <p>
+                The mass of the Earth (look it up) in kilograms.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>324,000 \, \text{nm}</m>. Convert this to meters first!
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Avogadro's number (<m>6.022 \times 10^{23}</m>) squared.
+                Try this without a calculator.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                The mass of the Earth is approximately <m>5.972 \times 10^{24} \, \text{kg}</m>, so its order of magnitude is 24.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>324,000 \, \text{nm} = 324,000 \times 10^{-9} \, \text{m} = 3.24 \times 10^{-4} \, \text{m}</m>, so its order of magnitude is -4.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Avogadro's number squared is <m>(6.022 \times 10^{23})^2 \approx 36 \times 10^{46} = 3.6 \times 10^{47}</m>, so its order of magnitude is 47.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      In a Fermi problem, we attempt to estimate a quantity by breaking it down into smaller, more manageable pieces and making reasonable assumptions about each piece.
+      Our goal is to get an estimate that is within an order of magnitude of the true value, which is often good enough for making decisions.
+      Being off by a factor of 2, for example, is completely fine in a Fermi problem.
+    </p>
+
+    <p>
+      "How do we know it's 500 kg?" Sarah asked.
+      "The rival school's website just says it's 'life-sized bronze'."
+    </p>
+
+    <p>
+      Dave grabbed a napkin.
+      "Let's estimate.
+      Richard Feynman was about 1.75 meters tall.
+      Let's model him as a cylinder, roughly 0.5 meters wide and 0.2 meters deep."
+    </p>
+
+    <p>
+      Dave uses the formula for the volume of an elliptic cylinder, <m>V = \pi abh</m>, where <m>a</m> and <m>b</m> are the semi-major and semi-minor axes of the elliptical cross-section, and <m>h</m> is the height.
+      This yields
+      <me>
+        V = \pi (0.25 \, \text{m})(0.1 \, \text{m})(1.75 \, \text{m}) \approx 0.14 \, \text{m}^3
+      </me>
+    </p>
+
+    <p>
+      Knowing that the density of bronze is approximately <m>8,800 \, \text{kg/m}^3</m>, we can estimate the mass of the statue as
+      <me>
+        m = \rho V = (8,800 \, \text{kg/m}^3)(0.14 \, \text{m}^3) \approx 1,200 \, \text{kg}
+      </me>.
+    </p>
+
+    <p>
+      Hmm...
+      this doesn't seem right.
+    </p>
+
+    <exercise>
+      <title>A Better Estimate</title>
+
+      <statement>
+        <p>
+          Dave frowned.
+          "Wait.
+          If it's 1,600 kg, the van will snap.
+          But wait <mdash /> is the statue solid or hollow?" Sarah checked the photos.
+          "It's cast bronze.
+          Usually, those are hollow shells about 1 cm thick."
+        </p>
+
+        <p>
+          Using this new information, what would Dave's new estimate for the mass of the statue be?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          We can model the statue as a hollow elliptic cylinder, which has a volume given by the difference between the outer and inner volumes:
+          <me>
+            V = \pi (a_o b_o h - a_i b_i h) = \pi h (a_o b_o - a_i b_i)
+          </me>,
+          where <m>a_o</m> and <m>b_o</m> are the dimensions of the outer ellipse, and <m>a_i</m> and <m>b_i</m> are the dimensions of the inner ellipse.
+          Since the thickness of the bronze is 1 cm, we have <m>a_i = a_o - 0.01 \, \text{m}</m> and <m>b_i = b_o - 0.01 \, \text{m}</m>.
+          Plugging in the numbers, we get
+          <me>
+            V = \pi (1.75 \, \text{m}) [(0.25 \, \text{m})(0.1 \, \text{m}) - (0.24 \, \text{m})(0.09 \, \text{m})] \approx 0.02 \, \text{m}^3
+          </me>.
+          This gives us an estimate for the mass of the statue of
+          <me>
+            m = \rho V = (8,800 \, \text{kg/m}^3)(0.02 \, \text{m}^3) \approx 176 \, \text{kg}
+          </me>.
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      Dave sighed with relief.
+      "Okay, so the statue is likely between 150 kg and 600 kg depending on the internal bracing.
+      Our 500 kg estimate is a safe upper bound for the mission."
+    </p>
+  </subsection>
+</section>

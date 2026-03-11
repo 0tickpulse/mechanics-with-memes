@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-dim-analysis-uncertainties-summary" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary</title>
+
+  <p>
+    Every chapter in this book has a summary section.
+    This section is meant to be a concise summary of the main points covered in the chapter.
+  </p>
+
+  <p>
+    <ul>
+      <li>
+        <p>
+          In science, quantities have dimensions, which are the physical nature of the quantity (e.g.
+          length, time, mass, etc.), and units, which are the specific way we measure that quantity (e.g.
+          meters, seconds, kilograms, etc.).
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The International System of Units (SI) is the most widely used system of units in the world.
+          It consists of seven base units and seven associated defining constants, as delineated in <xref ref="tab-si-definitions"/>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Historically, the definitions of the base units were based on physical artifacts or specific physical phenomena.
+          However, in 2019, the SI system was redefined to be based on fixed numerical values of fundamental physical constants, which provides a more stable and universal basis for the units.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Units composed of the base units are called derived units, and they can be expressed in terms of the base units.
+          For example, the unit of force, the newton, is a derived unit that can be expressed as <m>\text{N} = \text{kg} \cdot \text{m} \cdot \text{s}^{-2}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Other systems of units, such as the CGS system, exist and are used in specific fields.
+          Natural units, in which certain fundamental constants are set to 1, are used in theoretical physics to simplify equations and calculations.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          You can ascertain the relationship between different quantities by analyzing their dimensions.
+          We explored how this applies to the period of a simple pendulum.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Every measurement comes with some degree of uncertainty, which represents the range of possible values that the true value of the quantity could take.
+          An absolute uncertainty is a fixed amount of uncertainty, while a relative uncertainty is the ratio of the absolute uncertainty to the measured value.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Uncertainties propagate through calculations according to specific rules.
+          If <m>L = x + y</m>, <m>A = xy</m>, <m>B = \frac{x}{y}</m>, and <m>C = x^n</m>, then the uncertainties propagate as follows:
+          <md>
+            <mrow>\Delta L \amp = \sqrt{(\Delta x)^2 + (\Delta y)^2} </mrow>
+            <mrow>\frac{\Delta A}{A} \amp = \sqrt{\qty(\frac{\Delta x}{x})^2 + \qty(\frac{\Delta y}{y})^2} </mrow>
+            <mrow>\frac{\Delta B}{B} \amp = \sqrt{\qty(\frac{\Delta x}{x})^2 + \qty(\frac{\Delta y}{y})^2}</mrow>
+            <mrow>\frac{\Delta C}{C} \amp = |n| \cdot \frac{\Delta x}{x}</mrow>
+          </md>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Errors can be classified as random errors, which arise from unpredictable fluctuations in the measurement process, and systematic errors, which arise from consistent biases in the measurement process.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Random errors can be reduced by taking multiple measurements and averaging them.
+          The mean has a uncertainty given by the standard error
+          <me>
+            \Delta \bar{x} = \frac{\sigma}{\sqrt{N}}
+          </me>,
+          where <m>\sigma</m> is the standard deviation of the measurements and <m>N</m> is the number of measurements.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Data can be visualized on a graph, and the uncertainty can be represented as error bars on the graph.
+          A line of best fit can be drawn through the data points to represent the relationship between the variables.
+          The <m>R^2</m> value of the line of best fit indicates how well the line fits the data, with a value of 1 indicating a perfect fit and a value of 0 indicating no correlation.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Relationships can be linearized to make it easier to analyze the data and determine the relationship between the variables.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Fermi problems are estimation problems that involve making educated guesses about quantities that are difficult to measure directly.
+        </p>
+      </li>
+    </ul>
+  </p>
+</section>

@@ -44,7 +44,7 @@
 
     <figure xml:id="xt-function">
       <caption>Position as a function of time, graphed as a two-dimensional plot.</caption>
-      <image source="images/xt-function.png" />
+      <image source="images/02-kinematics/xt-function.png" />
       </figure>
     </subsection>
 
@@ -91,7 +91,7 @@
 
       <figure xml:id="xt-secant-line">
         <caption>Average velocity as the slope of the secant line connecting two points on a graph of position as a function of time.</caption>
-        <image source="images/xt-secant-line.png" />
+        <image source="images/02-kinematics/xt-secant-line.png" />
         </figure>
 
         <p>
@@ -114,7 +114,7 @@
         <figure xml:id="xt-graphs">
           <caption>Three different graphs of position as a function of time, all with the same average velocity of <quantity><mag>10</mag><unit base="meter" />
           <per base="second" /></quantity> between <m>t=0</m> and <m>t=10</m> seconds.</caption>
-          <image source="images/three-graphs-with-same-v-avg.png" />
+          <image source="images/02-kinematics/three-graphs-with-same-v-avg.png" />
           </figure>
 
           <p>
@@ -199,7 +199,7 @@
 
           <figure xml:id="xt-secant-to-tangent">
             <caption>Instantaneous velocity is the slope of the tangent line to a position-time graph at a specific point.</caption>
-            <image source="images/xt-secant-to-tangent.png" />
+            <image source="images/02-kinematics/xt-secant-to-tangent.png" />
             </figure>
 
             <p>

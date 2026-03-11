@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-dim-analysis-uncertainties-afr" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Applications and Further Reading</title>
+
+  <introduction>
+    <p>
+      Every chapter in this book has an applications and further reading section.
+      The applications section is meant to give you a taste of how phenomena described in a chapter appear in the real world.
+      They are to be read as bullet points, and you can pick and choose which ones to read.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-dim-analysis-uncertainties-applications">
+    <title>Applications</title>
+
+    <p>
+      While Dave and his team were worried about a 500 kg statue, real-world scientists worry about the stability of the SI units across centuries.
+      The <term>Global Positioning System (GPS)</term> relies on the definition of the second using the Cesium hyperfine transition frequency.
+      Indeed, if a satellite was inaccurate by just a few nanoseconds, it would lead to errors of several meters in the GPS system.
+    </p>
+
+    <p>
+      GPS systems also account for a significant systematic error arising from general relativity.
+      Gravity causes time to run slower, so the clocks on the GPS satellites (which are further from Earth's center of mass) run faster than those on the ground.
+      If this effect were not accounted for, the GPS system would accumulate errors, causing a catastrophic failure of the system.
+    </p>
+
+    <p>
+      Trading firms use atomic clocks to time their trades to the nanosecond.
+      If two firms' clocks are out of sync by even a millisecond, it can lead to massive systematic errors in market pricing and regulatory chaos.
+      Time literally is money.
+    </p>
+
+    <p>
+      Situation in which information is limited are ubiquitous in forensic science.
+      Investigators use Fermi estimation techniques to make educated guesses about crime scenes.
+      By estimating the volume of blood found and the rate of cooling, for instance, a forensic scientist can estimate the time of death of a victim.
+    </p>
+
+    <p>
+      In 1707, the British fleet hit the rocks of the Scilly Isles, killing 2,000 sailors.
+      The cause? A systematic error in timekeeping.
+      Before GPS, longitude was calculated by comparing local time to a reference clock.
+      A clock that was precise but not accurate (losing a few seconds a day) resulted in a position error of many miles <mdash /> the same "shaky hand" measurement error Sarah made, but with warships instead of statues.
+    </p>
+
+    <p>
+      The most famous Fermi problem is the Fermi Paradox, which asks why we haven't found any evidence of extraterrestrial life given the vastness of the universe.
+      Through a series of logical steps and estimates <mdash /> just as we did <mdash /> Fermi estimated that there should be many advanced civilizations in our galaxy, yet we haven't found any evidence of them.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-dim-analysis-uncertainties-further-reading">
+    <title>Further Reading</title>
+
+    <p>
+      You might be interested in learning more about the SI units and the history of their definitions.
+      For that, check out the <em>SI Brochure</em>, published by the International Bureau of Weights and Measures (BIPM) <xref ref="ref-si-brochure"/>.
+    </p>
+
+    <p>
+      Fermi problems are a fun way to practice estimation and dimensional analysis.
+      The University of Maryland has a great collection of Fermi problems, which you can find in <xref ref="ref-umd-fermi"/>.
+    </p>
+  </subsection>
+</section>

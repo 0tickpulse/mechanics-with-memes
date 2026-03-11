@@ -5,11 +5,16 @@
 
   <introduction>
     <p>
-      Before we can start discussing the interesting stuff, we need to understand how we think about quantities and measurements. This chapter is meant to be a brief introduction to dimensional analysis and uncertainties, which are two important tools that every scientist should be familiar with.
+      Before we can start discussing the interesting stuff, we need to understand how we think about quantities and measurements.
+      This chapter is meant to be a brief introduction to dimensional analysis and uncertainties, which are two important tools that every scientist should be familiar with.
     </p>
   </introduction>
-
   <!-- include sections -->
   <xi:include href="./01-dim-analysis-uncertainties/sec-the-international-system-of-units.ptx" />
-  <xi:include href="./01-dim-analysis-uncertainties/sec-dimensions-and-uncertainties.ptx" />
+  <xi:include href="./01-dim-analysis-uncertainties/sec-measurements.ptx" />
+  <xi:include href="./01-dim-analysis-uncertainties/sec-estimation-problems.ptx" />
+
+  <xi:include href="./01-dim-analysis-uncertainties/sec-dim-analysis-uncertainties-summary.ptx" />
+  <xi:include href="./01-dim-analysis-uncertainties/sec-dim-analysis-uncertainties-problems.ptx" />
+  <xi:include href="./01-dim-analysis-uncertainties/sec-dim-analysis-uncertainties-afr.ptx" />
 </chapter>

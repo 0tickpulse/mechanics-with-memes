@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-dimensions-and-uncertainties" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Dimensions and Uncertainties</title>
+<section xml:id="sec-measurements" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Measurements</title>
 
   <introduction>
     <p>
@@ -469,9 +469,86 @@
 
     <p>
       The independent variable is placed on the horizontal axis, and the dependent variable is placed on the vertical axis.
-      For our experiment, let's call the mass added to the van <m>m</m>, and let's call the compression of the suspension springs <m>C</m>.
+      For our experiment, let's call the mass added to the van <m>M</m>, and let's call the compression of the suspension springs <m>C</m>.
       Each data point on the graph corresponds to a pair of values.
-      We can denote the data points as <m>(m_1, C_1)</m>, <m>(m_2, C_2)</m>, and so on.
+      We can denote the data points as <m>(M_1, C_1)</m>, <m>(M_2, C_2)</m>, and so on.
     </p>
-  </subsection>
-</section>
+
+    <p>
+      Remember that each measurement has an uncertainty! We represent the uncertainty in the data points using <term>error bars</term>, which are lines on each data point that represent the range of possible values for that data point.
+    </p>
+
+    <figure xml:id="error-bars">
+      <caption>Error bars representing the uncertainty in the measurements.</caption>
+      <image source="images/01-dim-analysis-uncertainties/error-bars.png" />
+      </figure>
+
+      <p>
+        Dave plots the data points using his measurements of mass and compression, and he includes error bars to represent the uncertainties in his measurements.
+        This graph is shown in <xref ref="daves-scatter-plot"/>.
+        After eyeballing the graph, Sarah suggests that there is a relationship between the two variables.
+      </p>
+
+      <figure xml:id="daves-scatter-plot">
+        <caption>Scatter plot of mass vs. compression with error bars.</caption>
+        <image source="images/01-dim-analysis-uncertainties/daves-scatter-plot.png" />
+        </figure>
+
+        <p>
+          How can we determine the relationship between the two variables? Dave decides to draw a <term>line of best fit</term> through the data points, which is a line that best represents the trend in the data.
+          The degree to which the data points cluster around the line of best fit is quantified by the <term>coefficient of determination</term>, denoted as <m>R^2</m>.
+          There is no point determining this value by hand <mdash /> we have technology for a reason <mdash /> but it is important to understand what it means.
+          It ranges from 0 to 1, where 0 means that the line of best fit does not explain any of the variability in the data, and 1 means that the line of best fit explains all of the variability in the data.
+        </p>
+
+        <p>
+          When we fit a line to the data, the computer will give us the equation of the line.
+          If our line of best fit is a straight line, then the equation will be of the form <m>C = mM + b</m>, where <m>m</m> is the slope of the line and <m>b</m> is the y-intercept.
+        </p>
+
+        <p>
+          However, physics rarely hands us a straight line on a silver platter.
+          Suppose Sarah suggests that the air resistance <m>F_{air}</m> on the van at high speeds follows the formula <m>F_{air} = bv^2</m>, where <m>b</m> is a constant and <m>v</m> is velocity.
+          If we plot <m>F_{air}</m> vs.
+          <m>v</m>, we get a curve <mdash /> and humans are notoriously bad at "eyeballing" curves.
+          However, we can just plot <m>F_{air}</m> vs.
+          <m>v^2</m>, and we should get a straight line.
+          This is called a <term>linearization</term> of the data.
+        </p>
+
+        <exercise>
+          <statement>
+            <p>
+              Dave is measuring the braking distance <m>d</m> of the van at different velocities <m>v</m>.
+              He suspects the relationship is <m>d = kv^2</m>.
+              How should he plot the data to get a straight line? What would the slope of that line represent?
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Dave should plot the distance <m>d</m> on the <m>y</m>-axis and the square of the velocity (<m>v^2</m>) on the <m>x</m>-axis.
+              The slope of the resulting line of best fit would be the constant <m>k</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              In another experiment, Dave is measuring the brightness <m>B</m> of a light source as its chemical composition changes.
+              He suspects the relationship is <m>B = Ae^{ct}</m>, where <m>A</m> and <m>c</m> are constants, and <m>t</m> is the time since the light source was created.
+              How should he plot the data to get a straight line? What would the slope and intercept of that line represent?
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              In this case, Dave should take the natural logarithm of both sides of the equation to get <m>\ln(B) = \ln(A) + ct</m>.
+              He should then plot <m>\ln(B)</m> on the <m>y</m>-axis and <m>t</m> on the <m>x</m>-axis.
+              The slope of the resulting line of best fit would be the constant <m>c</m>, and the y-intercept would be <m>\ln(A)</m>.
+            </p>
+          </solution>
+        </exercise>
+      </subsection>
+    </section>

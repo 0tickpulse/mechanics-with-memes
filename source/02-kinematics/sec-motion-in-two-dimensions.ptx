@@ -11,14 +11,14 @@
     </p>
 
     <p>
-      Dave floors it again, keeping the minivan moving strictly in one dimension down the perfectly straight, infinitely long campus perimeter road.
+      Dave floors it again, keeping the van moving strictly in one dimension down the perfectly straight, infinitely long campus perimeter road.
       But the security guards are not playing by 1D rules.
-      The guard in the passenger seat of the golf cart reaches into a crate of stolen dining hall fruit, winds up, and hurls a lemon at the minivan.
+      The guard in the passenger seat of the golf cart reaches into a crate of stolen dining hall fruit, winds up, and hurls a lemon at the van.
     </p>
 
     <p>
       We have officially entered two dimensions.
-      <em>Domain expansion.</em> To figure out if Dave's minivan is about to get juiced, we need to understand projectile motion.
+      <em>Domain expansion.</em> To figure out if Dave's van is about to get juiced, we need to understand projectile motion.
     </p>
   </introduction>
 
@@ -139,8 +139,8 @@
     <title>Projectile Motion</title>
 
     <p>
-      Let's return to the problem at hand: the lemon being thrown at the minivan.
-      We want to know if the lemon will hit the minivan, which is moving along the horizontal axis.
+      Let's return to the problem at hand: the lemon being thrown at the van.
+      We want to know if the lemon will hit the van, which is moving along the horizontal axis.
     </p>
 
     <exercise>
@@ -214,8 +214,8 @@
     <title>Will the Lemon Hit?</title>
 
     <p>
-      Suppose the minivan is located at a horizontal distance <m>d = 20</m> meters from the origin, and a vertical height <m>h = 0</m> meters from the release point of the lemon.
-      We want to know if there is an angle <m>\theta</m> such that the lemon will go through the window of the minivan.
+      Suppose the van is located at a horizontal distance <m>d = 20</m> meters from the origin, and a vertical height <m>h = 0</m> meters from the release point of the lemon.
+      We want to know if there is an angle <m>\theta</m> such that the lemon will go through the window of the van.
       In other words, we want to know if there is a solution to the equation
       <me>
         \vb{r}(t) = d\vu{x} + h\vu{y}
@@ -242,330 +242,34 @@
     </p>
 
     <p>
-      We know that the minivan is located at <m>d = 20</m> meters and <m>h = 0</m> meters, so the condition for the lemon to hit the minivan is
+      We know that the van is located at <m>d = 20</m> meters and <m>h = 0</m> meters, so the condition for the lemon to hit the van is
       <me>
-        v_0 \geq 14\, \text{m/s}
+        v_0 \geq 14\, \text{m} \cdot \text{s}^{-1}
       </me>,
       which is about 31 miles per hour.
-      If the guard can throw the lemon at that speed, then there will be two angles at which the lemon will hit the minivan.
-    </p>
-  </subsection>
-
-
-  <subsection xml:id="subsec-derivative-rules">
-    <title>Derivative Rules</title>
-
-    <p>
-      Before proceeding, let's take a moment to derive some useful rules for differentiating vector-valued functions.
-    </p>
-
-    <p>
-      As the security guards, riding in the golf cart, are throwing lemons frantically at us, one of the lemons got snagged by a tree branch, which caused the lemon to swing back and forth like a pendulum.
-      The motion of the lemon can be described by the equation <m>\theta(t) = \cos(2t)</m>.
+      If the guard can throw the lemon at that speed, then there will be two angles at which the lemon will hit the van.
     </p>
 
     <exercise>
       <statement>
         <p>
-          Using first-principles, derive an expression for the angular velocity of the lemon, <m>\omega(t) = \dv{t} \theta(t)</m>.
-        </p>
-      </statement>
-
-      <hint>
-        <p>
-          You might want to use the trigonometric identity <m>\cos A - \cos B = -2\sin\qty(\frac{A + B}{2}) \sin\qty(\frac{A - B}{2})</m> to simplify the expression you get after plugging into the limit.
-        </p>
-      </hint>
-
-      <solution>
-        <p>
-          Using the definition of the derivative, we have
-          <me>
-            \omega(t) = \dv{t} \theta(t) = \lim_{\Delta t \to 0} \frac{\theta(t + \Delta t) - \theta(t)}{\Delta t} = \lim_{\Delta t \to 0} \frac{\cos(2(t + \Delta t)) - \cos(2t)}{\Delta t}
-          </me>.
-          Using the trigonometric identity <m>\cos A - \cos B = -2\sin\qty(\frac{A + B}{2}) \sin\qty(\frac{A - B}{2})</m>, we can rewrite the numerator as
-          <md>
-            <mrow> \cos(2(t + \Delta t)) - \cos(2t) \amp = -2\sin\qty(\frac{2(t + \Delta t) + 2t}{2}) \sin\qty(\frac{2(t + \Delta t) - 2t}{2}) </mrow>
-            <mrow> \amp = -2\sin(2t + \Delta t) \sin(\Delta t) </mrow>
-          </md>.
-          Therefore, we have
-          <me>
-            \omega(t) = \lim_{\Delta t \to 0} \frac{-2\sin(2t + \Delta t) \sin(\Delta t)}{\Delta t}
-          </me>.
-          As <m>\Delta t \to 0</m>, we have <m>\sin(2t + \Delta t) \to \sin(2t)</m> and <m>\frac{\sin(\Delta t)}{\Delta t} \to 1</m>, so we get
-          <me>
-            \omega(t) = -2\sin(2t)
-          </me>.
-        </p>
-      </solution>
-    </exercise>
-
-    <p>
-      The above was a straightforward application of the definition of the derivative, but it was quite tedious.
-      Indeed, if we had to find every derivative using first-principles, we would literally never get anything done.
-      In physics, we like to at least pretend that we are doing anything other than math, so we need some shortcuts for finding derivatives.
-    </p>
-
-    <p>
-      Notice the pattern in the above solution: we took the derivative of an expression consisting of an outer function (in this case, the cosine function) and an inner function (in this case, the linear function of time, <m>2t</m>), and we ended up with the derivative of the outer function (which is <m>-\sin(2t)</m>) multiplied by the derivative of the inner function (which is <m>2</m>).
-      Is this just a coincidence, or is there some deeper reason for this pattern? See the next two exercises for the answer.
-    </p>
-
-    <exercise>
-      <statement>
-        <p>
-          Show that more generally, if the trajectory of an object is given by <m>x(t) = f(g(t))</m>, then the velocity of the object is given by <m>v(t) = \dv{t} f(g(t)) = \dv{f}{g} \cdot \dv{g}{t}</m>.
+          The guard is 20 meters behind the van and throws a lemon at <m>20 \, \text{m} \cdot \text{s}^{-1}</m> at an angle of <m>45^\circ</m>.
+          If the van's roof is 2 meters high, does the lemon sail over the van or hit the back bumper?
         </p>
       </statement>
 
       <solution>
         <p>
-          Using the definition of the derivative, we have
+          Plugging <m>x = 20</m> into the trajectory equation (and assuming <m>g = 9.8 \, \text{m} \cdot \text{s}^{-2}</m>):
           <me>
-            v(t) = \dv{t} f(g(t)) = \lim_{\Delta t \to 0} \frac{f(g(t + \Delta t)) - f(g(t))}{\Delta t}
+            y(20) = (1)(20) - \frac{9.8}{2(400)(0.5)}(400) = 20 - 9.8 = 10.2 \, \text{meters}
           </me>.
-          We can add and subtract <m>f(g(t + \Delta t))</m> in the numerator to get
-          <md>
-            <mrow> v(t) \amp = \lim_{\Delta t \to 0} \frac{f(g(t + \Delta t)) - f(g(t)) + f(g(t + \Delta t)) - f(g(t))}{\Delta t} </mrow>
-            <mrow> \amp = \lim_{\Delta t \to 0} \qty[ \frac{f(g(t + \Delta t)) - f(g(t))}{g(t + \Delta t) - g(t)} \cdot \frac{g(t + \Delta t) - g(t)}{\Delta t} ] </mrow>
-          </md>.
-          Notice that the first fraction is the definition of the derivative of <m>f</m> with respect to <m>g</m>, and the second fraction is the definition of the derivative of <m>g</m> with respect to <m>t</m>.
-          Therefore, as <m>\Delta t \to 0</m>, the first fraction approaches <m>\dv{f}{g}</m> and the second fraction approaches <m>\dv{g}{t}</m>, so we get
-          <me>
-            v(t) = \dv{f}{g} \cdot \dv{g}{t}
-          </me>.
+          The lemon is 10.2 meters high when it reaches the van.
+          It sails harmlessly over the roof.
+          Dave: 1.
+          Security Guard: 0.
         </p>
       </solution>
     </exercise>
-
-    <exercise>
-      <statement>
-        <p>
-          The statement of the previous exercise is known as the chain rule, and it is one of the most important rules of differentiation.
-          Can you explain why the chain rule makes intuitive sense?
-        </p>
-      </statement>
-
-      <solution>
-        <p>
-          Suppose we want to find out how much <m>f</m> changes when we change <m>t</m>.
-          Since <m>f</m> changes when we change <m>g</m>, we know that <m>f</m> changes by <m>\dv{f}{g} \cdot \Delta g</m> when we change <m>g</m> by <m>\Delta g</m>.
-          But since <m>g</m> changes when we change <m>t</m>, we know that <m>g</m> changes by <m>\dv{g}{t} \cdot \Delta t</m> when we change <m>t</m> by <m>\Delta t</m>.
-          Therefore, when we change <m>t</m>, <m>f</m> changes by <m>\dv{f}{g} \cdot \dv{g}{t} \cdot \Delta t</m>, which means that the rate of change of <m>f</m> with respect to <m>t</m> is <m>\dv{f}{g} \cdot \dv{g}{t}</m>.
-        </p>
-      </solution>
-    </exercise>
-
-    <p>
-      The chain rule allows us to differentiate compositions of functions without having to go back to first-principles every time.
-      What about products of functions? For example, if we have a rectangle with length <m>l(t)</m> and width <m>w(t)</m>, how do we find the rate of change of the area of the rectangle, which is given by <m>A(t) = l(t) w(t)</m>?
-    </p>
-
-    <exercise>
-      <statement>
-        <p>
-          Now suppose we have a rectangle with length <m>l(t)</m> and width <m>w(t)</m>, where both are functions of time.
-          Can you derive an expression for the rate of change of the area of the rectangle with respect to time, i.e., <m>\dv{t} (l(t) w(t))</m>?
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Draw the rectangle out. If you increase both the length and the width by a small amount, how much does the area increase by?
-        </p>
-      </hint>
-      <solution>
-        <p>
-          If we increase the length by a small amount <m>\Delta l</m> and the width by a small amount <m>\Delta w</m>, then the area increases by
-          <me>
-            \Delta A = l \Delta w + w \Delta l + \Delta l \Delta w
-          </me>.
-          Dividing both sides by <m>\Delta t</m> and taking the limit as <m>\Delta t \to 0</m>, we get
-          <me>
-            \dv{A}{t} = l \dv{w}{t} + w \dv{l}{t}
-          </me>.
-        </p>
-      </solution>
-    </exercise>
-  </subsection>
-
-
-  <subsection xml:id="subsec-polar-coordinates">
-    <title>Polar Coordinates and Uniform Circular Motion</title>
-
-    <p>
-      Fortunately, the guard is not a professional athlete, and the lemon is not going to hit the minivan.
-      The lemon splatters harmlessly against the pavement behind them.
-      Dave has successfully navigated the 1D perimeter road, but the flashing lights of the security golf cart are still in the rearview mirror.
-    </p>
-
-    <p>
-      "Hang on!" Dave yells.
-      He yanks the steering wheel to the left, and the minivan screeches into the infamous "Founder's Quad Traffic Circle" <mdash /> a massive, perfectly circular roundabout that has claimed the hubcaps of countless freshmen.
-      Inside the van, absolute chaos ensues.
-      Even though Dave is keeping the speedometer pegged at a constant 15 m/s, everyone is violently shoved against the right-hand doors.
-      In the back, the 500 kg bronze statue of Richard Feynman groans and begins to slide across the carpet.
-    </p>
-
-    <p>
-      Wait a minute.
-      If Dave's speed is constant, why is everyone feeling an acceleration? The short answer is that the direction of the velocity is changing, even though its magnitude is not.
-      For a fuller understanding, we need to introduce a new coordinate system that is more natural for circular motion: polar coordinates.
-    </p>
-
-    <p>
-      In our usual (<term>Cartesian</term>) coordinate system, we specify the position of an object by giving its horizontal and vertical coordinates, <m>x</m> and <m>y</m>.
-      We don't <em>have</em> to forsake Cartesian coordinates to describe circular motion.
-      We could describe the van using a messy conglomeration of sines and cosines.
-      But think about Dave's perspective.
-      When he looks out the windshield, he doesn't care about his <m>x</m>-coordinate.
-      He only cares about two things: "Am I going forward?" and "Am I turning the wheel?" So, let's invent a coordinate system that rides inside the minivan with Dave.
-    </p>
-
-    <p>
-      A coordinate system specifies (1) the origin point, (2) the directions of the axes, (3) which direction is positive, and (4) unit vectors that point in the positive directions of the axes.
-      The origin remains the same in polar coordinates, but the unit vectors are different.
-      The <term>tangential vector</term>, <m>\vu{\theta}</m>, points in the direction of motion, and the <term>radial vector</term>, <m>\vu{r}</m>, points from the origin to the position of the object.
-      The tangential vector is positive in the direction of motion, and the radial vector is positive in the outward direction.
-    </p>
-
-    <p>
-      In Cartesian coordinates, <m>\vu{x}</m> and <m>\vu{y}</m> are constant unit vectors that point in the same direction at all times.
-      In polar coordinates, <m>\vu{\theta}</m> and <m>\vu{r}</m> are not constant.
-      Their directions change as the object moves around the circle.
-    </p>
-
-    <p>
-      At a given point, the polar unit vectors can be expressed in terms of the Cartesian unit vectors as
-      <md>
-        <mrow>\vu{r} \amp = \cos\theta \vu{x} + \sin\theta \vu{y}</mrow>
-        <mrow>\vu{\theta} \amp = -\sin\theta \vu{x} + \cos\theta \vu{y}</mrow>
-      </md>.
-      From this, it is clear that they depend on the position (specifically, the angle <m>\theta</m>).
-      The Cartesian unit vectors can also be expressed in terms of the polar unit vectors as
-      <md>
-        <mrow>\vu{x} \amp = \cos\theta \vu{r} - \sin\theta \vu{\theta}</mrow>
-        <mrow>\vu{y} \amp = \sin\theta \vu{r} + \cos\theta \vu{\theta}</mrow>
-      </md>.
-    </p>
-
-    <p>
-      If the polar unit vectors depend on the position, then they also depend on time, since the position depends on time.
-      The natural question is, then, what are the derivatives of the polar unit vectors?
-    </p>
-
-    <theorem xml:id="thm-derivatives-of-polar-vectors">
-      <statement>
-        <p>
-          The derivatives of the polar unit vectors are given by
-          <md>
-            <mrow>\dv{t} \vu{r} \amp = \dv{\theta}{t} \vu{\theta}</mrow>
-            <mrow>\dv{t} \vu{\theta} \amp = -\dv{\theta}{t} \vu{r}</mrow>
-          </md>.
-        </p>
-      </statement>
-      <proof>
-        <p>
-          Here I will present a more visual derivation. A more rigorous derivation is in the exercises section.
-        </p>
-      </proof>
-    </theorem>
-
-    <p>
-      As we speak, the minivan is moving around the traffic circle at a constant speed of 15 m/s.
-      Let's begin by stating the position of the van in polar coordinates:
-      <me>
-        \vb{r}(t) = R\vu{r}(t)
-      </me>,
-      where <m>R</m> is the radius of the traffic circle, and <m>\vu{r}(t)</m> is the radial unit vector that points from the center of the circle to the position of the van at time <m>t</m>.
-    </p>
-
-    <p>
-      The velocity of the van is the derivative of the position:
-      <me>
-        \vb{v}(t) = \dv{\vb{r}}{t} = R\dv{\vu{r}}{t} = R\dv{\theta}{t}\vu{\theta}
-      </me>.
-      The velocity points in the tangential direction, which makes sense since the van is moving around the circle.
-      The term <m>\dv{\theta}{t}</m> is called the <term>angular velocity</term>, and it is the rate at which the angle <m>\theta</m> changes with respect to time.
-      It is denoted by <m>\omega</m> (Greek letter <foreign>omega</foreign>), so we can write the velocity as
-      <me>
-        \vb{v}(t) = R\omega \vu{\theta}
-      </me>.
-      Note that this is only applicable if <m>R</m> is constant! If the van were moving in a spiral, then <m>R</m> would not be constant, and we would have to use the product rule to find the velocity:
-      <me>
-        \vb{v}(t) = \dv{R}{t} \vu{r} + R\dv{\vu{r}}{t} = \dv{R}{t} \vu{r} + R\omega \vu{\theta}
-      </me>.
-    </p>
-
-    <p>
-      Next, we can find the acceleration of the van by taking the derivative of the velocity.
-      For uniform circular motion, we have
-      <me>
-        \vb{a}(t) = \dv{\vb{v}}{t} = R\dv{\omega}{t} \vu{\theta} + R\omega \dv{\vu{\theta}}{t}
-      </me>.
-      The first term is zero, since the angular velocity is constant ("uniform" circular motion). So
-      <me>
-        \vb{a}(t) = R\omega \dv{\vu{\theta}}{t} = R\omega (-\omega \vu{r}) = -R\omega^2 \vu{r}
-      </me>.
-    </p>
-
-    <p>
-      So this is it! There is an acceleration, even though the speed is constant, because the direction of the velocity, <m>\vu{\theta}</m>, is changing. This is why everyone in the van is feeling an acceleration, even though the speedometer is pegged at 15 m/s. This is why the statue of Feynman is sliding across the carpet.
-    </p>
-
-    <p>
-      When discussing circular motion, it is very convenient to disregard the radius, and only discuss the angular displacement <m>\theta</m>, the angular velocity <m>\omega</m>, and the <term>angular acceleration</term> <m>\alpha = \dv{\omega}{t}</m>. Mathematically speaking, they are very similar to their linear counterparts, but they have different units and different physical interpretations. In fact, under constant angular acceleration, the equations of motion for angular displacement, velocity, and acceleration are exactly the same:
-      <md>
-        <mrow>\omega \amp = \omega_0 + \alpha t</mrow>
-        <mrow>\Delta \theta \amp = \omega_0 t + \frac{1}{2} \alpha t^2</mrow>
-        <mrow>\omega^2 \amp = \omega_0^2 + 2\alpha \Delta \theta</mrow>
-        <mrow>\Delta \theta \amp = \frac{\omega_0 + \omega}{2} t</mrow>
-      </md>
-
-    </p>
-
-    <exercise>
-      <statement>
-        <p>
-          The van continues to move around the traffic circle at a constant speed of 15 m/s.
-          The traffic circle has a radius of 15 meters.
-          How long does it take for the van to complete one full revolution around the circle? This quantity is called the <term>period</term> of the motion, and it is denoted by <m>T</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          The angular velocity of the van is given by <m>\omega = \frac{v}{R} = \frac{15\, \text{ m/s}}{15\, \text{ m}} = 1\, \text{ rad/s}</m>.
-        </p>
-
-        <p>
-          To complete one full revolution, the van needs to go through an angular displacement of <m>2\pi</m> radians.
-          Since the angular velocity is constant, we can use the equation <m>\Delta \theta = \omega t</m> to find the time it takes to complete one full revolution. Substituting in the values, we get
-          <me>
-            2\pi = 1 \cdot T \implies T = 2\pi\, \text{seconds}
-          </me>.
-        </p>
-      </solution>
-    </exercise>
-
-    <p>
-      Following the exercise above, we can define a few quantities that are commonly used in circular motion.
-    </p>
-
-    <definition xml:id="def-circular-motion-quantities">
-      <title>Quantities in Circular Motion</title>
-      <statement>
-        <p>
-          The <term>period</term> of a motion is the time it takes to complete one full cycle of the motion. It is denoted by
-          <me>
-            T = \frac{2\pi}{\omega}
-          </me>.
-        </p>
-        <p>
-          The <term>frequency</term> of a motion is the number of cycles completed per unit time,
-          <me>
-            f = \frac{1}{T} = \frac{\omega}{2\pi}
-          </me>.
-        </p>
-      </statement>
-    </definition>
   </subsection>
 </section>

@@ -5,10 +5,9 @@
 
   <introduction>
     <p>
-      Our universe has three spatial dimensions.
-      At least, that's what sane people think; don't ask the string theorists.
-      But for now, let's just consider motion in one dimension.
-      This is a good starting point, and it will allow us to build up our understanding of calculus without dealing with pesky little vectors.
+      Our universe has three spatial dimensions—at least, that's what sane people think; don't ask the string theorists.
+      But for <em>Operation: Fine-Man</em>, we are going to start with a <term>subspace</term>: the straight-line sprint from the rival university's statue pedestal to the safety of the campus gates.
+      This allows us to master the calculus of motion without dealing with pesky little vectors yet.
     </p>
   </introduction>
 
@@ -17,29 +16,14 @@
     <title>Position</title>
 
     <p>
-      I said in the introduction that the universe has three dimensions.
-      So how can we just consider motion in one dimension? Well, we can just pretend that the van is moving along a straight line, and we can ignore any motion in the other two dimensions.
-      We just work with a <term>subspace</term> of the universe.
+      To describe the van's motion, we treat the road as a number line (the real numbers <m>\mathbb{R}</m>).
+      We define the <term>origin</term> (<m>x = 0</m>) as the statue's pedestal.
+      Any distance toward our campus is positive; any distance toward the rival's Dean's office is negative (and a bad sign).
     </p>
 
     <p>
-      Anyways, in one dimension, we essentially treat space as a number line (the real numbers <m>\mathbb{R}</m>).
-      The coordinate along this line is a single letter, typically <m>x</m>, and it can be positive, negative, or zero.
-      The point at zero is the <term>origin</term>.
-      The choice of origin, as well as which direction is positive, is arbitrary.
-    </p>
-
-    <p>
-      But this won't suffice, for there is another parameter that we need to consider: time.
-      We treat time as another number line, with its own coordinate, typically <m>t</m>.
-      We usually choose the origin of time to be the moment we start observing the system, so <m>t=0</m> is when we start watching the van.
-      Time only moves forward, so we only consider non-negative values of <m>t</m>.
-    </p>
-
-    <p>
-      To describe the motion of the van, we need to know its position at each moment in time.
-      We can represent this as a function <m>x(t)</m>, which gives the position of the van at time <m>t</m>.
-      This function is called the <term>position</term>.
+      To know where the van is at any moment, we use a function <m>x(t)</m>, called <term>position</term>.
+      If <m>x(5) = 100</m>, it means 5 seconds after Dave floors it, we are 100 meters away from the scene of the crime.
     </p>
 
     <figure xml:id="xt-function">
@@ -53,19 +37,13 @@
       <title>Average Velocity</title>
 
       <p>
-        We shall begin with a simple question: how fast is the van moving? Suppose your friend is on the sidewalk, and he takes two pictures of your van, ten seconds apart.
-        He wants to time your van in order to plan the heist, and he thinks that taking pictures is a good way to do that.
-        After looking at the pictures, he tells you that in the first picture, your van is 0 meters from a certain lamppost, and in the second picture, your van is 100 meters from the same lamppost.
-      </p>
-
-      <p>
-        Let's now ask the question: if we knew all of this, how much would the van move after twenty seconds?
-      </p>
-
-      <p>
-        Of course, the first thing to do is transform this information into a mathematical function.
-        Let's denote the time of the first picture as <m>t_1 = 0</m> seconds, and the time of the second picture as <m>t_2 = 10</m> seconds.
-        The <term>average velocity</term> between these two times can be calculated as the change in position divided by the change in time.
+        Now, we want to know how fast the van is moving.
+        We can calculate the average velocity over a time interval by looking at how much the position changes over that time interval.
+        For example, if we look at the position at <m>t = 0</m> seconds and <m>t = 10</m> seconds, we can calculate the average velocity between those two times.
+        The change in position is <m>x(10) - x(0) = 100 - 0 = 100</m> meters, and the change in time is <m>10 - 0 = 10</m> seconds, so the average velocity is
+        <me>
+          v_{\text{avg}} = \frac{x(10) - x(0)}{10 - 0} = \frac{100}{10} = 10\, \text{m} \cdot \text{s}^{-1}
+        </me>.
       </p>
 
       <definition xml:id="def-average-velocity-1d">
@@ -80,11 +58,6 @@
       </definition>
 
       <p>
-        Ooo scary...
-        "Definition 1.1.2" <mdash /> doesn't that sound fancy? Well, in this book (or course? Website? Set of notes by someone unqualified to speak on the topic? I don't know what to call it), we will be using a lot of definitions, theorems, and proofs.
-      </p>
-
-      <p>
         On a graph of position over time (when we say <m>A</m> over <m>B</m>, we mean that <m>A</m> is on the vertical axis and <m>B</m> is on the horizontal axis), the average velocity between two times is the slope of a line connecting the two points on the graph corresponding to those times.
         This line is called a <term>secant line</term>.
       </p>
@@ -95,16 +68,7 @@
         </figure>
 
         <p>
-          Anyways, let's apply this definition to our problem.
-          We have <m>t_1 = 0</m> seconds, <m>t_2 = 10</m> seconds, <m>x(t_1) = 0</m> meters, and <m>x(t_2) = 100</m> meters.
-          Plugging these values into the formula, we get
-          <me>
-            v_{\text{avg}} = \frac{100 - 0}{10 - 0} = \frac{100}{10} = 10\, \text{m/s}
-          </me>.
-        </p>
-
-        <p>
-          So, the average velocity of the van between the two pictures is <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity>.
+          So, the average velocity of the van between the two times is <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity>.
           This means that, on average, the van is moving at a speed of 10 meters per second in the positive direction.
           However, this doesn't necessarily mean that the van is always moving at <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity>; it could be accelerating or decelerating.
           The figure below shows three graphs of position as a function of time, all of which have the same average velocity of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> between <m>t=0</m> and <m>t=10</m> seconds.
@@ -132,7 +96,7 @@
 
             Therefore, if we assume that the van continues to move at the same average velocity of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> for another ten seconds, we can calculate the change in position as
             <me>
-              \Delta x = 10 \, \text{m/s} \cdot 10 \, \text{s} = 100 \, \text{m}
+              \Delta x = 10 \, \text{m} \cdot \text{s}^{-1} \cdot 10 \, \text{s} = 100 \, \text{m}
             </me>.
           </p>
         </subsection>
@@ -142,16 +106,19 @@
           <title>Instantaneous Velocity</title>
 
           <p>
-            You would have to be pretty crazy to drive at a constant speed of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> (which is about 22 mph) on a highway.
-            In fact, you would be breaking the law, and you would probably get a ticket for driving too slow.
-            But how fast can you drive? How fast are you driving right now?
+            Suppose Sarah is standing by the gate with a stopwatch.
+            She sees the van pass the 100 m mark at <m>t = 5 \, \text{s}</m> and the 300 m mark at <m>t = 15 \, \text{s}</m>.
+            She calculates the <term>average velocity</term>:
+            <me>
+              v_{\text{avg}} = \frac{\Delta x}{\Delta t} = \frac{300 - 100}{15 - 5} = 20\, \text{m} \cdot \text{s}^{-1}
+            </me>.
           </p>
 
           <p>
-            Notice the subtlety.
-            In the previous example, we were able to calculate the average velocity over a time interval of ten seconds, but we couldn't say anything about the velocity at any specific moment in time.
-            Now, we want to know how fast the van is moving at a specific moment in time, say at <m>t=5</m> seconds.
-            In other words, what does your speedometer say at that moment? This is what we call the <term>instantaneous velocity</term>.
+            Dave is unimpressed.
+            "That tells me nothing, Sarah.
+            If I hit a speed trap halfway through, the cop doesn't care about my <em>average</em> speed over the last ten seconds.
+            He cares about how fast I'm going the <em>instant</em> he clicks the radar gun."
           </p>
 
           <remark>
@@ -263,8 +230,8 @@
             </p>
 
             <p>
-              Indeed, suppose you, on the van, have a speedometer that gives you the instantaneous velocity at each moment in time.
-              Take a video of the speedometer for ten seconds, and then analyze the video to find the velocity at each frame.
+              Indeed, suppose Dave, on the van, has a speedometer that gives him the instantaneous velocity at each moment in time.
+              He takes a video of the speedometer for ten seconds, and then analyze the video to find the velocity at each frame.
               Suppose each frame has a time interval of <m>\Delta t = 0.03</m> seconds, and you find the velocity at each frame, denoted as <m>v(t_i)</m> for the time of the <m>i</m>-th frame.
               Then, during that frame, the van moves approximately <m>v(t_i) \cdot \Delta t</m> meters.
               If you sum this up for all the frames, you get an approximation of how much the van has moved in those ten seconds:
@@ -319,10 +286,8 @@
             <title>Acceleration</title>
 
             <p>
-              The crew has successfully stolen the statue and is now driving it back to their university.
-              The car contains the driver and three passengers, who are all very excited about the heist.
-              In addition to the statue, they also have a cooler full of beer, and a bunch of meter sticks for some reason.
-              The driver <mdash /> let's call him Dave <mdash /> is cruising at a constant speed of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity> on the highway, and everyone in the van is feeling pretty good.
+              The crew is continuing to speed across campus at a constant speed of <quantity><mag>10</mag><unit base="meter" /><per base="second" /></quantity>.
+              Everyone in the van is feeling pretty good after this initial scouting mission.
               (In fact, thanks to Galilean relativity, as long as the windows are rolled up and the suspension isn't terrible, they might as well be sitting still in a parking lot.
               You don't actually <em>feel</em> velocity.)
             </p>
@@ -348,19 +313,9 @@
               </statement>
             </definition>
 
-            <remark>
-              <p>
-                Let's look at the units again.
-                If velocity is measured in meters per second (m/s), and we divide that by time in seconds (s), we get meters per second per second.
-                We usually write this as <quantity><unit base="meter" /><per base="second" /><per base="second" /></quantity>, or more commonly as <quantity><unit base="meter" /><per base="second" exp="2" /></quantity>.
-                It sounds weird, but it just means "how many meters per second of speed you are gaining every single second." There are units that are far more cursed, by the way.
-                Just ask a chemist.
-              </p>
-            </remark>
-
             <p>
               Just like with velocity, knowing the average acceleration over a ten-second panic attack isn't always enough.
-              We want to know exactly how hard the minivan is accelerating at the exact moment Dave's foot hits the floorboard.
+              We want to know exactly how hard the van is accelerating at the exact moment Dave's foot hits the floorboard.
               We need the <term>instantaneous acceleration</term>.
             </p>
 
@@ -405,20 +360,20 @@
 
             <p>
               Let's assess the situation.
-              The minivan is moving at <m>v_0 = 30\, \text{m/s}</m> (that's the initial velocity).
+              The van is moving at <m>v_0 = 30\, \text{m} \cdot \text{s}^{-1}</m> (that's the initial velocity).
               A family of raccoons is crossing the road exactly 50 meters ahead of them.
-              Dave has slammed on the brakes, causing the minivan to accelerate in the opposite direction of its motion.
+              Dave has slammed on the brakes, causing the van to accelerate in the opposite direction of its motion.
             </p>
 
             <p>
               Physics isn't just about describing what is happening right now.
               We want to predict the future, preferably with an accuracy exceeding that of a fortune teller.
-              We need to know: will the minivan stop before it hits the raccoons?
+              We need to know: will the van stop before it hits the raccoons?
             </p>
 
             <p>
               To solve this, we are going to make a classic physicist assumption.
-              We are going to assume that the minivan's acceleration is <term>constant</term>.
+              We are going to assume that the van's acceleration is <term>constant</term>.
               In reality, a car's braking acceleration changes depending on tire temperature, the road surface, and how hard Dave is mashing his foot into the floor mat.
               But assuming a constant, average acceleration makes the calculus incredibly clean, and it usually gets us close enough to the right answer.
               Let's assume the brakes provide a constant acceleration of <quantity><mag>-10</mag><unit base="meter" /><per base="second" exp="2" /></quantity>.
@@ -482,22 +437,21 @@
 
             <p>
               We finally have the tools to predict the future.
-              Let's use Equation 3, because we know Dave's initial velocity (<m>v_0 = 30\, \text{m/s}</m>), we know his final velocity needs to be zero to avoid a tragedy (<m>v = 0</m>), and we assumed his braking acceleration is <m>a = -10\, \text{m/s}^2</m>.
+              Let's use Equation 3, because we know Dave's initial velocity (<m>v_0 = 30\, \text{m} \cdot \text{s}^{-1}</m>), we know his final velocity needs to be zero to avoid a tragedy (<m>v = 0</m>), and we assumed his braking acceleration is <m>a = -10\, \text{m} \cdot \text{s}^{-2}</m>.
               We want to find the stopping distance, <m>\Delta x</m>.
               Just doing some algebra, we obtain
               <md>
                 <mrow>v^2 \amp = v_0^2 + 2a\Delta x</mrow>
                 <mrow>\implies 2a\Delta x \amp = v^2 - v_0^2</mrow>
                 <mrow>\implies \Delta x \amp = \frac{v^2 - v_0^2}{2a}</mrow>
-                <mrow>\amp = \frac{(0\, \text{m/s})^2 - (30\, \text{m/s})^2}{2 \cdot (-10\, \text{m/s}^2)}</mrow>
+                <mrow>\amp = \frac{(0\, \text{m} \cdot \text{s}^{-1})^2 - (30\, \text{m} \cdot \text{s}^{-1})^2}{2 \cdot (-10\, \text{m} \cdot \text{s}^{-2})}</mrow>
                 <mrow>\amp = 45\, \text{m}</mrow>
               </md>
             </p>
 
             <p>
               The raccoons are 50 meters away.
-              The minivan screeches to a halt exactly 5 meters in front of them.
-              The 500 kg bronze statue of Richard Feynman shifts heavily in the back but stays put.
+              The van screeches to a halt exactly 5 meters in front of them.
               Dave lets out a breath he didn't know he was holding.
             </p>
 

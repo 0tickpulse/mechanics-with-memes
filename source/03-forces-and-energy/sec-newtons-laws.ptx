@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-newtons-laws" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Newton's Laws</title>
+
+  <introduction>
+    <p>
+      In kinematics, we treated the van and the lemon as ghosts.
+      They were just points moving around, and we didn't care about what was causing them to move.
+      In <term>dynamics</term>, we will be treating the van and the lemon as real objects, and we will be trying to understand what <em>causes</em> them to move the way they do.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-introduction-to-forces">
+    <title>Introduction to Forces</title>
+
+    <p>
+      Dave is sitting in the driver's seat of the parked van.
+      He looks at the 500 kg statue pedestal in the distance.
+      "If we just leave the van here," Dave says, "it's not going to move unless I do something.
+      And once we get the statue in the back and get up to speed, it's not going to stop unless I hit the brakes."
+    </p>
+
+    <p>
+      This is the core idea behind the law of inertia, the first of Newton's laws.
+      Newton wrote these laws in his book <foreign>Philosophiæ Naturalis Principia Mathematica</foreign> (Mathematical Principles of Natural Philosophy) or just <em>Principia</em> for short.
+    </p>
+
+    <blockquote>
+      <p>
+        Every body perseveres in its state of rest, or of uniform motion in a right line, unless it is compelled to change that state by forces impressed thereon.
+      </p>
+    </blockquote>
+
+    <p>
+      What does this mean? The statue is a body, and it is at rest.
+      Note that there <em>are</em> forces acting on the statue, such as gravity and the normal force from the ground.
+      However, these forces are balanced, causing the statue to be at <term>static equilibrium</term>.
+    </p>
+
+    <p>
+      Forces are vector quantities, meaning they have both magnitude and direction.
+      They are defined by Newton as follows:
+    </p>
+
+    <blockquote>
+      <p>
+        An impressed force is an action exerted upon a body, in order to change its state, either of rest, or of uniform motion in a right line.
+      </p>
+    </blockquote>
+
+    <example>
+      <statement>
+        <p>
+          As the statue rests, a gravitational force with magnitude <m>mg = (500 \, \text{kg})(9.8 \, \text{m} \cdot \text{s}^{-2}) = 4900 \, \text{N}</m> is acting on it downwards.
+          What is the magnitude and direction of the normal force acting on the statue, for it to be at rest?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Let's write the forces as follows:
+          <me>
+            \vb{0} = -mg \vu{y} + \vb{N}
+          </me>,
+          where <m>\vu{y}</m> points upwards and <m>\vb{N}</m> is the normal force.
+          Evidently,
+          <me>
+            \vb{N} = mg \vu{y}
+          </me>.
+          So the normal force has a magnitude of 4900 N and is directed upwards.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      Sarah is looking at the heavy-duty winch they bought.
+      "Dave, how hard do we actually have to pull to get this thing moving?"
+    </p>
+
+    <p>
+      To answer this question, we must step out of equilibrium.
+      When the sum of forces acting on an object is not zero, the object will accelerate.
+      While many scientists before Newton had conceived ideas of forces causing motion, Newton was the first to quantify this relationship in a precise mathematical form.
+    </p>
+
+    <p>
+      Newton first defined a proportionality constant called the <term>inertial mass</term> <m>m_i</m>.
+      Imagine Sarah takes a stone and applies a force to it, and observes how much it accelerates using the kinematic equations we developed in the previous chapter.
+      The <term>force</term> is then defined as the product of the inertial mass and the acceleration, <m>\vb{F} = m_i \vb{a}</m>.
+      This is the statement of Newton's second law.
+    </p>
+
+    <p>
+      What if Sarah applies two forces to the stone, <m>\vb{F}_1</m> and <m>\vb{F}_2</m>, each with different magnitudes and directions? Suppose she first applies <m>\vb{F}_1</m> and observes an acceleration <m>\vb{a}_1</m>, and then applies <m>\vb{F}_2</m> and observes an acceleration <m>\vb{a}_2</m>.
+      If the forces are applied simultaneously, she observes the resulting acceleration to be
+      <me>
+        \vb{a} = \vb{a}_1 + \vb{a}_2
+      </me>.
+      If this were the case, it implies that the forces themselves must also add up, so we have
+      <me>
+        \vb{F} = m_i \vb{a} = m_i (\vb{a}_1 + \vb{a}_2) = m_i \vb{a}_1 + m_i \vb{a}_2 = \vb{F}_1 + \vb{F}_2
+      </me>.
+      This is the principle of superposition of forces, which should be understood as an experimental fact rather than a mathematical result.
+    </p>
+  </subsection>
+</section>

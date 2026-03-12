@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-03-forces-and-energy" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Forces and Energy</title>
+
+  <introduction>
+    <p>
+      In the previous chapter, we developed the mathematical description of motion to outline the plan for the heist. We analyzed the initial scouting mission and the chase from the security guards, using projectile motion to analyze the lemon-throwing, and circular motion to analyze the van's trajectory around the traffic circle.
+    </p>
+
+    <p>
+      But to proceed with the plan, we must not only know how something moves, but also why it moves <mdash /> and, more importantly, how to make 500 kg of bronze move when it really doesn't want to.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="./03-forces-and-energy/sec-newtons-laws.ptx" />
+</chapter>

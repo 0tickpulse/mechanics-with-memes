@@ -14,6 +14,7 @@
     <!-- Include chapters -->
     <xi:include href="./ch-01-dim-analysis-uncertainties.ptx" />
     <xi:include href="./ch-02-kinematics.ptx" />
+    <xi:include href="./ch-03-forces-and-energy.ptx" />
 
 
     <!-- Include backmatter -->

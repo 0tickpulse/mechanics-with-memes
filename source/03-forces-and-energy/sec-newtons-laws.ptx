@@ -16,32 +16,15 @@
     <title>Introduction to Forces</title>
 
     <p>
-      Dave is sitting in the driver's seat of the parked van.
-      He looks at the 500 kg statue pedestal in the distance.
-      "If we just leave the van here," Dave says, "it's not going to move unless I do something.
-      And once we get the statue in the back and get up to speed, it's not going to stop unless I hit the brakes."
+      Isaac Newton was a genius.
+      Not only did he invent calculus <mdash /> at the age of 23, no less <mdash /> but he also made groundbreaking contributions to optics, astronomy, and physics.
+      He laid the foundation for classical mechanics through a set of three fundamental laws of motion.
+      These laws, along with his later law of gravity, were instrumental in explaining the biggest puzzle of his time: planetary motion.
+      Newton wrote his three laws of motion in his book <foreign>Philosophiæ Naturalis Principia Mathematica</foreign> (Mathematical Principles of Natural Philosophy) or just <em>Principia</em> for short.
     </p>
 
     <p>
-      This is the core idea behind the law of inertia, the first of Newton's laws.
-      Newton wrote these laws in his book <foreign>Philosophiæ Naturalis Principia Mathematica</foreign> (Mathematical Principles of Natural Philosophy) or just <em>Principia</em> for short.
-    </p>
-
-    <blockquote>
-      <p>
-        Every body perseveres in its state of rest, or of uniform motion in a right line, unless it is compelled to change that state by forces impressed thereon.
-      </p>
-    </blockquote>
-
-    <p>
-      What does this mean? The statue is a body, and it is at rest.
-      Note that there <em>are</em> forces acting on the statue, such as gravity and the normal force from the ground.
-      However, these forces are balanced, causing the statue to be at <term>static equilibrium</term>.
-    </p>
-
-    <p>
-      Forces are vector quantities, meaning they have both magnitude and direction.
-      They are defined by Newton as follows:
+      Newton defines the <term>force</term> as follows:
     </p>
 
     <blockquote>
@@ -50,7 +33,12 @@
       </p>
     </blockquote>
 
-    <example>
+    <p>
+      In other words, a force is something that can cause an object to accelerate.
+      Note that it is a vector quantity.
+    </p>
+
+    <example xml:id="ex-statue-on-pedestal">
       <statement>
         <p>
           As the statue rests, a gravitational force with magnitude <m>mg = (500 \, \text{kg})(9.8 \, \text{m} \cdot \text{s}^{-2}) = 4900 \, \text{N}</m> is acting on it downwards.
@@ -104,5 +92,213 @@
       </me>.
       This is the principle of superposition of forces, which should be understood as an experimental fact rather than a mathematical result.
     </p>
+
+    <p>
+      This, by the way, is also why <xref ref="ex-statue-on-pedestal"/> works.
+      Because the acceleration of the statue is zero, the sum of the forces acting on it must also be zero, which means the normal force must balance out the gravitational force.
+    </p>
+
+    <remark>
+      <p>
+        When the situation is not ambiguous, we will simply write <m>m</m> instead of <m>m_i</m> to denote the inertial mass.
+      </p>
+    </remark>
+  </subsection>
+
+
+  <subsection xml:id="subsec-newtons-laws">
+    <title>Newton's Laws</title>
+
+    <p>
+      With these definitions in place, we can now state Newton's three laws of motion.
+    </p>
+
+    <blockquote>
+      <p>
+        Every object perseveres in its state of rest, or of uniform motion in a right line, unless it is compelled to change that state by forces impressed thereon.
+      </p>
+    </blockquote>
+
+    <p>
+      Dave looks at the statue.
+      It hasn't moved since 1986.
+      "It's got a lot of <term>inertia</term>," Dave notes.
+      This is the universe's way of being lazy.
+      If the van is moving at 20 m/s, it wants to keep moving at 20 m/s.
+      If Dave hits a brick wall, the van stops, but according to the First Law, the unbuckled freshmen in the back will "persevere" in their motion right through the windshield.
+    </p>
+
+    <p>
+      Newton's second law is as follows:
+    </p>
+
+    <blockquote>
+      <p>
+        The quantity of motion is the measure of the same, arising from the velocity and quantity of matter conjointly.
+        The motion of the whole is the sum of the motion of all its parts; and therefore in a body double in quantity, with equal velocity, the motion is double, with twice the velocity, it is quadruple.
+      </p>
+    </blockquote>
+
+    <p>
+      In modern notation, we define the momentum <m>\vb{p}</m> of an object as a vector quantity equal to the product of its inertial mass and its velocity, <m>\vb{p} = m \vb{v}</m>.
+      Newton's second law was stated as the following:
+    </p>
+
+    <blockquote>
+      <p>
+        The alteration of motion is ever proportional to the motive force impressed; and is made in the direction of the right line in which that force is impressed.
+      </p>
+
+      <p>
+        If any force generates a motion, a double force will generate double the motion, a triple force triple the motion, whether that force be impressed altogether and at once, or gradually and successively.
+        And this motion (being always directed the same way with the generating force) if the body moved before, is added to or subtracted from the former motion, according as they directly conspire with or are directly contrary to each other; or obliquely joined, when they are oblique, so as to produce a new motion compounded from the determination of both.
+      </p>
+    </blockquote>
+
+    <p>
+      In modern notation, this can be expressed as
+      <me>
+        \vb{F} = \dv{\vb{p}}{t}
+      </me>.
+      If the mass of the object is constant, we can write the law in the more familiar form
+      <me>
+        \vb{F} = m \dv{\vb{v}}{t} = m \vb{a}
+      </me>.
+    </p>
+
+    <p>
+      What makes this a law, and not a definition, is its combination with other force laws.
+      These force laws, such as the law of gravity and the laws of friction, are empirical relationships that determine the form of the force <m>\vb{F}</m> in terms of other physical quantities.
+      Additionally, there are <term>constraint forces</term> that are not determined <foreign>a priori</foreign> by any force law, but rather by how it alters the motion of the object.
+    </p>
+
+    <p>
+      When combined with the other side of the equation, <m>\dv{\vb{p}}{t}</m>, which is a kinematic quantity, Newton's second law gives us an <term>equation of motion</term> that allows us to predict the future motion of an object based on the forces acting on it.
+    </p>
+
+    <p>
+      The last of Newton's laws is the principle of action and reaction, perhaps the least obvious of the three.
+    </p>
+
+    <blockquote>
+      <p>
+        To every action there is always opposed an equal reaction: or the mutual actions of two bodies upon each other are always equal, and directed to contrary parts.
+      </p>
+
+      <p>
+        Whatever draws or presses another is as much drawn or pressed by that other.
+        If you press a stone with your finger, the finger is also pressed by the stone.
+        If a horse draws a stone tied to a rope, the horse (if I may so say) will be equally drawn back towards the stone: For the distended rope, by the same endeavour to relax or unbend itself, will draw the horse as much towards the stone, as it does the stone towards the horse, and will obstruct the progress of the one as much as it advances that of the other.
+      </p>
+    </blockquote>
+
+    <p>
+      This law states that upon the interaction of two objects, the forces they exert on each other are equal in magnitude and opposite in direction.
+      These forces are referred to as <term>interaction pairs</term>.
+    </p>
+
+    <p>
+      "If you press a stone with your finger," Newton wrote, "the finger is also pressed by the stone." In Dave's world, if the winch pulls the statue with 2000 N of force, the statue pulls the van with 2000 N of force.
+      If the van isn't heavy enough, Dave won't pull the statue into the van; he'll pull the van into the pedestal.
+      This is the law of Interaction Pairs.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-newtonian-mechanics">
+    <title>Newtonian Mechanics</title>
+
+    <p>
+      The three laws, as we have delineated above, comprise <term>Newtonian mechanics</term>, a framework that has been remarkably successful in describing the motion of objects in our everyday world, from the trajectory of a thrown ball to the orbits of planets.
+    </p>
+
+    <p>
+      When we approach a problem in Newtonian mechanics, we typically follow these steps:
+      <ol>
+        <li>
+          <p>
+            Identify the system of interest and the forces acting on it.
+            This involves drawing a <term>free-body diagram</term>, which is a visual representation of the object and the forces acting upon it.
+            Use known force laws to determine the form of the forces, and identify any constraint forces that may be present.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Apply Newton's second law to set up the equations of motion.
+            This involves writing down the mathematical expression of the forces and the resulting acceleration.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Solve the equations of motion to find the desired quantities, such as the acceleration, velocity, or position of the object as a function of time.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      But wait! How do we solve an equation of motion? For instance, let's say we have a simple equation of motion like
+      <me>
+        m \dv[2]{x}{t} = -kx - b \dv{x}{t}
+      </me>,
+      which states that the force (left-hand side) is equal to the sum of something proportional to the position (a <term>restoring force</term>) and something proportional to the velocity (a <term>damping force</term>).
+      This equation describes the motion of many physical systems, such as a mass attached to a spring underwater.
+    </p>
+
+    <p>
+      We need to solve for a <em>function</em> <mdash /> not just a number <mdash /> that satisfies this equation.
+      Such an equation is called a <term>differential equation</term>, and we will dedicate multiple sections to the study of these equations and their solutions.
+    </p>
+
+    <p>
+      Fortunately, we have already solved one differential equation before, which applies to the case of constant acceleration.
+      Constant acceleration occurs when the net force acting on an object is constant, meaning the equation of motion takes the form
+      <me>
+        m \dv[2]{x}{t} = F_0
+      </me>,
+      where <m>F_0</m> is a constant force.
+    </p>
+
+    <p>
+      Rewriting this as
+      <me>
+        \dv[2]{x}{t} = \frac{F_0}{m}
+      </me>,
+      we see that this is just the equation for constant acceleration with <m>a = F_0 / m</m>.
+    </p>
+
+    <p>
+      Hence, the solution to this equation is
+      <me>
+        x(t) = x_0 + v_0 t + \frac{1}{2} \frac{F_0}{m} t^2
+      </me>.
+      Wait, where did <m>x_0</m> and <m>v_0</m> come from? These are called <term>constants of integration</term>, and they arise because when we integrate a function, we can always add a constant to it without changing the derivative.
+      In the context of mechanics, it means that an equation of motion is not sufficient to determine the motion of an object; we also need to specify the <term>initial conditions</term>, which are the position and velocity of the object at a specific time (usually taken to be <m>t=0</m>).
+      The solution without the initial conditions is called the <term>general solution</term>, while the solution with the initial conditions specified is called the <term>particular solution</term>.
+      The process of finding the particular solution from the general solution is called an <term>initial value problem</term> (IVP).
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Dave is driving the 2000 kg van at 30 m/s.
+          He sees a security gate and slams the brakes, providing a constant friction force of <m>8000 , \text{N}</m>.
+          Solve the initial value problem to find how long it takes him to stop.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The equation of motion is <m>2000 a = -8000 \implies a = -4 , \text{m} \cdot \text{s}^{-2}</m>.
+          Using <m>v(t) = v_0 + at</m>:
+          <me>
+            0 = 30 - 4t \implies t = 7.5 \, \text{s}
+          </me>.
+          Dave stops, but he's going to need more than just brakes to get the statue on board.
+        </p>
+      </solution>
+    </exercise>
   </subsection>
 </section>

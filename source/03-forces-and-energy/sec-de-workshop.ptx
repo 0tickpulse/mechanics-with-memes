@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-de-workshop" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Differential Equation Workshop</title>
+
+  <introduction>
+    <p>
+      In the previous section, we outlined Newton's three laws of motion.
+      Part of moving the bronze statue involves applying a force to it, and Newton's second law gives us a mathematical relationship between the force we apply and the resulting motion of the statue.
+      But we will need a set of tools to solve this mathematical relationship.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-classification-of-differential-equations">
+    <title>Classification of Differential Equations</title>
+
+    <p>
+      Let's first discuss how to classify the types of differential equations we will encounter in this chapter.
+      As we saw in the previous section, differential equations are equations that relate a function to its derivatives.
+      We have to solve for the function to find the motion of the statue.
+      Since our equation of motion always has the form <m>F = m \dv[2]{x}{t}</m>, it will always have a second derivative.
+      A differential equation whose highest derivative is a second derivative is called a <term>second-order differential equation</term>.
+    </p>
+
+    <p>
+      There's one trick we can pull, however, to make our lives easier.
+      Namely, if the force doesn't depend on the position of the statue, then we can rewrite the equation of motion as <m>F = m \dv{v}{t}</m>, where <m>v = \dv{x}{t}</m> is the velocity of the statue.
+      Then, this is just a first-order differential equation, which is easier to solve than a second-order one.
+      This section will be devoted to solving first-order differential equations.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-separable-differential-equations">
+    <title>Separable Differential Equations (and Air Resistance)</title>
+
+    <p>
+      The simplest equation of motion is that of a constant force, which is the case when we push the statue with a constant force and there are no other forces acting on it (like friction or air resistance).
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          The team is using a constant-force winch to pull the statue across a frictionless floor (they've applied plenty of industrial grease).
+          The magnitude of the force applied by the winch is <m>F_0</m>, and the statue has a mass of <m>m</m>.
+          What is the velocity of the statue as a function of time?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The equation of motion is <m>F_0 = m \dv{v}{t}</m>.
+          Solving this involves just integrating both sides with respect to time:
+          <md>
+            <mrow>\amp \amp \dv{v}{t} \amp = \frac{F_0}{m}</mrow>
+            <mrow>\implies \amp \amp \int \dv{v}{t} \dd{t} \amp = \int \frac{F_0}{m} \dd{t}</mrow>
+            <mrow>\implies \amp \amp v \amp = \frac{F_0}{m} t + C</mrow>
+          </md>.
+          Next, we can determine the constant of integration <m>C</m> by using the initial condition that the statue starts at rest, so <m>v(0) = 0</m>.
+          When we plug in <m>t = 0</m>, we get <m>0 = \frac{F_0}{m} \cdot 0 + C</m>, so <m>C = 0</m>.
+          Therefore, the velocity of the statue as a function of time is <m>v(t) = \frac{F_0}{m} t</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      As the example shows, the velocity of the statue increases linearly with time when a constant force is applied.
+      Generally, when the derivative is constant, we can just integrate to find the function, and the solution will be a linear function of time.
+    </p>
+
+    <p>
+      What if the force isn't constant? One specific type of differential equation that we can solve is a <term>separable differential equation</term>, which looks like <m>\dv{v}{t} = f(v) g(t)</m>, where the right-hand side is a product of a function of <m>v</m> and a function of <m>t</m>.
+    </p>
+
+    <p>
+      There's a nice example of a separable differential equation that comes up in the context of air resistance.
+      When a solid (the van) travels through a fluid (the air), it experiences a <term>drag force</term>, which is a force that opposes the motion of the object.
+      Generally, the exact form of the drag force is very complicated, and it depends on the shape of the object, the properties of the fluid, and the speed of the object.
+    </p>
+
+    <p>
+      For a solid traveling through air at high speed, the drag force is approximately proportional to (1) the density <m>\rho</m> of the air, (2) the cross-sectional area <m>A</m> of the object, and (3) the square of the speed of the object, <m>v^2</m>.
+      Therefore, we can write the magnitude of the drag force as <m>F_\text{drag} \approx \frac{1}{2} \rho A C_d v^2</m>.
+      The constant <m>C_d</m> is called the <term>drag coefficient</term>, and it depends on the shape of the object.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          The van is coasting at high speed, but Dave shifts into neutral, so the engine is no longer providing any force to propel the van forward.
+          Right now, the van is moving at an initial velocity of <m>v_0</m>.
+        </p>
+
+        <p>
+          They are being slowed down by air resistance, which has a drag coefficient of <m>C_d</m>.
+          The density of air is <m>\rho</m>, and the cross-sectional area of the van is <m>A</m>.
+          What is the velocity of the van as a function of time?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The equation of motion is <m>m \dv{v}{t} = -\frac{1}{2} \rho A C_d v^2</m>.
+          For the sake of simplicity, let's define <m>\beta = \frac{1}{2} \rho A C_d</m>, so the equation of motion becomes <m>m \dv{v}{t} = -\beta v^2</m>.
+        </p>
+
+        <p>
+          This is a separable differential equation, since we can rewrite it as <m>\dv{v}{t} = -\frac{\beta}{m} v^2</m>, which is of the form <m>\dv{v}{t} = f(v) g(t)</m> with <m>f(v) = -\frac{\beta}{m} v^2</m> and <m>g(t) = 1</m>.
+        </p>
+
+        <p>
+          The strategy for solving a separable differential equation is to, as the name suggests, place all the <m>v</m>'s on one side and all the <m>t</m>'s on the other side, and then integrate both sides.
+          We can rewrite the equation as
+          <me>
+            \frac{1}{v^2} \dd{v} = -\frac{\beta}{m} \dd{t}
+          </me>.
+          Now we can integrate both sides:
+          <md>
+            <mrow>\amp \amp \int \frac{1}{v^2} \dd{v} \amp = \int -\frac{\beta}{m} \dd{t}</mrow>
+            <mrow>\implies \amp \amp -\frac{1}{v} \amp = -\frac{\beta}{m} t + C</mrow>
+          </md>.
+          Next, we can determine the constant of integration <m>C</m> by using the initial condition that the van starts with an initial velocity of <m>v_0</m>, so <m>v(0) = v_0</m>.
+          When we plug in <m>t = 0</m>, we get <m>-\frac{1}{v_0} = -\frac{\beta}{m} \cdot 0 + C</m>, so <m>C = -\frac{1}{v_0}</m>.
+          Therefore, the velocity of the van as a function of time is
+          <me>
+            v(t) = \frac{1}{\frac{\beta}{m} t + \frac{1}{v_0}} = \frac{v_0 m}{\beta v_0 t + m}
+          </me>.
+        </p>
+      </solution>
+    </example>
+
+    <definition xml:id="def-separable-first-order-ode">
+      <statement>
+        <p>
+          A <term>separable first-order ordinary differential equation</term> is a first-order ordinary differential equation of the form
+          <me>
+            \dv{v}{t} = f(v) g(t)
+          </me>.
+          The general solution to a separable first-order ordinary differential equation is given by
+          <me>
+            \int \frac{1}{f(v)} \dd{v} = \int g(t) \dd{t} + C
+          </me>,
+          where <m>C</m> is a constant of integration.
+        </p>
+      </statement>
+    </definition>
+  </subsection>
+</section>

@@ -200,6 +200,36 @@
 <exercise>
   <statement>
     <p>
+      Draw a unit circle on the Cartesian plane, and then draw a line segment from the origin to a point on the unit circle.
+      The angle between the line segment and the positive x-axis is <m>\theta</m>.
+      The vertical and horizontal components of the line segment are <m>\sin\theta</m> and <m>\cos\theta</m>, respectively.
+    </p>
+
+    <p>
+      Increase the angle <m>\theta</m> by a small amount <m>\dd{\theta}</m>.
+      What are the vertical and horizontal components of the change in the line segment?
+    </p>
+
+    <p>
+      Using this, show that
+      <md>
+        <mrow>\dv{\theta} \sin\theta \amp = \cos\theta</mrow>
+        <mrow>\dv{\theta} \cos\theta \amp = -\sin\theta</mrow>
+      </md>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      The arc formed between the two angles can be approximated by a straight line.
+      This allows us to use similar triangles to find the vertical and horizontal components of the change in the line segment.
+    </p>
+  </hint>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
       Suppose the van in our storyline was allowed to drive radially and tangentially in the "Founder's Quad Traffic Circle".
       Recall that in polar coordinates, the position of the van is given by <m>\vb{r}(t) = r\vu{r}</m>, where <m>r</m> is the distance from the center of the traffic circle and <m>\vu{r}</m> is the unit vector pointing radially outward from the center of the traffic circle.
       Show that the acceleration of the van can be written as
@@ -210,6 +240,7 @@
       The other is called the <term>coriolis acceleration</term>, which is responsible for the van's tendency to "slide outward" when it tries to turn.
     </p>
   </statement>
+
   <solution>
     <p>
       This is just brute force differentiation, using the product rule and the results from <xref ref="thm-derivatives-of-polar-vectors"/>.
@@ -229,4 +260,165 @@
     </p>
   </solution>
 </exercise>
-</exercises>
+
+<exercisegroup xml:id="ex-integration-techniques">
+<title>Integration techniques</title>
+
+<introduction>
+  <p>
+    This set of exercises will introduce you to a few integration techniques that are commonly used in physics.
+  </p>
+
+  <p>
+    We know that the integral is used to measure the accumulation of a quantity.
+    For instance, the integral of velocity with respect to time gives us the total displacement, as denoted by
+    <me>
+      x_f - x_i = \int_{t_i}^{t_f} v(t) \dd{t}
+    </me>.
+    A common notation you will see is the <term>antiderivative</term>, where we write
+    <me>
+      \int v(t) \dd{t} = V(t) + C
+    </me>,
+    in which <m>V(t)</m> is any function such that <m>\dv{t} V(t) = v(t)</m>, and <m>C</m> is an arbitrary constant of integration.
+    This notation is useful when we don't have specific limits of integration, and we just want to find a general expression for the integral.
+  </p>
+
+  <p>
+    The fact that the derivative of the antiderivative gives us back the original expression in the integral (called the <term>integrand</term>) is the <term>fundamental theorem of calculus</term>.
+  </p>
+</introduction>
+
+<exercise>
+  <statement>
+    <p>
+      Using the power rule of differentiation,
+      <me>
+        \dv{t} t^n = nt^{n-1}
+      </me>,
+      find the antiderivative of <m>t^n</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      <me>
+        \int t^n \dd{t} = \frac{t^{n+1}}{n+1} + C
+      </me>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Using the fact that
+      <md>
+        <mrow> \dv{\theta} \sin\theta \amp = \cos\theta </mrow>
+        <mrow> \dv{\theta} \cos\theta \amp = -\sin\theta </mrow>
+      </md>,
+      find the antiderivative of <m>\sin\theta</m> and <m>\cos\theta</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      <md>
+        <mrow> \int \sin\theta \dd{\theta} \amp = -\cos\theta + C </mrow>
+        <mrow> \int \cos\theta \dd{\theta} \amp = \sin\theta + C </mrow>
+      </md>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Recall from the chain rule of differentiation that
+      <me>
+        \dv{t} f(g(t)) = \dv{f}{g} \cdot \dv{g}{t}
+      </me>.
+      There is a technique of integration called <term>integration by substitution</term> that is based on the chain rule.
+      Suppose we have the integral
+      <me>
+        \int 2x \sin(x^2) \dd{x}
+      </me>.
+      Make the substitution <m>u = x^2</m>, and then find the antiderivative of the integrand with respect to <m>x</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      If we let <m>u = x^2</m>, then <m>\dv{u}{x} = 2x</m>, so <m>\dd{u} = 2x \dd{x}</m>.
+      Therefore, the integral becomes
+      <me>
+        \int \underbrace{\sin(x^2)}_{\sin(u)} \underbrace{2x \dd{x}}_{\dd{u}} = \int \sin u \dd{u} = -\cos u + C = -\cos(x^2) + C
+      </me>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Use the substitution <m>x = \tan\theta</m> to find the antiderivative of <m>\frac{1}{1 + x^2}</m>. The derivative of <m>\tan\theta</m> is <m>\sec^2\theta</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Use the trigonometric identity <m>1 + \tan^2\theta = \sec^2\theta</m> to simplify the integral after making the substitution.
+    </p>
+  </hint>
+
+  <solution>
+    <p>
+      If we let <m>x = \tan\theta</m>, then <m>\dv{x}{\theta} = \sec^2\theta</m>, so <m>\dd{x} = \sec^2\theta \dd{\theta}</m>.
+      Therefore, the integral becomes
+      <md>
+        <mrow>\int \frac{1}{1 + x^2} \dd{x} \amp = \int \frac{1}{1 + \tan^2\theta} \sec^2\theta \dd{\theta}</mrow>
+        <mrow>\amp = \int \frac{1}{\sec^2\theta} \sec^2\theta \dd{\theta}</mrow>
+        <mrow>\amp = \int 1 \dd{\theta} = \theta + C = \arctan x + C</mrow>
+      </md>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Recall from the product rule of differentiation that
+      <me>
+        \dv{t} (f(t)g(t)) = f(t) \dv{g}{t} + g(t) \dv{f}{t}
+      </me>,
+      or more succinctly,
+      <me>
+        \dv{t} (fg) = f \dot{g} + g \dot{f}
+      </me>.
+      If we integrate both sides of this equation with respect to time, we get
+      <me>
+        \int \dv{t} (fg) \dd{t} = \int f \dot{g} \dd{t} + \int g \dot{f} \dd{t}
+      </me>.
+      Using the fundamental theorem of calculus, we can simplify the left-hand side to get
+      <me>
+        fg = \int f \dot{g} \dd{t} + \int g \dot{f} \dd{t}
+      </me>.
+      Rearranging this equation gives us the formula for <term>integration by parts</term>:
+      <me>
+        \int f \dot{g} \dd{t} = fg - \int g \dot{f} \dd{t}
+      </me>.
+      Now, use integration by parts to find the antiderivative of <m>t e^t</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Let <m>f = t</m> and <m>g = e^t</m>.
+      Then, <m>\dot{f} = 1</m> and <m>\dot{g} = e^t</m>.
+      Using the formula for integration by parts, we get
+      <me>
+        \int t e^t \dd{t} = t e^t - \int e^t \dd{t} = t e^t - e^t + C = e^t (t - 1) + C
+      </me>.
+    </p>
+  </solution>
+</exercise>
+</exercisegroup> </exercises>

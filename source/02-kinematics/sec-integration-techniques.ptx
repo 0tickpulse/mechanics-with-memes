@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-integration-techniques" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Integration Techniques</title>
+
+  <introduction>
+    <p>
+      Dave and his team are planning out the heist, and we have seen how kinematics plays a role in the initial scouting mission and the chase from the security guards.
+      You have seen that integration must be used to find the position function from the velocity function, or to find the velocity function from the acceleration function.
+      We will dedicate this section to learning some techniques for solving these integrals, which will be useful for solving the problems in the next chapter.
+    </p>
+  </introduction>
+</section>

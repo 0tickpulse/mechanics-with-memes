@@ -29,6 +29,60 @@
       Then, this is just a first-order differential equation, which is easier to solve than a second-order one.
       This section will be devoted to solving first-order differential equations.
     </p>
+
+    <p>
+      Also, the differential equations we will encounter in this chapter will be <term>ordinary differential equations</term> (ODEs), which means that the function we are solving for is a function of a single variable (in our case, time).
+      This is in contrast to <term>partial differential equations</term> (PDEs), which involve functions of multiple variables and their partial derivatives.
+      (For example, perhaps we have a PDE that describes the temperature distribution in the van as a function of both time and position, and we want to solve for the temperature at a particular point in the van as a function of time.)
+    </p>
+
+    <p>
+      The <term>degree</term> of a differential equation is the highest power of the highest derivative that appears in the equation.
+      The equation
+      <me>
+        \dv{v}{t} = -\frac{\beta}{m} v^2
+      </me>
+      is a first-order, second-degree differential equation, since the highest derivative is a first derivative and the highest power of that derivative is 2.
+    </p>
+
+    <p>
+      A differential equation is called <term>linear</term> if the function and its derivatives appear to the first power and are not multiplied together.
+      The equation
+      <me>
+        \dv[2]{x}{t} + 3 \sin(t) \dv{x}{t} + 2 x = \cos(t)
+      </me>
+      is linear, whereas
+      <me>
+        \dv[2]{x}{t} + 3 \sin(t) \qty(\dv{x}{t})^2 + 2 x \dv{x}{t} = \cos(t)
+      </me>
+      is not linear due to the <m>\dv{x}{t}^2</m> and <m>x \dv{x}{t}</m> terms.
+    </p>
+
+    <p>
+      A differential equation is called <term>homogeneous</term> if all the terms involve the function or its derivatives, and there are no terms that are just functions of the independent variable.
+      The equation
+      <me>
+        \dv[2]{x}{t} + 3 \sin(t) \dv{x}{t} + 2 x = 0
+      </me>
+      is homogeneous, whereas
+      <me>
+        \dv[2]{x}{t} + 3 \sin(t) \dv{x}{t} + 2 x = \cos(t)
+      </me>
+      is not homogeneous due to the <m>\cos(t)</m> term on the right-hand side.
+    </p>
+
+    <p>
+      Finally, a differential equation is <term>autonomous</term> if the independent variable (in our case, time) does not explicitly appear in the equation.
+      The equation
+      <me>
+        \dv{v}{t} = av^2
+      </me>
+      is autonomous, since time does not explicitly appear in the equation, whereas
+      <me>
+        \dv{v}{t} = av^2 + b\sin(t)
+      </me>
+      is not autonomous due to the <m>b\sin(t)</m> term on the right-hand side.
+    </p>
   </subsection>
 
 
@@ -71,6 +125,7 @@
 
     <p>
       What if the force isn't constant? One specific type of differential equation that we can solve is a <term>separable differential equation</term>, which looks like <m>\dv{v}{t} = f(v) g(t)</m>, where the right-hand side is a product of a function of <m>v</m> and a function of <m>t</m>.
+      (Notice by the way, this type of equation is always homogeneous.)
     </p>
 
     <p>
@@ -130,6 +185,16 @@
       </solution>
     </example>
 
+    <p>
+      Let's generalize this result to the case where we have a general separable first-order ordinary differential equation of the form <m>\dv{v}{t} = f(v) g(t)</m>.
+      We can rewrite this as <m>\frac{1}{f(v)} \dd{v} = g(t) \dd{t}</m>.
+      Now we can integrate both sides:
+      <md>
+        <mrow>\amp \amp \int \frac{1}{f(v)} \dd{v} \amp = \int g(t) \dd{t}</mrow>
+        <mrow>\implies \amp \amp \int \frac{1}{f(v)} \dd{v} \amp = \int g(t) \dd{t} + C</mrow>
+      </md>.
+    </p>
+
     <definition xml:id="def-separable-first-order-ode">
       <statement>
         <p>
@@ -145,5 +210,323 @@
         </p>
       </statement>
     </definition>
+  </subsection>
+
+
+  <subsection xml:id="subsec-linear-inhomogeneous-differential-equations">
+    <title>Linear Inhomogeneous Differential Equations</title>
+
+    <p>
+      The next type of differential equation we will solve is a <term>linear inhomogeneous differential equation</term>, which has the form
+      <me>
+        \dv{v}{t} + p(t) v = q(t)
+      </me>.
+      The functions <m>p(t)</m> and <m>q(t)</m> are given functions of time, and we are solving for the function <m>v(t)</m>.
+    </p>
+
+    <p>
+      The general method to solving this type of equation is to multiply both sides by the <term>integrating factor</term>, which is given by
+      <me>
+        \mu(t) = e^{\int p(t) \dd{t}}
+      </me>.
+      The reason we are interested in the integrating factor is that its derivative is just
+      <me>
+        \dv{\mu}{t} = p(t) e^{\int p(t) \dd{t}} = p(t) \mu(t)
+      </me>.
+      Thus, if we multiply both sides of the equation by the integrating factor, we get
+      <md>
+        <mrow>\amp \amp \mu(t) \dv{v}{t} + \mu(t) p(t) v \amp = \mu(t) q(t)</mrow>
+        <mrow>\implies \amp \amp \mu(t) \dv{v}{t} + v \dv{\mu}{t} \amp = \mu(t) q(t)</mrow>
+        <mrow>\implies \amp \amp \dv{}{t} \qty(\mu(t) v) \amp = \mu(t) q(t)</mrow>
+      </md>.
+      Now we can integrate both sides:
+      <md>
+        <mrow>\amp \amp \int \dv{}{t} \qty(\mu(t) v) \dd{t} \amp = \int \mu(t) q(t) \dd{t}</mrow>
+        <mrow>\implies \amp \amp \mu(t) v \amp = \int \mu(t) q(t) \dd{t} + C</mrow>
+      </md>.
+      Finally, we can solve for <m>v(t)</m> by dividing both sides by the integrating factor:
+      <me>
+        v(t) = \frac{1}{\mu(t)} \qty(\int \mu(t) q(t) \dd{t} + C)
+      </me>.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Part of the scouting mission involved swimming across a river, and Dave is now wondering how long it would take to swim across the river.
+        </p>
+
+        <p>
+          Fluids exert a drag force on objects moving through them.
+          Their <term>viscosity</term> is a measure of how much drag force they exert.
+          At low speeds, the drag force is approximately proportional to the velocity of the object, so we can write the magnitude of the drag force as <m>F_\text{drag} = 6 \pi \eta r v</m> (known as <term>Stokes' law</term>), where <m>\eta</m> is the viscosity of the fluid, <m>r</m> is the radius of the object, and <m>v</m> is the speed of the object.
+        </p>
+
+        <p>
+          If Dave swims with a constant force of magnitude <m>F_0</m>, then the equation of motion is
+          <me>
+            m \dv{v}{t} = F_0 - 6 \pi \eta r v
+          </me>.
+          What is the velocity of Dave as a function of time, and how long does it take for Dave to swim across the river, which has a width of <m>d</m>?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The equation of motion can be rewritten as
+          <me>
+            \dv{v}{t} + \frac{6 \pi \eta r}{m} v = \frac{F_0}{m}
+          </me>,
+          which is a linear inhomogeneous differential equation with <m>p(t) = \frac{6 \pi \eta r}{m}</m> and <m>q(t) = \frac{F_0}{m}</m>.
+          Let's define <m>\gamma = 6 \pi \eta r /m</m> for the sake of simplicity, so the equation becomes
+          <me>
+            \dv{v}{t} + \gamma v = \frac{F_0}{m}
+          </me>.
+          The integrating factor is
+          <me>
+            \mu(t) = e^{\int \gamma \dd{t}} = e^{\gamma t}
+          </me>.
+          Multiplying both sides of the equation by the integrating factor, we get
+          <md>
+            <mrow>\amp \amp e^{\gamma t} \dv{v}{t} + e^{\gamma t} \gamma v \amp = e^{\gamma t} \frac{F_0}{m}</mrow>
+            <mrow>\implies \amp \amp \dv{}{t} \qty(e^{\gamma t} v) \amp = e^{\gamma t} \frac{F_0}{m}</mrow>
+          </md>.
+          Now we can integrate both sides:
+          <md>
+            <mrow>\amp \amp \int \dv{}{t} \qty(e^{\gamma t} v) \dd{t} \amp = \int e^{\gamma t} \frac{F_0}{m} \dd{t}</mrow>
+            <mrow>\implies \amp \amp e^{\gamma t} v \amp = \frac{F_0}{m} \int e^{\gamma t} \dd{t} + C</mrow>
+            <mrow>\amp \amp \amp = \frac{F_0}{m} \cdot \frac{1}{\gamma} e^{\gamma t} + C</mrow>
+            <mrow>\implies \amp \amp v(t) \amp = \frac{F_0}{\gamma} + C e^{-\gamma t}</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Notice, by the way, that this equation was technically also separable.
+          The next one, however, is not.
+        </p>
+      </solution>
+    </example>
+
+    <exercise>
+      <statement>
+        <p>
+          The force Dave applies to swim across the river may be more accurately modeled as a force that oscillates in time, such as <m>F(t) = F_0 \sin(\omega t)</m>.
+        </p>
+
+        <p>
+          Solve the equation of motion
+          <me>
+            m \dv{v}{t} = F_0 \sin(\omega t) - 6 \pi \eta r v
+          </me>
+          for the velocity of Dave as a function of time.
+        </p>
+
+        <p>
+          Then show that if Dave starts at rest, the velocity of Dave as a function of time is
+          <me>
+            v(t) = \frac{F_0}{m (\gamma^2 + \omega^2)} \qty(-\gamma \sin(\omega t) + \omega (e^{-\gamma t} - \cos(\omega t)))
+          </me>,
+          where <m>\gamma = 6 \pi \eta r /m</m>.
+        </p>
+      </statement>
+
+      <hint>
+        <p>
+          The integral
+          <me>
+            \int e^{\gamma t} \sin(\omega t) \dd{t}
+          </me>
+          can be evaluated using integration by parts twice.
+        </p>
+      </hint>
+
+      <hint>
+        <p>
+          The integral is equal to
+          <me>
+            \int e^{\gamma t} \sin(\omega t) \dd{t} = -\frac{e^{\gamma t}}{\gamma^2 + \omega^2} (\gamma \sin(\omega t) + \omega \cos(\omega t)) + C
+          </me>.
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          The equation of motion can be rewritten as
+          <me>
+            \dv{v}{t} + \frac{6 \pi \eta r}{m} v = \frac{F_0}{m} \sin(\omega t)
+          </me>,
+          which is a linear inhomogeneous differential equation with <m>p(t) = \frac{6 \pi \eta r}{m}</m> and <m>q(t) = \frac{F_0}{m} \sin(\omega t)</m>.
+          Let's define <m>\gamma = 6 \pi \eta r /m</m> for the sake of simplicity, so the equation becomes
+          <me>
+            \dv{v}{t} + \gamma v = \frac{F_0}{m} \sin(\omega t)
+          </me>.
+          The integrating factor is
+          <me>
+            \mu(t) = e^{\int \gamma \dd{t}} = e^{\gamma t}
+          </me>.
+          Multiplying both sides of the equation by the integrating factor, we get
+          <md>
+            <mrow>\amp \amp e^{\gamma t} \dv{v}{t} + e^{\gamma t} \gamma v \amp = e^{\gamma t} \frac{F_0}{m} \sin(\omega t)</mrow>
+            <mrow>\implies \amp \amp \dv{}{t} \qty(e^{\gamma t} v) \amp = e^{\gamma t} \frac{F_0}{m} \sin(\omega t)</mrow>
+          </md>.
+          Now we can integrate both sides:
+          <md>
+            <mrow>\amp \amp \int \dv{}{t} \qty(e^{\gamma t} v) \dd{t} \amp = \int e^{\gamma t} \frac{F_0}{m} \sin(\omega t) \dd{t}</mrow>
+            <mrow>\implies \amp \amp e^{\gamma t} v \amp = -\frac{F_0}{m (\gamma^2 + \omega^2)} e^{\gamma t} (\gamma \sin(\omega t) + \omega \cos(\omega t)) + C</mrow>
+            <mrow>\implies \amp \amp v(t) \amp = -\frac{F_0}{m (\gamma^2 + \omega^2)} (\gamma \sin(\omega t) + \omega \cos(\omega t)) + C e^{-\gamma t}</mrow>
+          </md>.
+          We can determine the constant of integration <m>C</m> by using the initial condition that Dave starts at rest, so <m>v(0) = 0</m>.
+          When we plug in <m>t = 0</m>, we get
+          <me>
+            0 = -\frac{F_0}{m (\gamma^2 + \omega^2)} \omega + C
+          </me>,
+          so <m>C = \frac{F_0 \omega}{m (\gamma^2 + \omega^2)}</m>.
+          Therefore, the velocity of Dave as a function of time is
+          <me>
+            v(t) = \frac{F_0}{m (\gamma^2 + \omega^2)} \qty(-\gamma \sin(\omega t) + \omega (e^{-\gamma t} - \cos(\omega t)))
+          </me>.
+          We can, in fact, combine the sine and cosine terms into a single sine term with a phase shift
+          <me>
+            v(t) = \frac{F_0}{m \sqrt{\gamma^2 + \omega^2}} \qty(e^{-\gamma t} - \sin(\omega t + \phi))
+          </me>,
+          where <m>\phi = \tan^{-1}(\gamma / \omega)</m>.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+
+
+  <subsection xml:id="subsec-homogeneous-differential-equations">
+    <title>Homogeneous Differential Equations</title>
+
+    <p>
+      Another type of differential equation we will encounter is a <term>homogeneous differential equation</term>, which has the form
+      <me>
+        \dv{v}{t} = f\qty(\frac{v}{t})
+      </me>.
+      The function on the right-hand side is a function of the ratio <m>v/t</m>.
+    </p>
+
+    <p>
+      This type of equation can be solved by making the substitution <m>z = v/t</m>, which implies that <m>v = tz</m>.
+      Then, by the product rule of differentiation, we have
+      <me>
+        \dv{v}{t} = z + t \dv{z}{t}
+      </me>.
+      Substituting this into the original equation, we get
+      <me>
+        z + t \dv{z}{t} = f(z)
+      </me>.
+      This is separable, leading to
+      <me>
+        \frac{1}{f(z) - z} \dd{z} = \frac{1}{t} \dd{t}
+      </me>.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Suppose that the force Dave applies to swim across the river is proportional to the ratio of his velocity to the time he's been swimming, so <m>F(t) = k \frac{v}{t}</m>.
+          (Perhaps Dave is getting more tired as time goes on, so the force he can apply decreases with time, but it also increases with his velocity since he's a bit of a speed demon.) Ignoring the viscous force for now, determine the equation of motion for Dave, and solve for the velocity of Dave as a function of time.
+          At what velocity is this model valid?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The equation of motion is
+          <me>
+            m \dv{v}{t} = k \frac{v}{t}
+          </me>.
+          This is a homogeneous differential equation, since the right-hand side is a function of the ratio <m>v/t</m>.
+          We can solve this by making the substitution <m>z = v/t</m>, which implies that <m>v = tz</m>.
+          Then, by the product rule of differentiation, we have
+          <me>
+            \dv{v}{t} = z + t \dv{z}{t}
+          </me>.
+          Substituting this into the original equation, we get
+          <me>
+            z + t \dv{z}{t} = \frac{k}{m} z
+          </me>.
+          Rearranging gives
+          <me>
+            t \dv{z}{t} = \qty(\frac{k}{m} - 1) z
+          </me>.
+          Let <m>\alpha = \frac{k}{m} - 1</m> for the sake of simplicity, so the equation becomes
+          <me>
+            t \dv{z}{t} = \alpha z
+          </me>.
+          This is separable, leading to
+          <me>
+            \frac{1}{z} \dd{z} = \frac{\alpha}{t} \dd{t}
+          </me>.
+          Now we can integrate both sides:
+          <md>
+            <mrow>\amp \amp \int \frac{1}{z} \dd{z} \amp = \int \frac{\alpha}{t} \dd{t}</mrow>
+            <mrow>\implies \amp \amp \ln|z| \amp = \alpha \ln|t| + C</mrow>
+            <mrow>\implies \amp \amp z \amp = C' t^\alpha</mrow>
+          </md>.
+          Finally, we can substitute back to get
+          <me>
+            v(t) = C' t^{\alpha + 1} = C' t^{\frac{k}{m}}
+          </me>.
+          This model is valid when the viscous force is negligible compared to the force Dave applies.
+          This is only the case when <m>6 \pi \eta r v \ll k \frac{v}{t}</m>, which implies that <m>t \ll \frac{k}{6 \pi \eta r}</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+
+  <subsection xml:id="subsec-bernoulli-differential-equations">
+    <title>Bernoulli Differential Equations</title>
+
+    <p>
+      The last type of first-order differential equation we will encounter (for now) is a <term>Bernoulli differential equation</term>, which has the form
+      <me>
+        \dv{v}{t} + p(t) v = q(t) v^n
+      </me>,
+      where <m>n</m> is a real number.
+      This is a nonlinear differential equation, since the function <m>v</m> appears to the power of <m>n</m>.
+    </p>
+
+    <p>
+      However, with a clever substitution of <m>u = v^{1-n}</m>, we can turn this into a linear differential equation.
+      The derivative of <m>u</m> with respect to <m>t</m> is
+      <me>
+        \dv{u}{t} = \dv{u}{v} \dv{v}{t} = (1-n) v^{-n} \dv{v}{t}
+      </me>.
+    </p>
+
+    <p>
+      Multiply the original equation by <m>v^{-n}</m> to get
+      <me>
+        v^{-n} \dv{v}{t} + p(t) v^{1-n} = q(t)
+      </me>.
+      Notice that the left-hand side is just <m>\frac{1}{1-n} \dv{u}{t} + p(t) u</m>.
+      Therefore, we can rewrite the equation as
+      <me>
+        \frac{1}{1-n} \dv{u}{t} + p(t) u = q(t)
+      </me>.
+      Multiplying both sides by <m>1-n</m> gives
+      <me>
+        \dv{u}{t} + (1-n) p(t) u = (1-n) q(t)
+      </me>,
+      which is a linear differential equation that we can solve using the integrating factor method as described above.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          After the van has stopped, the headlights stopped, and are cooling down.
+          The surrounding air has a temperature of <m>T_\text{air}</m>, and the headlights have a temperature of <m>T(t)</m> at time <m>t</m>.
+          This function can be modeled by the equation
+          <me>
+            \dv{T}{t} + aT = bT^2
+          </me>,
+          where <m>a</m> and <m>b</m> are positive constants that depend on the properties of the headlights and the surrounding air.
+        </p>
+      </statement>
+    </example>
   </subsection>
 </section>

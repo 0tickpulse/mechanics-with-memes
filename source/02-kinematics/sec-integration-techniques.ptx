@@ -6,8 +6,66 @@
   <introduction>
     <p>
       Dave and his team are planning out the heist, and we have seen how kinematics plays a role in the initial scouting mission and the chase from the security guards.
-      You have seen that integration must be used to find the position function from the velocity function, or to find the velocity function from the acceleration function.
-      We will dedicate this section to learning some techniques for solving these integrals, which will be useful for solving the problems in the next chapter.
+      You have seen that integration must be used to find <m>v(t)</m> from <m>a(t)</m>, and to find <m>x(t)</m> from <m>v(t)</m>.
+      We will dedicate this section to learning some techniques for solving these integrals.
     </p>
   </introduction>
+
+
+  <subsection xml:id="subsec-the-antiderivative">
+    <title>The Antiderivative</title>
+
+    <p>
+      Up until now, we have used the fundamental theorem of calculus to find the displacement through the velocity function, writing it as
+      <me>
+        x(t_2) - x(t_1) = \int_{t_1}^{t_2} v(t') \dd{t'}
+      </me>.
+      Remember that this is interpreted as a sum of small displacements each of magnitude <m>v(t) \Delta t</m>.
+      We take the limit as <m>\Delta t \to 0</m> to get the integral.
+      <me>
+        \sum_{n=0}^{N-1} v(t_n) \Delta t \xrightarrow{\Delta t \to 0} \int_{t_1}^{t_2} v(t') \dd{t'}
+      </me>.
+    </p>
+
+    <p>
+      If we want to write an expression for <m>x(t)</m> for any arbitrary time <m>t</m>, we put the time in the upper limit of the integral:
+      <me>
+        x(t) - x(t_0) = \int_{t_0}^{t} v(t') \dd{t'}
+      </me>.
+      Here, we leave the lower limit as <m>t_0</m> to indicate that we are measuring the displacement from some initial time <m>t_0</m>.
+    </p>
+
+    <p>
+      There is a related, although not identical, concept called the <term>antiderivative</term>.
+      It is essentially a shorthand for writing the integral where we don't specify the bounds.
+      The equation above, when written in terms of the antiderivative, looks like
+      <me>
+        x(t) + C = \int v(t) \dd{t}
+      </me>.
+      We replace the lower limit with an arbitrary constant <m>C</m> to indicate that we don't know the initial position, and we can only determine the position up to an additive constant.
+    </p>
+
+    <p>
+      This is known as an antiderivative, because the derivative of <m>x(t) + C</m> gives back the original expression in the integral (known as the <term>integrand</term>).
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find the antiderivative of <m>v(t) = 3t^2</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The derivative of <m>t^3</m> is <m>3t^2</m>, so one antiderivative of <m>v(t)</m> is <m>t^3</m>.
+          However, since we can add any constant to this expression and still have the same derivative, we have infinitely many antiderivatives, which can be expressed as <m>t^3 + C</m>, where <m>C</m> is an arbitrary constant.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      An antiderivative is also called an <term>indefinite integral</term>, whereas the integral with specified bounds is called a <term>definite integral</term>.
+    </p>
+  </subsection>
 </section>

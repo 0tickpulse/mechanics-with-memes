@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appendix xml:id="sec-common-calculus-rules" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Common Calculus Rules</title>
+
+  <introduction>
+    <p>
+      In this section, we list some common rules from calculus that are useful to know.
+      We will not derive these formulas here, but you can verify them by using various techniques, such as the limit definition of the derivative, or by using the fundamental theorem of calculus.
+      You can also find these formulas in any calculus textbook, such as <xref ref="ref-calculus-early-transcendentals" />.
+    </p>
+  </introduction>
+
+
+  <subsection xml:id="subsec-limit-rules">
+    <title>Limit Rules</title>
+
+    <p>
+      Limits follow linearity and multiplicative rules.
+      For any functions <m>f(t)</m> and <m>g(t)</m>, and any constants <m>L</m> and <m>n</m>, we have the following rules:
+      <md>
+        <mrow> \lim_{t \to c} L \amp = L </mrow>
+        <mrow> \lim_{t \to c} t \amp = c </mrow>
+        <mrow> \lim_{t \to c} (f(t) + L) \amp = \lim_{t \to c} f(t) + L </mrow>
+        <mrow> \lim_{t \to c} (f(t))^n \amp = (\lim_{t \to c} f(t))^n </mrow>
+        <mrow> \lim_{t \to c} (f(t) + g(t)) \amp = \lim_{t \to c} f(t) + \lim_{t \to c} g(t) </mrow>
+        <mrow> \lim_{t \to c} (f(t) g(t)) \amp = \lim_{t \to c} f(t) \cdot \lim_{t \to c} g(t) </mrow>
+        <mrow> \lim_{t \to c} \frac{f(t)}{g(t)} \amp = \frac{\lim_{t \to c} f(t)}{\lim_{t \to c} g(t)} </mrow>
+        <mrow> \lim_{t \to c} g(f(t)) \amp = g(\lim_{t \to c} f(t)) </mrow>
+      </md>
+    </p>
+
+    <p>
+      In the case of <m>\lim_{t \to c} \frac{f(t)}{g(t)}</m>, if both <m>\lim_{t \to c} f(t)</m> and <m>\lim_{t \to c} g(t)</m> are zero or both are infinity, then we have an indeterminate form, and we cannot apply the rule above.
+      However, we can apply <term>L'Hôpital's rule</term> to evaluate the limit in this case, which states that
+      <me>
+        \lim_{t \to c} \frac{f(t)}{g(t)} = \lim_{t \to c} \frac{\dot{f}(t)}{\dot{g}(t)}
+      </me>,
+      where <m>\dot{f}(t)</m> and <m>\dot{g}(t)</m> are the derivatives of <m>f(t)</m> and <m>g(t)</m>, respectively.
+      This rule is named after French mathematician Guillaume de l'Hôpital, who published it in his 1696 book on calculus, although the rule was actually discovered by the Swiss mathematician Johann Bernoulli.
+      The more formal statement of L'Hôpital's rule is given in <xref ref="thm-lhopitals-rule" />.
+    </p>
+
+    <theorem xml:id="thm-lhopitals-rule">
+      <title>L'Hôpital's Rule</title>
+
+      <statement>
+        <p>
+          For any two two functions <m>f(t)</m> and <m>g(t)</m> such that
+          <ul>
+            <li>
+              <p>
+                Both functions are defined on an open interval <m>(a, b)</m> containing <m>c</m>, except possibly at <m>c</m> itself,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Both functions are differentiable on <m>(a, b) \setminus \{c\}</m>,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\lim_{t \to c} f(t) = \lim_{t \to c} g(t) = 0</m> or <m>\lim_{t \to c} f(t) = \lim_{t \to c} g(t) = \pm \infty</m>,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dot{g}(t) \neq 0</m> for all <m>t \in (a, b) \setminus \{c\}</m>, and
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\lim_{t \to c} \frac{\dot{f}(t)}{\dot{g}(t)}</m> exists,
+              </p>
+            </li>
+          </ul>
+          then
+          <me>
+            \lim_{t \to c} \frac{f(t)}{g(t)} = \lim_{t \to c} \frac{\dot{f}(t)}{\dot{g}(t)}
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Another rule that is handy to know is the squeeze theorem.
+      Essentially, if a function is squeezed between two other functions that have the same limit at a point, then the squeezed function also has that limit at that point.
+    </p>
+
+    <theorem xml:id="thm-squeeze-thm">
+      <title>Squeeze Theorem</title>
+
+      <statement>
+        <p>
+          For any three functions <m>f(t)</m>, <m>g(t)</m>, and <m>h(t)</m> such that
+          <ul>
+            <li>
+              <p>
+                <m>f(t) \leq g(t) \leq h(t)</m> for all <m>t</m> in some open interval containing <m>c</m>, except possibly at <m>c</m> itself, and
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\lim_{t \to c} f(t) = \lim_{t \to c} h(t) = L</m>,
+              </p>
+            </li>
+          </ul>
+          then
+          <me>
+            \lim_{t \to c} g(t) = L
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      There are several special limits that are useful to know, such as
+      <md>
+        <mrow> \lim_{x \to 0} \frac{\sin x}{x} \amp = 1 </mrow>
+        <mrow> \lim_{x \to 0} \frac{1 - \cos x}{x} \amp = 0 </mrow>
+        <mrow> \lim_{x \to 0} \frac{e^x - 1}{x} \amp = 1 </mrow>
+        <mrow> \lim_{x \to 0} \frac{\ln(1 + x)}{x} \amp = 1 </mrow>
+      </md>.
+      A more comprehensive list of special limits can be found on a Wikipedia page.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="subsec-common-derivatives">
+    <title>Common Derivatives</title>
+
+    <p>
+      Just like limits, derivatives follow linearity rules.
+      For any functions <m>f(t)</m> and <m>g(t)</m>, and any constants <m>L</m> and <m>n</m>, we have the following rules:
+      <md>
+        <mrow> \dv{t} L \amp = 0 </mrow>
+        <mrow> \dv{t} t \amp = 1 </mrow>
+        <mrow> \dv{t} (f(t) + g(t)) \amp = \dv{f}{t} + \dv{g}{t} </mrow>
+        <mrow> \dv{t} (f(t) g(t)) \amp = \dv{f}{t} \cdot g(t) + f(t) \cdot \dv{g}{t} </mrow>
+        <mrow> \dv{t} \frac{f(t)}{g(t)} \amp = \frac{\dv{f}{t} \cdot g(t) - f(t) \cdot \dv{g}{t}}{(g(t))^2} </mrow>
+        <mrow> \dv{t} g(f(t)) \amp = \dv{f}{t} \cdot \dv{g}{f} </mrow>
+      </md>.
+    </p>
+
+    <p>
+      The following are some common derivatives that are useful to know:
+      <md>
+        <mrow> \dv{t} t^n \amp = n t^{n-1} </mrow>
+        <mrow> \dv{t} e^t \amp = e^t </mrow>
+        <mrow> \dv{t} \ln t \amp = \frac{1}{t} </mrow>
+        <mrow> \dv{t} \sin t \amp = \cos t </mrow>
+        <mrow> \dv{t} \cos t \amp = -\sin t </mrow>
+        <mrow> \dv{t} \tan t \amp = \sec^2 t </mrow>
+        <mrow> \dv{t} \cot t \amp = -\csc^2 t </mrow>
+        <mrow> \dv{t} \sec t \amp = \sec t \tan t </mrow>
+        <mrow> \dv{t} \csc t \amp = -\csc t \cot t </mrow>
+        <mrow> \dv{t} \arcsin\qty(\frac{t}{a}) \amp = \frac{1}{\sqrt{a^2 - t^2}} </mrow>
+        <mrow> \dv{t} \arccos\qty(\frac{t}{a}) \amp = -\frac{1}{\sqrt{a^2 - t^2}} </mrow>
+        <mrow> \dv{t} \arctan\qty(\frac{t}{a}) \amp = \frac{a}{a^2 + t^2} </mrow>
+        <mrow> \dv{t} \arccot\qty(\frac{t}{a}) \amp = -\frac{a}{a^2 + t^2} </mrow>
+        <mrow> \dv{t} \arcsec\qty(\frac{t}{a}) \amp = \frac{a}{t \sqrt{t^2 - a^2}} </mrow>
+        <mrow> \dv{t} \arccsc\qty(\frac{t}{a}) \amp = -\frac{a}{t \sqrt{t^2 - a^2}} </mrow>
+      </md>.
+    </p>
+  </subsection>
+</appendix>

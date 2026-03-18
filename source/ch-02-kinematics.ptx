@@ -17,6 +17,7 @@
   <xi:include href="./02-kinematics/sec-motion-in-one-dimension.ptx" />
   <xi:include href="./02-kinematics/sec-motion-in-two-dimensions.ptx" />
   <xi:include href="./02-kinematics/sec-circular-motion.ptx" />
+  <xi:include href="./02-kinematics/sec-integration-techniques.ptx" />
 
   <xi:include href="./02-kinematics/sec-kinematics-summary.ptx" />
   <xi:include href="./02-kinematics/sec-kinematics-problems.ptx" />

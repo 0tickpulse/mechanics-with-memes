@@ -964,11 +964,56 @@ var ptx_lunr_docs = [
   "body": "  The radius of the traffic circle is meters. Dave estimates that on a damp night, the maximum centripetal acceleration the van can handle before sliding is . What is the maximum speed Dave can maintain without losing control?    Rearranging the formula for centripetal acceleration, we can solve for the maximum speed: . So this gives . Dave realizes that his current speed of is only possible because the road is dry. If it rains on the night of the heist, he'll have to drop his speed by nearly 40% to avoid a disaster.   "
 },
 {
+  "id": "sec-integration-techniques",
+  "level": "1",
+  "url": "sec-integration-techniques.html",
+  "type": "Section",
+  "number": "2.4",
+  "title": "Integration Techniques",
+  "body": " Integration Techniques   Dave and his team are planning out the heist, and we have seen how kinematics plays a role in the initial scouting mission and the chase from the security guards. You have seen that integration must be used to find from , and to find from . We will dedicate this section to learning some techniques for solving these integrals.    The Antiderivative  Up until now, we have used the fundamental theorem of calculus to find the displacement through the velocity function, writing it as . Remember that this is interpreted as a sum of small displacements each of magnitude . We take the limit as to get the integral. .  If we want to write an expression for for any arbitrary time , we put the time in the upper limit of the integral: . Here, we leave the lower limit as to indicate that we are measuring the displacement from some initial time .  There is a related, although not identical, concept called the antiderivative . It is essentially a shorthand for writing the integral where we don't specify the bounds. The equation above, when written in terms of the antiderivative, looks like . We replace the lower limit with an arbitrary constant to indicate that we don't know the initial position, and we can only determine the position up to an additive constant.  This is known as an antiderivative, because the derivative of gives back the original expression in the integral (known as the integrand ).    Find the antiderivative of .    The derivative of is , so one antiderivative of is . However, since we can add any constant to this expression and still have the same derivative, we have infinitely many antiderivatives, which can be expressed as , where is an arbitrary constant.    An antiderivative is also called an indefinite integral , whereas the integral with specified bounds is called a definite integral .   "
+},
+{
+  "id": "subsec-the-antiderivative-4",
+  "level": "2",
+  "url": "sec-integration-techniques.html#subsec-the-antiderivative-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "antiderivative "
+},
+{
+  "id": "subsec-the-antiderivative-5",
+  "level": "2",
+  "url": "sec-integration-techniques.html#subsec-the-antiderivative-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "integrand "
+},
+{
+  "id": "subsec-the-antiderivative-6",
+  "level": "2",
+  "url": "sec-integration-techniques.html#subsec-the-antiderivative-6",
+  "type": "Example",
+  "number": "2.4.1",
+  "title": "",
+  "body": "  Find the antiderivative of .    The derivative of is , so one antiderivative of is . However, since we can add any constant to this expression and still have the same derivative, we have infinitely many antiderivatives, which can be expressed as , where is an arbitrary constant.   "
+},
+{
+  "id": "subsec-the-antiderivative-7",
+  "level": "2",
+  "url": "sec-integration-techniques.html#subsec-the-antiderivative-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "indefinite integral definite integral "
+},
+{
   "id": "sec-kinematics-summary",
   "level": "1",
   "url": "sec-kinematics-summary.html",
   "type": "Section",
-  "number": "2.4",
+  "number": "2.5",
   "title": "Summary",
   "body": " Summary     Motion is described by functions of time. In one dimension, the position function is , and in multiple dimensions, the position function is a vector function .    The average velocity between two times and is the change in position divided by the change in time,     The instantaneous velocity is defined by taking the limit as the change in time goes to zero, .    The velocity is the derivative of the position, , and the acceleration is the derivative of the velocity, .    Under constant acceleration, a set of four kinematic equations can be derived:     Vectors can be expressed in different coordinate systems, such as Cartesian coordinates and polar coordinates. In polar coordinates, the unit vectors are changing with time, so we have to use the product rule of differentiation when taking derivatives of vectors in polar coordinates. These derivatives are described in .    In circular motion, even if the speed is constant, there is still an acceleration because the direction of the velocity is changing.    Uniform circular motion is a special case of circular motion where the angular velocity is constant. In uniform circular motion of radius and angular velocity , the acceleration is .    Angular coordinates behave very similarly to linear coordinates, forming a relationship summarized in .     "
 },
@@ -977,16 +1022,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-kinematics-problems.html",
   "type": "Exercises",
-  "number": "2.5",
+  "number": "2.6",
   "title": "Additional Problems",
-  "body": " Additional Problems    Prove .    Switch back to Cartesian coordinates and use the product rule of differentiation. Then, switch back to polar coordinates and use the definitions of the unit vectors in terms of Cartesian coordinates.     , and similarly, .     The USB throw   It is 11:58 PM, and your group project is due at midnight. The campus Wi-Fi has crashed, so you have loaded the final project onto a USB flash drive. You are standing outside your partner's dorm, trying to throw the flash drive through their slightly open window.  The window is located at a horizontal distance and a vertical height from the release point of your hand. You can throw the drive with a set initial speed . Now you just need the perfect angle .     Construct an expression for the trajectory of the flash drive, , in terms of , , and the acceleration due to gravity .    This trigonometric identity will come in handy: .    Begin with the standard equations for projectile motion, . Then isolate in the first equation and substitute it into the second equation to get an expression for in terms of .    Solving for in the first equation gives us . Substituting this into the second equation gives us . Finally, using the trigonometric identity, we can rewrite this as , which is a quadratic function of .      Under what conditions on , , and will there be a solution for such that the flash drive goes through the window?    The discriminant of a quadratic equation must be non-negative for there to be a real solution.    First, the equation we need to solve is . Plugging in the expression for gives us . The discriminant of is , so in our case, the discriminant is . Therefore, there will be a solution for if and only if . Rearranging this inequality gives us . Most likely, this will not be zero, meaning there will be two distinct solutions for . If this seems confusing, graph for the two solutions (given some specific values of , , and ) to see how the two parabolas both pass through the point .      Come up with one set of parameters such that there's only one angle that reaches the window, regardless of the initial speed.    There will be only one angle if the discriminant is zero, i.e., . If we factor out , we get . One obvious way to satisfy this equation is to set , which means the window is directly above the release point of your hand. Another way to satisfy this equation is to set the expression in the brackets equal to zero, which gives us . This gives us a relationship between , , and such that there will be only one angle that reaches the window.       A string quartet is rehearsing in a practice room on campus. The violist, as always, forgot their rosin, so they decide to borrow some from the violinist. Assuming the violinist throws the rosin with an initial speed of at an angle of , what's the ideal angle that maximizes the horizontal distance traveled by the rosin?    You may need to use the double angle formula for sine .    We need to find the horizontal distance traveled by the rosin. When it arrives, the height is zero, so we can set . This gives us two solutions for : (when the rosin is released) and (when the rosin lands). Plugging the latter solution into the equation for horizontal position gives us . The maximum value of is 1, which occurs when , so the ideal angle to throw the rosin is .      Suppose the van in our storyline was allowed to drive radially and tangentially in the \"Founder's Quad Traffic Circle\". Recall that in polar coordinates, the position of the van is given by , where is the distance from the center of the traffic circle and is the unit vector pointing radially outward from the center of the traffic circle. Show that the acceleration of the van can be written as . One of these terms is the centripetal acceleration, which is responsible for keeping the van moving in a circle. The other is called the coriolis acceleration , which is responsible for the van's tendency to \"slide outward\" when it tries to turn.    This is just brute force differentiation, using the product rule and the results from . First, we compute the velocity of the van: . Then the acceleration is     "
+  "body": " Additional Problems    Prove .    Switch back to Cartesian coordinates and use the product rule of differentiation. Then, switch back to polar coordinates and use the definitions of the unit vectors in terms of Cartesian coordinates.     , and similarly, .     The USB throw   It is 11:58 PM, and your group project is due at midnight. The campus Wi-Fi has crashed, so you have loaded the final project onto a USB flash drive. You are standing outside your partner's dorm, trying to throw the flash drive through their slightly open window.  The window is located at a horizontal distance and a vertical height from the release point of your hand. You can throw the drive with a set initial speed . Now you just need the perfect angle .     Construct an expression for the trajectory of the flash drive, , in terms of , , and the acceleration due to gravity .    This trigonometric identity will come in handy: .    Begin with the standard equations for projectile motion, . Then isolate in the first equation and substitute it into the second equation to get an expression for in terms of .    Solving for in the first equation gives us . Substituting this into the second equation gives us . Finally, using the trigonometric identity, we can rewrite this as , which is a quadratic function of .      Under what conditions on , , and will there be a solution for such that the flash drive goes through the window?    The discriminant of a quadratic equation must be non-negative for there to be a real solution.    First, the equation we need to solve is . Plugging in the expression for gives us . The discriminant of is , so in our case, the discriminant is . Therefore, there will be a solution for if and only if . Rearranging this inequality gives us . Most likely, this will not be zero, meaning there will be two distinct solutions for . If this seems confusing, graph for the two solutions (given some specific values of , , and ) to see how the two parabolas both pass through the point .      Come up with one set of parameters such that there's only one angle that reaches the window, regardless of the initial speed.    There will be only one angle if the discriminant is zero, i.e., . If we factor out , we get . One obvious way to satisfy this equation is to set , which means the window is directly above the release point of your hand. Another way to satisfy this equation is to set the expression in the brackets equal to zero, which gives us . This gives us a relationship between , , and such that there will be only one angle that reaches the window.       A string quartet is rehearsing in a practice room on campus. The violist, as always, forgot their rosin, so they decide to borrow some from the violinist. Assuming the violinist throws the rosin with an initial speed of at an angle of , what's the ideal angle that maximizes the horizontal distance traveled by the rosin?    You may need to use the double angle formula for sine .    We need to find the horizontal distance traveled by the rosin. When it arrives, the height is zero, so we can set . This gives us two solutions for : (when the rosin is released) and (when the rosin lands). Plugging the latter solution into the equation for horizontal position gives us . The maximum value of is 1, which occurs when , so the ideal angle to throw the rosin is .      Draw a unit circle on the Cartesian plane, and then draw a line segment from the origin to a point on the unit circle. The angle between the line segment and the positive x-axis is . The vertical and horizontal components of the line segment are and , respectively.  Increase the angle by a small amount . What are the vertical and horizontal components of the change in the line segment?  Using this, show that .    The arc formed between the two angles can be approximated by a straight line. This allows us to use similar triangles to find the vertical and horizontal components of the change in the line segment.      Suppose the van in our storyline was allowed to drive radially and tangentially in the \"Founder's Quad Traffic Circle\". Recall that in polar coordinates, the position of the van is given by , where is the distance from the center of the traffic circle and is the unit vector pointing radially outward from the center of the traffic circle. Show that the acceleration of the van can be written as . One of these terms is the centripetal acceleration, which is responsible for keeping the van moving in a circle. The other is called the coriolis acceleration , which is responsible for the van's tendency to \"slide outward\" when it tries to turn.    This is just brute force differentiation, using the product rule and the results from . First, we compute the velocity of the van: . Then the acceleration is     "
 },
 {
   "id": "sec-kinematics-problems-2",
   "level": "2",
   "url": "sec-kinematics-problems.html#sec-kinematics-problems-2",
   "type": "Exercise",
-  "number": "2.5.1",
+  "number": "2.6.1",
   "title": "",
   "body": "  Prove .    Switch back to Cartesian coordinates and use the product rule of differentiation. Then, switch back to polar coordinates and use the definitions of the unit vectors in terms of Cartesian coordinates.     , and similarly, .   "
 },
@@ -995,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kinematics-problems.html#ex-the-usb-throw-3",
   "type": "Exercise",
-  "number": "2.5.2",
+  "number": "2.6.2",
   "title": "",
   "body": "  Construct an expression for the trajectory of the flash drive, , in terms of , , and the acceleration due to gravity .    This trigonometric identity will come in handy: .    Begin with the standard equations for projectile motion, . Then isolate in the first equation and substitute it into the second equation to get an expression for in terms of .    Solving for in the first equation gives us . Substituting this into the second equation gives us . Finally, using the trigonometric identity, we can rewrite this as , which is a quadratic function of .   "
 },
@@ -1004,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kinematics-problems.html#ex-the-usb-throw-4",
   "type": "Exercise",
-  "number": "2.5.3",
+  "number": "2.6.3",
   "title": "",
   "body": "  Under what conditions on , , and will there be a solution for such that the flash drive goes through the window?    The discriminant of a quadratic equation must be non-negative for there to be a real solution.    First, the equation we need to solve is . Plugging in the expression for gives us . The discriminant of is , so in our case, the discriminant is . Therefore, there will be a solution for if and only if . Rearranging this inequality gives us . Most likely, this will not be zero, meaning there will be two distinct solutions for . If this seems confusing, graph for the two solutions (given some specific values of , , and ) to see how the two parabolas both pass through the point .   "
 },
@@ -1013,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kinematics-problems.html#ex-the-usb-throw-5",
   "type": "Exercise",
-  "number": "2.5.4",
+  "number": "2.6.4",
   "title": "",
   "body": "  Come up with one set of parameters such that there's only one angle that reaches the window, regardless of the initial speed.    There will be only one angle if the discriminant is zero, i.e., . If we factor out , we get . One obvious way to satisfy this equation is to set , which means the window is directly above the release point of your hand. Another way to satisfy this equation is to set the expression in the brackets equal to zero, which gives us . This gives us a relationship between , , and such that there will be only one angle that reaches the window.   "
 },
@@ -1022,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kinematics-problems.html#sec-kinematics-problems-4",
   "type": "Exercise",
-  "number": "2.5.5",
+  "number": "2.6.5",
   "title": "",
   "body": "  A string quartet is rehearsing in a practice room on campus. The violist, as always, forgot their rosin, so they decide to borrow some from the violinist. Assuming the violinist throws the rosin with an initial speed of at an angle of , what's the ideal angle that maximizes the horizontal distance traveled by the rosin?    You may need to use the double angle formula for sine .    We need to find the horizontal distance traveled by the rosin. When it arrives, the height is zero, so we can set . This gives us two solutions for : (when the rosin is released) and (when the rosin lands). Plugging the latter solution into the equation for horizontal position gives us . The maximum value of is 1, which occurs when , so the ideal angle to throw the rosin is .   "
 },
@@ -1031,7 +1076,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kinematics-problems.html#sec-kinematics-problems-5",
   "type": "Exercise",
-  "number": "2.5.6",
+  "number": "2.6.6",
+  "title": "",
+  "body": "  Draw a unit circle on the Cartesian plane, and then draw a line segment from the origin to a point on the unit circle. The angle between the line segment and the positive x-axis is . The vertical and horizontal components of the line segment are and , respectively.  Increase the angle by a small amount . What are the vertical and horizontal components of the change in the line segment?  Using this, show that .    The arc formed between the two angles can be approximated by a straight line. This allows us to use similar triangles to find the vertical and horizontal components of the change in the line segment.   "
+},
+{
+  "id": "sec-kinematics-problems-6",
+  "level": "2",
+  "url": "sec-kinematics-problems.html#sec-kinematics-problems-6",
+  "type": "Exercise",
+  "number": "2.6.7",
   "title": "",
   "body": "  Suppose the van in our storyline was allowed to drive radially and tangentially in the \"Founder's Quad Traffic Circle\". Recall that in polar coordinates, the position of the van is given by , where is the distance from the center of the traffic circle and is the unit vector pointing radially outward from the center of the traffic circle. Show that the acceleration of the van can be written as . One of these terms is the centripetal acceleration, which is responsible for keeping the van moving in a circle. The other is called the coriolis acceleration , which is responsible for the van's tendency to \"slide outward\" when it tries to turn.    This is just brute force differentiation, using the product rule and the results from . First, we compute the velocity of the van: . Then the acceleration is    "
 },
@@ -1040,9 +1094,387 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-kinematics-afr.html",
   "type": "Section",
-  "number": "2.6",
+  "number": "2.7",
   "title": "Applications and Further Reading",
   "body": " Applications and Further Reading    Further Reading  As you may have noticed, we have been using calculus throughout this chapter. It is very important to have a good understanding of calculus from the very beginning.  I would begin with Grant Sanderson's 3Blue1Brown YouTube channel, specifically his Essence of Calculus series, for a gentle and visual introduction to calculus. Then, I would recommend reading through the first few chapters of a standard calculus textbook, such as Stewart's Calculus: Early Transcendentals  .  We have been using vectors throughout this chapter, but we haven't really defined what they are or how to work with them. Just like calculus, start with Grant Sanderson's 3Blue1Brown YouTube channel, specifically his Essence of Linear Algebra series, for a visual introduction to vectors and linear algebra. Then, I would recommend reading through the first few chapters of a standard linear algebra textbook, such as Strang's Introduction to Linear Algebra  .   "
+},
+{
+  "id": "sec-newtons-laws",
+  "level": "1",
+  "url": "sec-newtons-laws.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "Newton’s Laws",
+  "body": " Newton's Laws   In kinematics, we treated the van and the lemon as ghosts. They were just points moving around, and we didn't care about what was causing them to move. In dynamics , we will be treating the van and the lemon as real objects, and we will be trying to understand what causes them to move the way they do.    Introduction to Forces  Isaac Newton was a genius. Not only did he invent calculus at the age of 23, no less but he also made groundbreaking contributions to optics, astronomy, and physics. He laid the foundation for classical mechanics through a set of three fundamental laws of motion. These laws, along with his later law of gravity, were instrumental in explaining the biggest puzzle of his time: planetary motion. Newton wrote his three laws of motion in his book Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy) or just Principia for short.  Newton defines the force as follows:   An impressed force is an action exerted upon a body, in order to change its state, either of rest, or of uniform motion in a right line.   In other words, a force is something that can cause an object to accelerate. Note that it is a vector quantity.    As the statue rests, a gravitational force with magnitude is acting on it downwards. What is the magnitude and direction of the normal force acting on the statue, for it to be at rest?    Let's write the forces as follows: , where points upwards and is the normal force. Evidently, . So the normal force has a magnitude of 4900 N and is directed upwards.    Sarah is looking at the heavy-duty winch they bought. \"Dave, how hard do we actually have to pull to get this thing moving?\"  To answer this question, we must step out of equilibrium. When the sum of forces acting on an object is not zero, the object will accelerate. While many scientists before Newton had conceived ideas of forces causing motion, Newton was the first to quantify this relationship in a precise mathematical form.  Newton first defined a proportionality constant called the inertial mass  . Imagine Sarah takes a stone and applies a force to it, and observes how much it accelerates using the kinematic equations we developed in the previous chapter. The force is then defined as the product of the inertial mass and the acceleration, . This is the statement of Newton's second law.  What if Sarah applies two forces to the stone, and , each with different magnitudes and directions? Suppose she first applies and observes an acceleration , and then applies and observes an acceleration . If the forces are applied simultaneously, she observes the resulting acceleration to be . If this were the case, it implies that the forces themselves must also add up, so we have . This is the principle of superposition of forces, which should be understood as an experimental fact rather than a mathematical result.  This, by the way, is also why works. Because the acceleration of the statue is zero, the sum of the forces acting on it must also be zero, which means the normal force must balance out the gravitational force.   When the situation is not ambiguous, we will simply write instead of to denote the inertial mass.     Newton's Laws  With these definitions in place, we can now state Newton's three laws of motion.   Every object perseveres in its state of rest, or of uniform motion in a right line, unless it is compelled to change that state by forces impressed thereon.   Dave looks at the statue. It hasn't moved since 1986. \"It's got a lot of inertia ,\" Dave notes. This is the universe's way of being lazy. If the van is moving at 20 m\/s, it wants to keep moving at 20 m\/s. If Dave hits a brick wall, the van stops, but according to the First Law, the unbuckled freshmen in the back will \"persevere\" in their motion right through the windshield.  Newton's second law is as follows:   The quantity of motion is the measure of the same, arising from the velocity and quantity of matter conjointly. The motion of the whole is the sum of the motion of all its parts; and therefore in a body double in quantity, with equal velocity, the motion is double, with twice the velocity, it is quadruple.   In modern notation, we define the momentum of an object as a vector quantity equal to the product of its inertial mass and its velocity, . Newton's second law was stated as the following:   The alteration of motion is ever proportional to the motive force impressed; and is made in the direction of the right line in which that force is impressed.  If any force generates a motion, a double force will generate double the motion, a triple force triple the motion, whether that force be impressed altogether and at once, or gradually and successively. And this motion (being always directed the same way with the generating force) if the body moved before, is added to or subtracted from the former motion, according as they directly conspire with or are directly contrary to each other; or obliquely joined, when they are oblique, so as to produce a new motion compounded from the determination of both.   In modern notation, this can be expressed as . If the mass of the object is constant, we can write the law in the more familiar form .  What makes this a law, and not a definition, is its combination with other force laws. These force laws, such as the law of gravity and the laws of friction, are empirical relationships that determine the form of the force in terms of other physical quantities. Additionally, there are constraint forces that are not determined a priori by any force law, but rather by how it alters the motion of the object.  When combined with the other side of the equation, , which is a kinematic quantity, Newton's second law gives us an equation of motion that allows us to predict the future motion of an object based on the forces acting on it.  The last of Newton's laws is the principle of action and reaction, perhaps the least obvious of the three.   To every action there is always opposed an equal reaction: or the mutual actions of two bodies upon each other are always equal, and directed to contrary parts.  Whatever draws or presses another is as much drawn or pressed by that other. If you press a stone with your finger, the finger is also pressed by the stone. If a horse draws a stone tied to a rope, the horse (if I may so say) will be equally drawn back towards the stone: For the distended rope, by the same endeavour to relax or unbend itself, will draw the horse as much towards the stone, as it does the stone towards the horse, and will obstruct the progress of the one as much as it advances that of the other.   This law states that upon the interaction of two objects, the forces they exert on each other are equal in magnitude and opposite in direction. These forces are referred to as interaction pairs .  \"If you press a stone with your finger,\" Newton wrote, \"the finger is also pressed by the stone.\" In Dave's world, if the winch pulls the statue with 2000 N of force, the statue pulls the van with 2000 N of force. If the van isn't heavy enough, Dave won't pull the statue into the van; he'll pull the van into the pedestal. This is the law of Interaction Pairs.    Newtonian Mechanics  The three laws, as we have delineated above, comprise Newtonian mechanics , a framework that has been remarkably successful in describing the motion of objects in our everyday world, from the trajectory of a thrown ball to the orbits of planets.  When we approach a problem in Newtonian mechanics, we typically follow these steps:   Identify the system of interest and the forces acting on it. This involves drawing a free-body diagram , which is a visual representation of the object and the forces acting upon it. Use known force laws to determine the form of the forces, and identify any constraint forces that may be present.    Apply Newton's second law to set up the equations of motion. This involves writing down the mathematical expression of the forces and the resulting acceleration.    Solve the equations of motion to find the desired quantities, such as the acceleration, velocity, or position of the object as a function of time.     But wait! How do we solve an equation of motion? For instance, let's say we have a simple equation of motion like , which states that the force (left-hand side) is equal to the sum of something proportional to the position (a restoring force ) and something proportional to the velocity (a damping force ). This equation describes the motion of many physical systems, such as a mass attached to a spring underwater.  We need to solve for a function  not just a number that satisfies this equation. Such an equation is called a differential equation , and we will dedicate multiple sections to the study of these equations and their solutions.  Fortunately, we have already solved one differential equation before, which applies to the case of constant acceleration. Constant acceleration occurs when the net force acting on an object is constant, meaning the equation of motion takes the form , where is a constant force.  Rewriting this as , we see that this is just the equation for constant acceleration with .  Hence, the solution to this equation is . Wait, where did and come from? These are called constants of integration , and they arise because when we integrate a function, we can always add a constant to it without changing the derivative. In the context of mechanics, it means that an equation of motion is not sufficient to determine the motion of an object; we also need to specify the initial conditions , which are the position and velocity of the object at a specific time (usually taken to be ). The solution without the initial conditions is called the general solution , while the solution with the initial conditions specified is called the particular solution . The process of finding the particular solution from the general solution is called an initial value problem (IVP).    Dave is driving the 2000 kg van at 30 m\/s. He sees a security gate and slams the brakes, providing a constant friction force of . Solve the initial value problem to find how long it takes him to stop.    The equation of motion is . Using : . Dave stops, but he's going to need more than just brakes to get the statue on board.     "
+},
+{
+  "id": "sec-newtons-laws-2-1",
+  "level": "2",
+  "url": "sec-newtons-laws.html#sec-newtons-laws-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dynamics "
+},
+{
+  "id": "subsec-introduction-to-forces-3",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-introduction-to-forces-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "force "
+},
+{
+  "id": "ex-statue-on-pedestal",
+  "level": "2",
+  "url": "sec-newtons-laws.html#ex-statue-on-pedestal",
+  "type": "Example",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  As the statue rests, a gravitational force with magnitude is acting on it downwards. What is the magnitude and direction of the normal force acting on the statue, for it to be at rest?    Let's write the forces as follows: , where points upwards and is the normal force. Evidently, . So the normal force has a magnitude of 4900 N and is directed upwards.   "
+},
+{
+  "id": "subsec-introduction-to-forces-9",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-introduction-to-forces-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "inertial mass force "
+},
+{
+  "id": "subsec-introduction-to-forces-12",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-introduction-to-forces-12",
+  "type": "Remark",
+  "number": "3.1.2",
+  "title": "",
+  "body": " When the situation is not ambiguous, we will simply write instead of to denote the inertial mass.  "
+},
+{
+  "id": "subsec-newtons-laws-4",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtons-laws-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "inertia "
+},
+{
+  "id": "subsec-newtons-laws-10",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtons-laws-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "constraint forces "
+},
+{
+  "id": "subsec-newtons-laws-11",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtons-laws-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "equation of motion "
+},
+{
+  "id": "subsec-newtons-laws-14",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtons-laws-14",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "interaction pairs "
+},
+{
+  "id": "subsec-newtonian-mechanics-2",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtonian-mechanics-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Newtonian mechanics "
+},
+{
+  "id": "subsec-newtonian-mechanics-3",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtonian-mechanics-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "free-body diagram "
+},
+{
+  "id": "subsec-newtonian-mechanics-4",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtonian-mechanics-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "restoring force damping force "
+},
+{
+  "id": "subsec-newtonian-mechanics-5",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtonian-mechanics-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "differential equation "
+},
+{
+  "id": "subsec-newtonian-mechanics-8",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtonian-mechanics-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "constants of integration initial conditions general solution particular solution initial value problem "
+},
+{
+  "id": "subsec-newtonian-mechanics-9",
+  "level": "2",
+  "url": "sec-newtons-laws.html#subsec-newtonian-mechanics-9",
+  "type": "Checkpoint",
+  "number": "3.1.3",
+  "title": "",
+  "body": "  Dave is driving the 2000 kg van at 30 m\/s. He sees a security gate and slams the brakes, providing a constant friction force of . Solve the initial value problem to find how long it takes him to stop.    The equation of motion is . Using : . Dave stops, but he's going to need more than just brakes to get the statue on board.   "
+},
+{
+  "id": "sec-de-workshop",
+  "level": "1",
+  "url": "sec-de-workshop.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Differential Equation Workshop",
+  "body": " Differential Equation Workshop   In the previous section, we outlined Newton's three laws of motion. Part of moving the bronze statue involves applying a force to it, and Newton's second law gives us a mathematical relationship between the force we apply and the resulting motion of the statue. But we will need a set of tools to solve this mathematical relationship.    Classification of Differential Equations  Let's first discuss how to classify the types of differential equations we will encounter in this chapter. As we saw in the previous section, differential equations are equations that relate a function to its derivatives. We have to solve for the function to find the motion of the statue. Since our equation of motion always has the form , it will always have a second derivative. A differential equation whose highest derivative is a second derivative is called a second-order differential equation .  There's one trick we can pull, however, to make our lives easier. Namely, if the force doesn't depend on the position of the statue, then we can rewrite the equation of motion as , where is the velocity of the statue. Then, this is just a first-order differential equation, which is easier to solve than a second-order one. This section will be devoted to solving first-order differential equations.  Also, the differential equations we will encounter in this chapter will be ordinary differential equations (ODEs), which means that the function we are solving for is a function of a single variable (in our case, time). This is in contrast to partial differential equations (PDEs), which involve functions of multiple variables and their partial derivatives. (For example, perhaps we have a PDE that describes the temperature distribution in the van as a function of both time and position, and we want to solve for the temperature at a particular point in the van as a function of time.)  The degree of a differential equation is the highest power of the highest derivative that appears in the equation. The equation is a first-order, second-degree differential equation, since the highest derivative is a first derivative and the highest power of that derivative is 2.  A differential equation is called linear if the function and its derivatives appear to the first power and are not multiplied together. The equation is linear, whereas is not linear due to the and terms.  A differential equation is called homogeneous if all the terms involve the function or its derivatives, and there are no terms that are just functions of the independent variable. The equation is homogeneous, whereas is not homogeneous due to the term on the right-hand side.  Finally, a differential equation is autonomous if the independent variable (in our case, time) does not explicitly appear in the equation. The equation is autonomous, since time does not explicitly appear in the equation, whereas is not autonomous due to the term on the right-hand side.    Separable Differential Equations (and Air Resistance)  The simplest equation of motion is that of a constant force, which is the case when we push the statue with a constant force and there are no other forces acting on it (like friction or air resistance).    The team is using a constant-force winch to pull the statue across a frictionless floor (they've applied plenty of industrial grease). The magnitude of the force applied by the winch is , and the statue has a mass of . What is the velocity of the statue as a function of time?    The equation of motion is . Solving this involves just integrating both sides with respect to time: . Next, we can determine the constant of integration by using the initial condition that the statue starts at rest, so . When we plug in , we get , so . Therefore, the velocity of the statue as a function of time is .    As the example shows, the velocity of the statue increases linearly with time when a constant force is applied. Generally, when the derivative is constant, we can just integrate to find the function, and the solution will be a linear function of time.  What if the force isn't constant? One specific type of differential equation that we can solve is a separable differential equation , which looks like , where the right-hand side is a product of a function of and a function of . (Notice by the way, this type of equation is always homogeneous.)  There's a nice example of a separable differential equation that comes up in the context of air resistance. When a solid (the van) travels through a fluid (the air), it experiences a drag force , which is a force that opposes the motion of the object. Generally, the exact form of the drag force is very complicated, and it depends on the shape of the object, the properties of the fluid, and the speed of the object.  For a solid traveling through air at high speed, the drag force is approximately proportional to (1) the density of the air, (2) the cross-sectional area of the object, and (3) the square of the speed of the object, . Therefore, we can write the magnitude of the drag force as . The constant is called the drag coefficient , and it depends on the shape of the object.    The van is coasting at high speed, but Dave shifts into neutral, so the engine is no longer providing any force to propel the van forward. Right now, the van is moving at an initial velocity of .  They are being slowed down by air resistance, which has a drag coefficient of . The density of air is , and the cross-sectional area of the van is . What is the velocity of the van as a function of time?    The equation of motion is . For the sake of simplicity, let's define , so the equation of motion becomes .  This is a separable differential equation, since we can rewrite it as , which is of the form with and .  The strategy for solving a separable differential equation is to, as the name suggests, place all the 's on one side and all the 's on the other side, and then integrate both sides. We can rewrite the equation as . Now we can integrate both sides: . Next, we can determine the constant of integration by using the initial condition that the van starts with an initial velocity of , so . When we plug in , we get , so . Therefore, the velocity of the van as a function of time is .    Let's generalize this result to the case where we have a general separable first-order ordinary differential equation of the form . We can rewrite this as . Now we can integrate both sides: .    A separable first-order ordinary differential equation is a first-order ordinary differential equation of the form . The general solution to a separable first-order ordinary differential equation is given by , where is a constant of integration.      Linear Inhomogeneous Differential Equations  The next type of differential equation we will solve is a linear inhomogeneous differential equation , which has the form . The functions and are given functions of time, and we are solving for the function .  The general method to solving this type of equation is to multiply both sides by the integrating factor , which is given by . The reason we are interested in the integrating factor is that its derivative is just . Thus, if we multiply both sides of the equation by the integrating factor, we get . Now we can integrate both sides: . Finally, we can solve for by dividing both sides by the integrating factor: .    Part of the scouting mission involved swimming across a river, and Dave is now wondering how long it would take to swim across the river.  Fluids exert a drag force on objects moving through them. Their viscosity is a measure of how much drag force they exert. At low speeds, the drag force is approximately proportional to the velocity of the object, so we can write the magnitude of the drag force as (known as Stokes' law ), where is the viscosity of the fluid, is the radius of the object, and is the speed of the object.  If Dave swims with a constant force of magnitude , then the equation of motion is . What is the velocity of Dave as a function of time, and how long does it take for Dave to swim across the river, which has a width of ?    The equation of motion can be rewritten as , which is a linear inhomogeneous differential equation with and . Let's define for the sake of simplicity, so the equation becomes . The integrating factor is . Multiplying both sides of the equation by the integrating factor, we get . Now we can integrate both sides: .  Notice, by the way, that this equation was technically also separable. The next one, however, is not.      The force Dave applies to swim across the river may be more accurately modeled as a force that oscillates in time, such as .  Solve the equation of motion for the velocity of Dave as a function of time.  Then show that if Dave starts at rest, the velocity of Dave as a function of time is , where .    The integral can be evaluated using integration by parts twice.    The integral is equal to .    The equation of motion can be rewritten as , which is a linear inhomogeneous differential equation with and . Let's define for the sake of simplicity, so the equation becomes . The integrating factor is . Multiplying both sides of the equation by the integrating factor, we get . Now we can integrate both sides: . We can determine the constant of integration by using the initial condition that Dave starts at rest, so . When we plug in , we get , so . Therefore, the velocity of Dave as a function of time is . We can, in fact, combine the sine and cosine terms into a single sine term with a phase shift , where .      Homogeneous Differential Equations  Another type of differential equation we will encounter is a homogeneous differential equation , which has the form . The function on the right-hand side is a function of the ratio .  This type of equation can be solved by making the substitution , which implies that . Then, by the product rule of differentiation, we have . Substituting this into the original equation, we get . This is separable, leading to .    Suppose that the force Dave applies to swim across the river is proportional to the ratio of his velocity to the time he's been swimming, so . (Perhaps Dave is getting more tired as time goes on, so the force he can apply decreases with time, but it also increases with his velocity since he's a bit of a speed demon.) Ignoring the viscous force for now, determine the equation of motion for Dave, and solve for the velocity of Dave as a function of time. At what velocity is this model valid?    The equation of motion is . This is a homogeneous differential equation, since the right-hand side is a function of the ratio . We can solve this by making the substitution , which implies that . Then, by the product rule of differentiation, we have . Substituting this into the original equation, we get . Rearranging gives . Let for the sake of simplicity, so the equation becomes . This is separable, leading to . Now we can integrate both sides: . Finally, we can substitute back to get . This model is valid when the viscous force is negligible compared to the force Dave applies. This is only the case when , which implies that .      Bernoulli Differential Equations  The last type of first-order differential equation we will encounter (for now) is a Bernoulli differential equation , which has the form , where is a real number. This is a nonlinear differential equation, since the function appears to the power of .  However, with a clever substitution of , we can turn this into a linear differential equation. The derivative of with respect to is .  Multiply the original equation by to get . Notice that the left-hand side is just . Therefore, we can rewrite the equation as . Multiplying both sides by gives , which is a linear differential equation that we can solve using the integrating factor method as described above.    After the van has stopped, the headlights stopped, and are cooling down. The surrounding air has a temperature of , and the headlights have a temperature of at time . This function can be modeled by the equation , where and are positive constants that depend on the properties of the headlights and the surrounding air.     "
+},
+{
+  "id": "subsec-classification-of-differential-equations-2",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-classification-of-differential-equations-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "second-order differential equation "
+},
+{
+  "id": "subsec-classification-of-differential-equations-4",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-classification-of-differential-equations-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ordinary differential equations partial differential equations "
+},
+{
+  "id": "subsec-classification-of-differential-equations-5",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-classification-of-differential-equations-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "degree "
+},
+{
+  "id": "subsec-classification-of-differential-equations-6",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-classification-of-differential-equations-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "linear "
+},
+{
+  "id": "subsec-classification-of-differential-equations-7",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-classification-of-differential-equations-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "homogeneous "
+},
+{
+  "id": "subsec-classification-of-differential-equations-8",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-classification-of-differential-equations-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "autonomous "
+},
+{
+  "id": "subsec-separable-differential-equations-3",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-separable-differential-equations-3",
+  "type": "Example",
+  "number": "3.2.1",
+  "title": "",
+  "body": "  The team is using a constant-force winch to pull the statue across a frictionless floor (they've applied plenty of industrial grease). The magnitude of the force applied by the winch is , and the statue has a mass of . What is the velocity of the statue as a function of time?    The equation of motion is . Solving this involves just integrating both sides with respect to time: . Next, we can determine the constant of integration by using the initial condition that the statue starts at rest, so . When we plug in , we get , so . Therefore, the velocity of the statue as a function of time is .   "
+},
+{
+  "id": "subsec-separable-differential-equations-5",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-separable-differential-equations-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "separable differential equation "
+},
+{
+  "id": "subsec-separable-differential-equations-6",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-separable-differential-equations-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "drag force "
+},
+{
+  "id": "subsec-separable-differential-equations-7",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-separable-differential-equations-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "drag coefficient "
+},
+{
+  "id": "subsec-separable-differential-equations-8",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-separable-differential-equations-8",
+  "type": "Example",
+  "number": "3.2.2",
+  "title": "",
+  "body": "  The van is coasting at high speed, but Dave shifts into neutral, so the engine is no longer providing any force to propel the van forward. Right now, the van is moving at an initial velocity of .  They are being slowed down by air resistance, which has a drag coefficient of . The density of air is , and the cross-sectional area of the van is . What is the velocity of the van as a function of time?    The equation of motion is . For the sake of simplicity, let's define , so the equation of motion becomes .  This is a separable differential equation, since we can rewrite it as , which is of the form with and .  The strategy for solving a separable differential equation is to, as the name suggests, place all the 's on one side and all the 's on the other side, and then integrate both sides. We can rewrite the equation as . Now we can integrate both sides: . Next, we can determine the constant of integration by using the initial condition that the van starts with an initial velocity of , so . When we plug in , we get , so . Therefore, the velocity of the van as a function of time is .   "
+},
+{
+  "id": "def-separable-first-order-ode",
+  "level": "2",
+  "url": "sec-de-workshop.html#def-separable-first-order-ode",
+  "type": "Definition",
+  "number": "3.2.3",
+  "title": "",
+  "body": "  A separable first-order ordinary differential equation is a first-order ordinary differential equation of the form . The general solution to a separable first-order ordinary differential equation is given by , where is a constant of integration.   "
+},
+{
+  "id": "subsec-linear-inhomogeneous-differential-equations-2",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-linear-inhomogeneous-differential-equations-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "linear inhomogeneous differential equation "
+},
+{
+  "id": "subsec-linear-inhomogeneous-differential-equations-3",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-linear-inhomogeneous-differential-equations-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "integrating factor "
+},
+{
+  "id": "subsec-linear-inhomogeneous-differential-equations-4",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-linear-inhomogeneous-differential-equations-4",
+  "type": "Example",
+  "number": "3.2.4",
+  "title": "",
+  "body": "  Part of the scouting mission involved swimming across a river, and Dave is now wondering how long it would take to swim across the river.  Fluids exert a drag force on objects moving through them. Their viscosity is a measure of how much drag force they exert. At low speeds, the drag force is approximately proportional to the velocity of the object, so we can write the magnitude of the drag force as (known as Stokes' law ), where is the viscosity of the fluid, is the radius of the object, and is the speed of the object.  If Dave swims with a constant force of magnitude , then the equation of motion is . What is the velocity of Dave as a function of time, and how long does it take for Dave to swim across the river, which has a width of ?    The equation of motion can be rewritten as , which is a linear inhomogeneous differential equation with and . Let's define for the sake of simplicity, so the equation becomes . The integrating factor is . Multiplying both sides of the equation by the integrating factor, we get . Now we can integrate both sides: .  Notice, by the way, that this equation was technically also separable. The next one, however, is not.   "
+},
+{
+  "id": "subsec-linear-inhomogeneous-differential-equations-5",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-linear-inhomogeneous-differential-equations-5",
+  "type": "Checkpoint",
+  "number": "3.2.5",
+  "title": "",
+  "body": "  The force Dave applies to swim across the river may be more accurately modeled as a force that oscillates in time, such as .  Solve the equation of motion for the velocity of Dave as a function of time.  Then show that if Dave starts at rest, the velocity of Dave as a function of time is , where .    The integral can be evaluated using integration by parts twice.    The integral is equal to .    The equation of motion can be rewritten as , which is a linear inhomogeneous differential equation with and . Let's define for the sake of simplicity, so the equation becomes . The integrating factor is . Multiplying both sides of the equation by the integrating factor, we get . Now we can integrate both sides: . We can determine the constant of integration by using the initial condition that Dave starts at rest, so . When we plug in , we get , so . Therefore, the velocity of Dave as a function of time is . We can, in fact, combine the sine and cosine terms into a single sine term with a phase shift , where .   "
+},
+{
+  "id": "subsec-homogeneous-differential-equations-2",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-homogeneous-differential-equations-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "homogeneous differential equation "
+},
+{
+  "id": "subsec-homogeneous-differential-equations-4",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-homogeneous-differential-equations-4",
+  "type": "Example",
+  "number": "3.2.6",
+  "title": "",
+  "body": "  Suppose that the force Dave applies to swim across the river is proportional to the ratio of his velocity to the time he's been swimming, so . (Perhaps Dave is getting more tired as time goes on, so the force he can apply decreases with time, but it also increases with his velocity since he's a bit of a speed demon.) Ignoring the viscous force for now, determine the equation of motion for Dave, and solve for the velocity of Dave as a function of time. At what velocity is this model valid?    The equation of motion is . This is a homogeneous differential equation, since the right-hand side is a function of the ratio . We can solve this by making the substitution , which implies that . Then, by the product rule of differentiation, we have . Substituting this into the original equation, we get . Rearranging gives . Let for the sake of simplicity, so the equation becomes . This is separable, leading to . Now we can integrate both sides: . Finally, we can substitute back to get . This model is valid when the viscous force is negligible compared to the force Dave applies. This is only the case when , which implies that .   "
+},
+{
+  "id": "subsec-bernoulli-differential-equations-2",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-bernoulli-differential-equations-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Bernoulli differential equation "
+},
+{
+  "id": "subsec-bernoulli-differential-equations-5",
+  "level": "2",
+  "url": "sec-de-workshop.html#subsec-bernoulli-differential-equations-5",
+  "type": "Example",
+  "number": "3.2.7",
+  "title": "",
+  "body": "  After the van has stopped, the headlights stopped, and are cooling down. The surrounding air has a temperature of , and the headlights have a temperature of at time . This function can be modeled by the equation , where and are positive constants that depend on the properties of the headlights and the surrounding air.   "
+},
+{
+  "id": "subsec-limit-rules",
+  "level": "1",
+  "url": "subsec-limit-rules.html",
+  "type": "Subsection",
+  "number": "A.1",
+  "title": "Limit Rules",
+  "body": " Limit Rules  Limits follow linearity and multiplicative rules. For any functions and , and any constants and , we have the following rules:   In the case of , if both and are zero or both are infinity, then we have an indeterminate form, and we cannot apply the rule above. However, we can apply L'Hôpital's rule to evaluate the limit in this case, which states that , where and are the derivatives of and , respectively. This rule is named after French mathematician Guillaume de l'Hôpital, who published it in his 1696 book on calculus, although the rule was actually discovered by the Swiss mathematician Johann Bernoulli. The more formal statement of L'Hôpital's rule is given in .   L'Hôpital's Rule   For any two two functions and such that   Both functions are defined on an open interval containing , except possibly at itself,    Both functions are differentiable on ,     or ,     for all , and     exists,   then .    Another rule that is handy to know is the squeeze theorem. Essentially, if a function is squeezed between two other functions that have the same limit at a point, then the squeezed function also has that limit at that point.   Squeeze Theorem   For any three functions , , and such that    for all in some open interval containing , except possibly at itself, and     ,   then .    There are several special limits that are useful to know, such as . A more comprehensive list of special limits can be found on a Wikipedia page.  "
+},
+{
+  "id": "subsec-limit-rules-3",
+  "level": "2",
+  "url": "subsec-limit-rules.html#subsec-limit-rules-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "L'Hôpital's rule "
+},
+{
+  "id": "thm-lhopitals-rule",
+  "level": "2",
+  "url": "subsec-limit-rules.html#thm-lhopitals-rule",
+  "type": "Theorem",
+  "number": "A.1.8",
+  "title": "L’Hôpital’s Rule.",
+  "body": " L'Hôpital's Rule   For any two two functions and such that   Both functions are defined on an open interval containing , except possibly at itself,    Both functions are differentiable on ,     or ,     for all , and     exists,   then .   "
+},
+{
+  "id": "thm-squeeze-thm",
+  "level": "2",
+  "url": "subsec-limit-rules.html#thm-squeeze-thm",
+  "type": "Theorem",
+  "number": "A.1.9",
+  "title": "Squeeze Theorem.",
+  "body": " Squeeze Theorem   For any three functions , , and such that    for all in some open interval containing , except possibly at itself, and     ,   then .   "
+},
+{
+  "id": "subsec-common-derivatives",
+  "level": "1",
+  "url": "subsec-common-derivatives.html",
+  "type": "Subsection",
+  "number": "A.2",
+  "title": "Common Derivatives",
+  "body": " Common Derivatives  Just like limits, derivatives follow linearity rules. For any functions and , and any constants and , we have the following rules: .  The following are some common derivatives that are useful to know: .  "
 },
 {
   "id": "refs-main",
@@ -1051,12 +1483,12 @@ var ptx_lunr_docs = [
   "type": "References",
   "number": "",
   "title": "References",
-  "body": " Ludlow, Andrew D., et al. “Optical Atomic Clocks.”  Reviews of Modern Physics , vol. 87, no. 2, June 2015, pp. 637–701. DOI.org (Crossref), .  Redish, Edward F., et al. University of Maryland Fermi Problems    Stewart, James, et al. Calculus: Early Transcendentals. Ninth edition, Cengage, 2021.  Strang, Gilbert. Introduction to Linear Algebra. 6th ed, Wellesley-Cambridge press, 2023.   The International System of Units (SI): SI Brochure. 2019. DOI.org (Crossref), .  "
+  "body": " Ludlow, Andrew D., et al. “Optical Atomic Clocks.”  Reviews of Modern Physics , vol. 87, no. 2, June 2015, pp. 637–701. DOI.org (Crossref), .  Newton, Isaac. The Mathematical Principles of Natural Philosophy. Translated by Andrew Motte, 1729, .  Redish, Edward F., et al. University of Maryland Fermi Problems    Stewart, James, et al. Calculus: Early Transcendentals. Ninth edition, Cengage, 2021.  Strang, Gilbert. Introduction to Linear Algebra. 6th ed, Wellesley-Cambridge press, 2023.   The International System of Units (SI): SI Brochure. 2019. DOI.org (Crossref), .  "
 },
 {
-  "id": "backmatter-3",
+  "id": "backmatter-4",
   "level": "1",
-  "url": "backmatter-3.html",
+  "url": "backmatter-4.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",

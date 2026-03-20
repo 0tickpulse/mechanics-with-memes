@@ -68,4 +68,25 @@
       An antiderivative is also called an <term>indefinite integral</term>, whereas the integral with specified bounds is called a <term>definite integral</term>.
     </p>
   </subsection>
+
+
+  <subsection xml:id="subsec-integration-by-substitution">
+    <title>Integration by Substitution</title>
+
+    <p>
+      Remember the chain rule? We had to use it a lot when we were taking derivatives of vectors in polar coordinates.
+      There is a reverse version of the chain rule that we can use to evaluate integrals, called <term>integration by substitution</term>.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find the antiderivative
+          <me>
+            x(t) = \int 2t \sqrt{t^2 + 1} \dd{t}.
+          </me>
+        </p>
+      </statement>
+    </example>
+  </subsection>
 </section>

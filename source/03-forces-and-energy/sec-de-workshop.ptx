@@ -204,9 +204,8 @@
           </me>.
           The general solution to a separable first-order ordinary differential equation is given by
           <me>
-            \int \frac{1}{f(v)} \dd{v} = \int g(t) \dd{t} + C
-          </me>,
-          where <m>C</m> is a constant of integration.
+            \int \frac{1}{f(v)} \dd{v} = \int g(t) \dd{t}
+          </me>.
         </p>
       </statement>
     </definition>
@@ -235,10 +234,14 @@
       </me>.
       Thus, if we multiply both sides of the equation by the integrating factor, we get
       <md>
-        <mrow>\amp \amp \mu(t) \dv{v}{t} + \mu(t) p(t) v \amp = \mu(t) q(t)</mrow>
+        <mrow>\amp \amp \mu(t) \dv{v}{t} + \underbrace{\mu(t) p(t)}_{\dv{\mu}{t}} v \amp = \mu(t) q(t)</mrow>
         <mrow>\implies \amp \amp \mu(t) \dv{v}{t} + v \dv{\mu}{t} \amp = \mu(t) q(t)</mrow>
-        <mrow>\implies \amp \amp \dv{}{t} \qty(\mu(t) v) \amp = \mu(t) q(t)</mrow>
       </md>.
+      But wait! The left-hand side can be rewritten as the derivative of the product <m>\mu(t) v</m>, due to the product rule of differentiation.
+      Therefore, we can rewrite the equation as
+      <me>
+        \dv{}{t} \qty(\mu(t) v) = \mu(t) q(t)
+      </me>.
       Now we can integrate both sides:
       <md>
         <mrow>\amp \amp \int \dv{}{t} \qty(\mu(t) v) \dd{t} \amp = \int \mu(t) q(t) \dd{t}</mrow>
@@ -287,10 +290,15 @@
             \mu(t) = e^{\int \gamma \dd{t}} = e^{\gamma t}
           </me>.
           Multiplying both sides of the equation by the integrating factor, we get
+          <me>
+            e^{\gamma t} \dv{v}{t} + e^{\gamma t} \gamma v = e^{\gamma t} \frac{F_0}{m}
+          </me>
+          But wait, if you notice, the left-hand side can be rewritten as the derivative of a product, since the derivative of <m>e^{\gamma t} </m> is <m>\gamma e^{\gamma t}</m>.
+          Thus
           <md>
-            <mrow>\amp \amp e^{\gamma t} \dv{v}{t} + e^{\gamma t} \gamma v \amp = e^{\gamma t} \frac{F_0}{m}</mrow>
+            <mrow>\amp \amp \underbrace{e^{\gamma t}}_{\mu(t)} \dv{v}{t} + v \cdot \underbrace{\gamma e^{\gamma t}}_{\dv{\mu}{t}} \amp = e^{\gamma t} \frac{F_0}{m}</mrow>
             <mrow>\implies \amp \amp \dv{}{t} \qty(e^{\gamma t} v) \amp = e^{\gamma t} \frac{F_0}{m}</mrow>
-          </md>.
+          </md>
           Now we can integrate both sides:
           <md>
             <mrow>\amp \amp \int \dv{}{t} \qty(e^{\gamma t} v) \dd{t} \amp = \int e^{\gamma t} \frac{F_0}{m} \dd{t}</mrow>
@@ -391,6 +399,10 @@
           </me>,
           where <m>\phi = \tan^{-1}(\gamma / \omega)</m>.
         </p>
+
+        <p>
+          This is all, by the way, a sneak peek of a subject in physics typically called <term>vibrations and waves</term>, which is the study of oscillatory motion.
+        </p>
       </solution>
     </exercise>
   </subsection>
@@ -475,6 +487,22 @@
         </p>
       </solution>
     </example>
+
+    <definition xml:id="def-fo-homogeneous-differential-equation">
+      <statement>
+        <p>
+          A <term>first-order homogeneous differential equation</term> is a first-order differential equation of the form
+          <me>
+            \dv{v}{t} = f\qty(\frac{v}{t})
+          </me>,
+          where the function on the right-hand side is a function of the ratio <m>v/t</m>.
+          The solution to a first-order homogeneous differential equation can be found by making the substitution <m>z = v/t</m>, which leads to the separable equation
+          <me>
+            \frac{1}{f(z) - z} \dd{z} = \frac{1}{t} \dd{t}
+          </me>.
+        </p>
+      </statement>
+    </definition>
   </subsection>
 
 
@@ -518,15 +546,127 @@
     <example>
       <statement>
         <p>
-          After the van has stopped, the headlights stopped, and are cooling down.
-          The surrounding air has a temperature of <m>T_\text{air}</m>, and the headlights have a temperature of <m>T(t)</m> at time <m>t</m>.
-          This function can be modeled by the equation
+          Imagine, for a moment, that the van is coasting at a speed where both the linear (Stokes) drag force and the quadratic drag force are significant, so the equation of motion is
           <me>
-            \dv{T}{t} + aT = bT^2
-          </me>,
-          where <m>a</m> and <m>b</m> are positive constants that depend on the properties of the headlights and the surrounding air.
+            m \dv{v}{t} = -6 \pi \eta r v - \frac{1}{2} \rho A C_d v^2
+          </me>.
+          Given an initial velocity of <m>v_0</m>, solve for the velocity of the van as a function of time.
+          What is the terminal velocity of the van in this model?
         </p>
       </statement>
+
+      <solution>
+        <p>
+          Let's make some simplifications to the equation of motion by defining <m>\gamma = 6 \pi \eta r / m</m> and <m>\beta = \frac{1}{2} \rho A C_d / m</m>, so the equation becomes
+          <me>
+            \dv{v}{t} + \gamma v = -\beta v^2
+          </me>.
+          This is a Bernoulli differential equation with <m>p(t) = \gamma</m>, <m>q(t) = -\beta</m>, and <m>n = 2</m>.
+          Let's make the substitution <m>u = v^{1-n} = v^{-1}</m>.
+          Then, the derivative of <m>u</m> with respect to <m>t</m> is
+          <me>
+            \dv{u}{t} = \dv{u}{v} \dv{v}{t} = -v^{-2} \dv{v}{t}
+          </me>.
+          Keep this in mind, and multiply the original equation by <m>v^{-n} = v^{-2}</m> to get
+          <me>
+            v^{-2} \dv{v}{t} + \gamma v^{-1} = -\beta
+          </me>.
+          The left-hand side consists of a term exactly the same as the derivative of <m>u</m> and a term that is just a constant times <m>u</m>, so we can rewrite the equation as
+          <me>
+            -\dv{u}{t} + \gamma u = -\beta
+          </me>,
+          or
+          <me>
+            \dv{u}{t} - \gamma u = \beta
+          </me>.
+        </p>
+
+        <p>
+          Now we can just solve this by multiplying both sides by the integrating factor, which is <m>e^{-\gamma t}</m>, and then integrating both sides:
+          <md>
+            <mrow>\amp \amp e^{-\gamma t} \dv{u}{t} - e^{-\gamma t} \gamma u \amp = e^{-\gamma t} \beta</mrow>
+            <mrow>\implies \amp \amp \dv{}{t} \qty(e^{-\gamma t} u) \amp = e^{-\gamma t} \beta</mrow>
+            <mrow>\implies \amp \amp e^{-\gamma t} u \amp = -\frac{\beta}{\gamma} e^{-\gamma t} + C</mrow>
+            <mrow>\implies \amp \amp u(t) \amp = -\frac{\beta}{\gamma} + C e^{\gamma t}</mrow>
+          </md>.
+          Recalling that <m>u = v^{-1}</m>, we can substitute back to get
+          <me>
+            v(t) = \frac{1}{-\frac{\beta}{\gamma} + C e^{\gamma t}} = \frac{\gamma}{-\beta + C \gamma e^{\gamma t}}
+          </me>.
+        </p>
+
+        <p>
+          Next, we can determine the constant of integration <m>C</m> by using the initial condition that the van starts with an initial velocity of <m>v_0</m>, so <m>v(0) = v_0</m>.
+          When we plug in <m>t = 0</m>, we get
+          <me>
+            v_0 = \frac{\gamma}{-\beta + C \gamma}
+          </me>,
+          so <m>C = \qty(\frac{\gamma}{v_0} + \beta) / \gamma</m>.
+          Plugging this back in yields
+          <me>
+            v(t) = \frac{\gamma}{-\beta + \qty(\frac{\gamma}{v_0} + \beta) e^{\gamma t}} = \frac{\gamma v_0}{(\gamma + \beta v_0) e^{\gamma t} - \beta v_0}
+          </me>.
+        </p>
+      </solution>
     </example>
+  </subsection>
+
+
+  <subsection xml:id="subsec-the-other-newtonian-forces">
+    <title>The Other Newtonian Forces</title>
+
+    <p>
+      So far, we have introduced various types of differential equations and how to solve them.
+      In the examples, we gave some examples of forces that lead to these types of differential equations, such as the drag force due to air resistance and the viscous force due to swimming through water.
+      It is worth making a summary of these differential equations.
+    </p>
+
+    <table>
+      <title>Types of First-Order Differential Equations</title>
+
+      <tabular>
+        <row header="yes">
+          <cell> Type </cell>
+          <cell> Form </cell>
+          <cell> Example </cell>
+          <cell> Solution Method </cell>
+        </row>
+
+        <row>
+          <cell> Separable </cell>
+          <cell> <m>\dv{v}{t} = f(v) g(t)</m> </cell>
+          <cell> Air resistance at high speed (<m>\dot{v} = -\beta v^2</m>) </cell>
+          <cell> Separate variables and integrate both sides </cell>
+        </row>
+
+        <row>
+          <cell> Linear inhomogeneous </cell>
+          <cell> <m>\dv{v}{t} + p(t) v = q(t)</m> </cell>
+          <cell> Swimming with viscous drag (<m>\dot{v} + \gamma v = \frac{F_0}{m}</m>) </cell>
+          <cell> Multiply by integrating factor <m>\mu(t) = e^{\int p(t) \dd{t}}</m> and integrate both sides </cell>
+        </row>
+
+        <row>
+          <cell> Homogeneous </cell>
+          <cell> <m>\dv{v}{t} = f\qty(\frac{v}{t})</m> </cell>
+          <cell> Swimming with a force proportional to velocity over time (<m>\dot{v} = k \frac{v}{t}</m>) </cell>
+          <cell> Make the substitution <m>z = v/t</m>, which leads to a separable equation </cell>
+        </row>
+
+        <row>
+          <cell> Bernoulli </cell>
+          <cell> <m>\dv{v}{t} + p(t) v = q(t) v^n</m> </cell>
+          <cell> Coasting with both linear and quadratic drag (<m>\dot{v} + \gamma v = -\beta v^2</m>) </cell>
+          <cell> Make the substitution <m>u = v^{1-n}</m>, which leads to a linear equation </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <remark>
+      <p>
+        There is one other major type of first-order differential equation that we will occasionally encounter, which is an <term>exact differential equation</term>.
+        We will go into them once we introduce multiple dimensions and vector calculus.
+      </p>
+    </remark>
   </subsection>
 </section>
